@@ -26,11 +26,11 @@ static bool isMoatTrackingEnabled = true;
 + (NSDictionary*) mapSADictoToMoatDict:(NSDictionary*)dict {
     return @{
              @"level1": @"SuperAwesome",
-             @"level2": [dict objectForKey:@"campaignId"],
-             @"level3": [dict objectForKey:@"lineItemId"],
-             @"level4": [dict objectForKey:@"creativeId"],
-             @"slicer1": [dict objectForKey:@"appId"],
-             @"slider2": [dict objectForKey:@"placementId"]
+             @"level2": [dict objectForKey:@"campaign"],
+             @"level3": [dict objectForKey:@"line_item"],
+             @"level4": [dict objectForKey:@"creative"],
+             @"slicer1": [dict objectForKey:@"app"],
+             @"slider2": [dict objectForKey:@"placement"]
              };
 }
 

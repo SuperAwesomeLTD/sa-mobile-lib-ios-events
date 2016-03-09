@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SAEvents"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Library that sends Events to AwesomeAds AdServer"
   s.description      = <<-DESC
 		       Sends custom AA events as well as Moat events
