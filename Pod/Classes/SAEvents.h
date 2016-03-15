@@ -26,18 +26,18 @@
 // @param: the URL to make the event request to
 + (void) sendEventToURL:(NSString*)url;
 
+////
+//// This function sends display data to Moat
+//+ (void) sendDisplayMoatEvent:(UIView*)adView andAdDictionary:(NSDictionary*)adDict;
 //
-// This function sends display data to Moat
-+ (void) sendDisplayMoatEvent:(UIView*)adView andAdDictionary:(NSDictionary*)adDict;
-
-
-// This function sends video events to Moat
-+ (void) sendVideoMoatEvent:(AVPlayer*)player andLayer:(AVPlayerLayer*)layer andView:(UIView*)adView andAdDictionary:(NSDictionary*)adDict;
+//
+//// This function sends video events to Moat
+//+ (void) sendVideoMoatEvent:(AVPlayer*)player andLayer:(AVPlayerLayer*)layer andView:(UIView*)adView andAdDictionary:(NSDictionary*)adDict;
 
 // functions to enable or disable tracking
 + (void) enableSATracking;
 + (void) disableSATracking;
-+ (void) enableMoatTracking;
-+ (void) disableMoatTracking;
+//+ (void) enableMoatTracking;
+//+ (void) disableMoatTracking;
 
 @end
