@@ -18,5 +18,4 @@ Pod::Spec.new do |s|
     'SAEvents' => ['Pod/Assets/*.png']
   }
   s.dependency 'SAUtils'
-  # s.vendored_frameworks = "Pod/Frameworks/SUPMoatMobileAppKit.framework"
 end
