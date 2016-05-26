@@ -1,0 +1,10 @@
+
+target 'SAEvents_Example', :exclusive => true do
+  pod 'SAEvents', :path => '../'
+end
+
+target 'SAEvents_Tests', :exclusive => true do
+  pod 'SAEvents', :path => '../'
+
+  
+end
