@@ -1,5 +1,8 @@
 PODS:
   - SAEvents (1.0.4):
+    - SAEvents/Core (= 1.0.4)
+    - SAUtils
+  - SAEvents/Core (1.0.4):
     - SAUtils
   - SAUtils (1.1.6)
 
@@ -11,7 +14,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: d1a63a87a07a3ef47a0dd06eed13c146aa85eebe
+  SAEvents: 74236628e6e072769cac1f7d865f5834b78655e6
   SAUtils: acb66358c0744e48632849dc88d44188bbef7d4b
 
 COCOAPODS: 0.38.2

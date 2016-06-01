@@ -19,16 +19,31 @@
     "ios": "6.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "SAEvents": [
-      "Pod/Assets/*.png"
-    ]
-  },
+  "default_subspecs": "Core",
   "dependencies": {
     "SAUtils": [
 
     ]
   },
-  "vendored_frameworks": "Pod/Frameworks/SUPMoatMobileAppKit.framework"
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Pod/Classes/**/*",
+      "resource_bundles": {
+        "SuperAwesome": [
+          "Pod/Assets/*"
+        ]
+      }
+    },
+    {
+      "name": "Moat",
+      "dependencies": {
+        "SAEvents/Core": [
+
+        ]
+      },
+      "source_files": "Pod/Plugin/Moat/*",
+      "vendored_frameworks": "Pod/Frameworks/SUPMoatMobileAppKit.framework"
+    }
+  ]
 }
