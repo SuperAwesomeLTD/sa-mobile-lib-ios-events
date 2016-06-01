@@ -13,9 +13,20 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/SuperAwesomeLTD/sa-mobile-lib-ios-events.git", :tag => "1.0.4" }
   s.platform     = :ios, '6.0'
   s.requires_arc = true
-  s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
     'SAEvents' => ['Pod/Assets/*.png']
   }
+  s.default_subspec = 'Core'
   s.dependency 'SAUtils'
+  s.vendored_frameworks = "Pod/Frameworks/SUPMoatMobileAppKit.framework"
+
+  s.subspec 'Core' do |c|
+    c.source_files = 'Pod/Classes/**/*'
+    c.resource_bundles = { 'SuperAwesome' => ['Pod/Assets/*'] }
+  end
+
+  s.subspec 'Moat' do |mo|
+    mo.dependency 'SAEvents/Core'
+    mo.source_files = "Pod/Plugin/Moat/*"
+  end  
 end

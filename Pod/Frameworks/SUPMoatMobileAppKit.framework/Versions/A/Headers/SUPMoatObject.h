@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SUPMoatBootstrap.h"
-#import "SUPMoatTracker.h"
-#import "SUPMoatVideoTracker.h"
 
-@interface SUPMoatMobileAppKit : NSObject
+@interface SUPMoatObject : NSObject
 
 @end

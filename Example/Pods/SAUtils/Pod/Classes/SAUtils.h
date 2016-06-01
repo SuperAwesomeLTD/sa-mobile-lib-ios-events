@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 ////////////////////////////////////////////////////////////////////////////////
 // Different "globally" available declarations; for enums, typedefs, etc
@@ -19,7 +20,7 @@ typedef enum SASystemSize {
 }SASystemSize;
 
 // callback for iOS's own [NSURLConnection sendAsynchronousRequest:]
-typedef void (^netresponse)(NSURLResponse * response, NSData * data, NSError * error);
+typedef void (^netresponse)(NSData * data, NSURLResponse * response, NSError * error);
 
 // callback for generic success with data
 typedef void (^success)(NSData *data);
@@ -44,7 +45,6 @@ typedef void (^failure)();
 
 + (SASystemSize) getSystemSize;
 + (NSString*) getVerboseSystemDetails;
-+ (NSString*) filePathForName:(NSString*)name type:(NSString*)type andBundle:(NSString*)bundleName andClass:(Class)className;
 + (NSString*) filePathInDocuments:(NSString*)fpath;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -60,10 +60,16 @@ typedef void (^failure)();
 + (BOOL) isValidURL:(NSObject*) urlObject;
 
 ////////////////////////////////////////////////////////////////////////////////
+// UIImage classes
+////////////////////////////////////////////////////////////////////////////////
+
++ (UIImage*) closeImage;
++ (UIImage*) padlockImage;
+
+////////////////////////////////////////////////////////////////////////////////
 // Aux network functions
 ////////////////////////////////////////////////////////////////////////////////
 
-+ (NSData*) sendSyncGETToEndpoint:(NSString*)endpoint;
 + (void) sendGETtoEndpoint:(NSString*)endpoint withQueryDict:(NSDictionary*)GETDict andSuccess:(success)success orFailure:(failure)failure;
 
 @end

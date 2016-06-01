@@ -21,7 +21,6 @@
 // @param: the URL to make the event request to
 + (void) sendEventToURL:(NSString*)url;
 
-// functions to enable or disable tracking
 + (void) enableSATracking;
 + (void) disableSATracking;
 

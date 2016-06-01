@@ -8,8 +8,13 @@
 
 #import "SAFileDownloader.h"
 
+// callback for iOS's own [NSURLConnection sendAsynchronousRequest:]
+typedef void (^downloadresponse)(NSURL * location, NSURLResponse * response, NSError * error);
+
 // defines
 #define SA_FILE_STORE @"SA_FILE_STORE"
+#define PAIR_KEY @"Key"
+#define PAIR_PATH @"FPath"
 
 //
 // private vars for SAFileDownloader
@@ -23,6 +28,8 @@
 //
 // actual implementation of SAFileDownloader
 @implementation SAFileDownloader
+
+#pragma mark Singleton & Constructor functions
 
 + (SAFileDownloader *) getInstance {
     static SAFileDownloader *sharedManager = nil;
@@ -53,41 +60,13 @@
     return self;
 }
 
-- (NSString*) downloadFileSync:(NSString *)url {
-    // file data
-    NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:url]];
-    
-    // file data
-    if (data != NULL) {
-        NSString *key = [SAUtils generateUniqueKey];
-        NSString *filePath = [NSString stringWithFormat:@"samov_%@.mp4", key];
-        NSString *fullFilePath = [SAUtils filePathInDocuments:filePath];
-        NSError *fileError = NULL;
-        if (filePath != NULL) {
-            [data writeToFile:fullFilePath options:NSDataWritingAtomic error:&fileError];
-        }
-        // file written ok
-        if (fileError == NULL) {
-            // save
-            [_fileStore setObject:filePath forKey:key];
-            [_defs setObject:_fileStore forKey:SA_FILE_STORE];
-            [_defs synchronize];
-            
-            // call success
-            return filePath;
-        }
-        // failure to write file
-        else {
-            return NULL;
-        }
-    }
-    // the response will be Null
-    else {
-        return NULL;
-    }
+#pragma mark Main Public functions
+
+- (NSString*) getDiskLocation {
+    return [NSString stringWithFormat:@"samov_%@.mp4", [SAUtils generateUniqueKey]];
 }
 
-- (void) downloadFileAsync:(NSString *)url withSuccess:(downloadSuccess)success orFailure:(failure)failure {
+- (void) downloadFileFrom:(NSString*)url to:(NSString*)fpath withSuccess:(downloadFinish)success orFailure:(failure)failure {
     
     // form the URL & request
     NSURL *URL = [NSURL URLWithString:url];
@@ -95,47 +74,70 @@
     [request setURL:URL];
     [request setHTTPMethod:@"GET"];
     
-    // the response
-    netresponse resp = ^(NSURLResponse * response, NSData * data, NSError * error) {
+    downloadresponse resp2 = ^(NSURL * location, NSURLResponse * response, NSError * error) {
         NSInteger statusCode = ((NSHTTPURLResponse*)response).statusCode;
         
         // check for whatever error
         if (error != NULL || statusCode != 200) {
-            failure();
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (failure) {
+                    failure();
+                }
+            });
         }
         // goto success
         else {
-            NSString *key = [SAUtils generateUniqueKey];
-            NSString *filePath = [NSString stringWithFormat:@"samov_%@.mp4", key];
-            NSString *fullFilePath = [SAUtils filePathInDocuments:filePath];
+            NSString *fullFilePath = [SAUtils filePathInDocuments:fpath];
+            NSString *key = [self getKeyFromLocation:fpath];
             NSError *fileError = NULL;
-            if (filePath != NULL) {
-                [data writeToFile:fullFilePath options:NSDataWritingAtomic error:&fileError];
-            }
-            // file written ok
-            if (fileError == NULL) {
+            NSURL *destURL = [NSURL fileURLWithPath:fullFilePath];
+            [_fileManager moveItemAtURL:location toURL:destURL error:&fileError];
+            
+            if (fileError == NULL || key == NULL) {
                 // save
-                [_fileStore setObject:filePath forKey:key];
+                [_fileStore setObject:fpath forKey:key];
                 [_defs setObject:_fileStore forKey:SA_FILE_STORE];
                 [_defs synchronize];
                 
+                NSLog(@"[Download OK] %@ ==> %@", url, fpath);
+                
                 // call success
-                success(filePath);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (success) {
+                        success();
+                    }
+                });
+                
             }
             // failure to write file
             else {
-                failure();
+                NSLog(@"[Download NOK] %@ ==> %@", url, fpath);
+                // call success
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (failure) {
+                        failure();
+                    }
+                });
             }
         }
     };
     
-    // make the request and get back the data
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue currentQueue]
-                           completionHandler:resp];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:resp2];
+    [task resume];
 }
 
-#pragma mark Aux Functions
+#pragma mark Private Functions
+
+- (NSString*) getKeyFromLocation:(NSString*)location {
+    if (!location) return NULL;
+    NSArray *c1 = [location componentsSeparatedByString:@"_"];
+    if ([c1 count] < 2) return NULL;
+    NSString *key1 = [c1 objectAtIndex:1];
+    NSArray *c2 = [key1 componentsSeparatedByString:@"."];
+    if ([c2 count] < 1) return NULL;
+    return [c2 firstObject];
+}
 
 - (void) cleanup {
     
