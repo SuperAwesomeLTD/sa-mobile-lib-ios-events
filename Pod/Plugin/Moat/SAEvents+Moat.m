@@ -14,8 +14,6 @@
 
 @implementation SAEvents (Moat)
 
-static bool isMoatTrackingEnabled = true;
-
 + (NSDictionary*) mapSADictoToMoatDict:(NSDictionary*)dict {
     return @{
              @"level1": @"SuperAwesome",
@@ -28,7 +26,6 @@ static bool isMoatTrackingEnabled = true;
 }
 
 + (void) sendDisplayMoatEvent:(UIView*)adView andAdDictionary:(NSDictionary*)adDict {
-    if (!isMoatTrackingEnabled) return;
     
     SUPMoatTracker *tracker = [SUPMoatTracker trackerWithAdView:adView partnerCode:MOAT_DISPLAY_PARTNER_CODE];
     [tracker trackAd:[self mapSADictoToMoatDict:adDict]];
@@ -37,7 +34,6 @@ static bool isMoatTrackingEnabled = true;
 }
 
 + (void) sendVideoMoatEvent:(AVPlayer*)player andLayer:(AVPlayerLayer*)layer andView:(UIView*)adView andAdDictionary:(NSDictionary*)adDict {
-    if (!isMoatTrackingEnabled) return;
     
     SUPMoatVideoTracker *tracker = [SUPMoatVideoTracker trackerWithPartnerCode:MOAT_VIDEO_PARTNER_CODE];
     [tracker trackVideoAd:[self mapSADictoToMoatDict:adDict]
@@ -46,14 +42,6 @@ static bool isMoatTrackingEnabled = true;
        withContainingView:adView];
     
     NSLog(@"[AA :: Info] Sending Video Event to Moat");
-}
-
-+ (void) enableMoatTracking {
-    isMoatTrackingEnabled = true;
-}
-
-+ (void) disableMoatTracking {
-    isMoatTrackingEnabled = false;
 }
 
 @end

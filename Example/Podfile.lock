@@ -1,20 +1,24 @@
 PODS:
-  - SAEvents (1.0.4):
-    - SAEvents/Core (= 1.0.4)
+  - SAEvents (1.0.5):
+    - SAEvents/Core (= 1.0.5)
     - SAUtils
-  - SAEvents/Core (1.0.4):
+  - SAEvents/Core (1.0.5):
+    - SAUtils
+  - SAEvents/Moat (1.0.5):
+    - SAEvents/Core
     - SAUtils
   - SAUtils (1.1.6)
 
 DEPENDENCIES:
   - SAEvents (from `../`)
+  - SAEvents/Moat (from `../`)
 
 EXTERNAL SOURCES:
   SAEvents:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: 74236628e6e072769cac1f7d865f5834b78655e6
+  SAEvents: bde500535c6faf8a6a200456bd9dddfacb57d766
   SAUtils: acb66358c0744e48632849dc88d44188bbef7d4b
 
 COCOAPODS: 0.38.2

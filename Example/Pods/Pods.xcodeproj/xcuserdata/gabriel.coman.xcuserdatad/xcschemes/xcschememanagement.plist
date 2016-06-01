@@ -4,22 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-SAEvents_Example-SAEvents-SuperAwesome.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SAEvents_Example-SAEvents.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SAEvents_Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SAEvents_Tests-SAEvents-SuperAwesome.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SAEvents_Tests-SAEvents.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SAEvents_Tests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SAEvents-SuperAwesome.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SAEvents.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +47,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>37EA053AD2415A051204515EE707DB27</key>
+		<key>14F1514D18B1E6A30865E6B54ABD0BE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3EA2FFECE6919F10781F88D3C87144D7</key>
+		<key>1AAF44FB9F4308C849B8C5075135057C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>27CBFD3CBA4AA68F1103D4A792E0DCF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37EA053AD2415A051204515EE707DB27</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D321C1B2BA46BA977F07945FC6C6ADE</key>
+		<key>406F3A7111CABF20DD32EBFCE5F5B318</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B89CC692367C50EC6910500485BC87C</key>
+		<key>428973D5A2824ED757FAC1B583886CF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8E75D5D82F635F961C0FE1898DA290D</key>
+		<key>ECE69DDD9778431F9BD37714FBA8F60D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
