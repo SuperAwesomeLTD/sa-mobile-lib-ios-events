@@ -8,6 +8,7 @@
 
 #import "SAEvents+Moat.h"
 #import <SUPMoatMobileAppKit/SUPMoatMobileAppKit.h>
+#import "SAUtils.h"
 
 #define MOAT_DISPLAY_PARTNER_CODE @"superawesomeinappdisplay731223424656"
 #define MOAT_VIDEO_PARTNER_CODE @"superawesomeinappvideo467548716573"
@@ -27,6 +28,14 @@
 
 + (void) sendDisplayMoatEvent:(UIView*)adView andAdDictionary:(NSDictionary*)adDict {
     
+    // make only 1 in 5 moat events OK
+    NSInteger rand = [SAUtils randomNumberBetween:0 maxNumber:100];
+    if (rand > 20) {
+        NSLog(@"[AA:: Info] Moat Display Event not triggered this time");
+        return;
+    }
+    
+    // go ahead
     SUPMoatTracker *tracker = [SUPMoatTracker trackerWithAdView:adView partnerCode:MOAT_DISPLAY_PARTNER_CODE];
     [tracker trackAd:[self mapSADictoToMoatDict:adDict]];
     
@@ -35,6 +44,14 @@
 
 + (void) sendVideoMoatEvent:(AVPlayer*)player andLayer:(AVPlayerLayer*)layer andView:(UIView*)adView andAdDictionary:(NSDictionary*)adDict {
     
+    // make only 1 in 5 moat events OK
+    NSInteger rand = [SAUtils randomNumberBetween:0 maxNumber:100];
+    if (rand > 20) {
+        NSLog(@"[AA:: Info] Moat Video Event not triggered this time");
+        return;
+    }
+    
+    // go ahead
     SUPMoatVideoTracker *tracker = [SUPMoatVideoTracker trackerWithPartnerCode:MOAT_VIDEO_PARTNER_CODE];
     [tracker trackVideoAd:[self mapSADictoToMoatDict:adDict]
        usingAVMoviePlayer:player

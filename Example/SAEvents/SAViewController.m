@@ -7,6 +7,8 @@
 //
 
 #import "SAViewController.h"
+#import "SAEvents.h"
+#import "SAEVents+Moat.h"
 
 @interface SAViewController ()
 
@@ -18,6 +20,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"Here");
+    
+    if ([[SAEvents class] respondsToSelector:@selector(sendDisplayMoatEvent:andAdDictionary:)]){
+        NSLog(@"%@ responds", @"abc");
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
