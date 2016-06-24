@@ -50,6 +50,34 @@
     return CGRectMake(X, Y, W, H);
 }
 
++ (BOOL) isRect:(CGRect)target inRect:(CGRect)frame {
+    // window
+    CGFloat x11 = frame.origin.x;
+    CGFloat y11 = frame.origin.y;
+    CGFloat x12 = frame.origin.x + frame.size.width;
+    CGFloat y12 = frame.origin.y + frame.size.height;
+    
+    // banner
+    CGFloat x21 = target.origin.x;
+    CGFloat y21 = target.origin.y;
+    CGFloat x22 = target.origin.x + target.size.width;
+    CGFloat y22 = target.origin.y + target.size.height;
+    
+    CGFloat x_overlap = MAX(0, MIN(x12, x22)) - MAX(x11, x21);
+    CGFloat y_overlap = MAX(0, MIN(y12, y22)) - MAX(y11, y21);
+    
+    // overlap area
+    CGFloat overlap = x_overlap * y_overlap;
+    
+    // banner area
+    CGFloat barea = target.size.width * target.size.height;
+    
+    // treshold
+    CGFloat treshold = barea / 2.0f;
+    
+    return overlap > treshold;
+}
+
 + (NSInteger) randomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max {
     return min + arc4random_uniform((uint32_t)(max - min + 1));
 }
@@ -174,6 +202,20 @@
 
 + (NSString*) decodeHTMLEntitiesFrom:(NSString*)string {
     return [string stringByDecodingHTMLEntities];
+}
+
++ (NSString*) findBaseURLFromResourceURL:(NSString*)resourceURL {
+    if (!resourceURL) return nil;
+    if (![self isValidURL:resourceURL]) return nil;
+    NSString *workString = [resourceURL stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+    NSArray *components = [workString componentsSeparatedByString:@"/"];
+    NSMutableArray *newComponents = [@[] mutableCopy];
+    for (int i = 0; i < components.count - 1; i++){
+        [newComponents addObject:components[i]];
+    }
+    NSMutableString *result = [[newComponents componentsJoinedByString:@"/"] mutableCopy];
+    if ([self isValidURL:result]) return [result stringByAppendingString:@"/"];
+    return nil;
 }
 
 + (BOOL) isValidURL:(NSObject *)urlObject {
@@ -461,6 +503,24 @@
     [imageString appendString:@"Z54RMwPMADPQOQMEE8+UmAFmgBlgBqzKwP8BSZK5M9OL+AwAAAAASUVORK5CYII="];
     NSData *imageData = [[NSData alloc] initWithBase64EncodedString:imageString options:NSDataBase64DecodingIgnoreUnknownCharacters];
     return [UIImage imageWithData:imageData];
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Colors
+////////////////////////////////////////////////////////////////////////////////
+
+UIColor *UIColorFromHex(int rgbValue) {
+    return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+                           green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+                            blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+                           alpha:1.0];
+}
+
+UIColor *UIColorFromRGB(NSInteger red, NSInteger green, NSInteger blue) {
+    return [UIColor colorWithRed:(CGFloat)((CGFloat)red / 255.0f)
+                           green:(CGFloat)((CGFloat)green / 255.0f)
+                            blue:(CGFloat)((CGFloat)blue / 255.0f)
+                           alpha:1.0f];
 }
 
 ////////////////////////////////////////////////////////////////////////////////

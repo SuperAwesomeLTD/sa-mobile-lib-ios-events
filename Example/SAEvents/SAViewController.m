@@ -27,6 +27,8 @@
         NSLog(@"%@ responds", @"abc");
     }
     
+    [SAEvents sendCustomEvent:@"https://ads.superawesome.tv/v2" withPlacement:7186 withLineItem:30285 andCreative:30169 andEvent:@"custom.PopJame"];
+    
 }
 
 - (void)didReceiveMemoryWarning

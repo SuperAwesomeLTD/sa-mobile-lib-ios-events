@@ -1,9 +1,7 @@
+platform :ios, '6.0'
 
-target 'SAEvents_Example', :exclusive => true do
+target 'SAEvents_Example' do
   pod 'SAEvents', :path => '../'
   pod 'SAEvents/Moat', :path => '../'
 end
 
-target 'SAEvents_Tests', :exclusive => true do
-  pod 'SAEvents', :path => '../'
-end
