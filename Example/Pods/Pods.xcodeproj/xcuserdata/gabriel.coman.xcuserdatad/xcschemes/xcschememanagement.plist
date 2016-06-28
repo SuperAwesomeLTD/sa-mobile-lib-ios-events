@@ -9,17 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SAEvents-SuperAwesome.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SAEvents.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SAUtils-SAUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,11 +22,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A80FEA43B3C4C23AB144D1A23B8A0B7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>503C3E99A6A0C55243D63337F5877502</key>
 		<dict>
 			<key>primary</key>
@@ -48,11 +33,6 @@
 			<true/>
 		</dict>
 		<key>9F94312BE95986D2FEC5EEEF8CA38874</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B6396D3547BB0A1C5137E2C9B52A5100</key>
 		<dict>
 			<key>primary</key>
 			<true/>

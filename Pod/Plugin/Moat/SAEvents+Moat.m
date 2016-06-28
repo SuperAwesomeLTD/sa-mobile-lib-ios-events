@@ -36,17 +36,17 @@
     }
     
     // go ahead
-    [SUPMoatBootstrap injectDelegateWrapper:webView];
+    BOOL allOK = [SUPMoatBootstrap injectDelegateWrapper:webView];
     
     NSMutableString *moatQuery = [[NSMutableString alloc] init];
-    [moatQuery appendFormat:@"moatClientLevel1=%@", [adDict objectForKey:@"SuperAwesome"]];
+    [moatQuery appendFormat:@"moatClientLevel1=%@", @"SuperAwesome"];
     [moatQuery appendFormat:@"&moatClientLevel2=%@", [adDict objectForKey:@"campaign"]];
     [moatQuery appendFormat:@"&moatClientLevel3=%@", [adDict objectForKey:@"line_item"]];
     [moatQuery appendFormat:@"&moatClientLevel4=%@", [adDict objectForKey:@"creative"]];
     [moatQuery appendFormat:@"&moatSlicerLevel1=%@", [adDict objectForKey:@"app"]];
     [moatQuery appendFormat:@"&moatSlicerLevel2=%@", [adDict objectForKey:@"placement"]];
     NSMutableString *moatString = [[NSMutableString alloc] init];
-    [moatString appendFormat:@"<script src=\"https://z.moatads.com/superawesomeinappdisplay731223424656/moatad.js?%@\" type=\"text/javascript\">", moatQuery];
+    [moatString appendFormat:@"<script src=\"https://z.moatads.com/superawesomeinappdisplay731223424656/moatad.js?%@\" type=\"text/javascript\"></script>", moatQuery];
     [webView stringByEvaluatingJavaScriptFromString:moatString];
     
     NSLog(@"[AA :: Info] Sending Display Event to Moat with Script %@", moatString);

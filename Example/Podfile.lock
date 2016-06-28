@@ -1,13 +1,13 @@
 PODS:
-  - SAEvents (1.0.7):
-    - SAEvents/Core (= 1.0.7)
+  - SAEvents (1.1.1):
+    - SAEvents/Core (= 1.1.1)
     - SAUtils
-  - SAEvents/Core (1.0.7):
+  - SAEvents/Core (1.1.1):
     - SAUtils
-  - SAEvents/Moat (1.0.7):
+  - SAEvents/Moat (1.1.1):
     - SAEvents/Core
     - SAUtils
-  - SAUtils (1.2.1)
+  - SAUtils (1.2.2)
 
 DEPENDENCIES:
   - SAEvents (from `../`)
@@ -18,8 +18,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: a28d8337856900c2a5ef8389cf8f67d4144a175f
-  SAUtils: 71cd672943ff5c598eb86c8bf81c2040d9def526
+  SAEvents: 8f3af1db1f596072c7ba8220ecf8e7e6f978b5d9
+  SAUtils: a6d0ad03c8a25c03a6a2a7c153793f2c916ec869
 
 PODFILE CHECKSUM: e4de8515c079c75bdaa6bdbfd4319c76b158419e
 
