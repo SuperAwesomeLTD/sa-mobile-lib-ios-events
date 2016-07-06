@@ -1,9 +1,9 @@
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../Pod/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SAEvents" "${PODS_ROOT}/Headers/Public/SAUtils"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/SAEvents" "$PODS_CONFIGURATION_BUILD_DIR/SAUtils"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/SAEvents" -isystem "${PODS_ROOT}/Headers/Public/SAUtils"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"SAEvents" -l"SAUtils" -framework "SUPMoatMobileAppKit" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SAEvents" "${PODS_ROOT}/Headers/Public/SANetworking" "${PODS_ROOT}/Headers/Public/SAUtils"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/SAEvents" "$PODS_CONFIGURATION_BUILD_DIR/SANetworking" "$PODS_CONFIGURATION_BUILD_DIR/SAUtils"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/SAEvents" -isystem "${PODS_ROOT}/Headers/Public/SANetworking" -isystem "${PODS_ROOT}/Headers/Public/SAUtils"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"SAEvents" -l"SANetworking" -l"SAUtils" -framework "SUPMoatMobileAppKit" -framework "SystemConfiguration"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods
