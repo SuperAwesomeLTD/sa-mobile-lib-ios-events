@@ -48,7 +48,7 @@
     [moatQuery appendFormat:@"&moatSlicerLevel1=%@", [adDict objectForKey:@"app"]];
     [moatQuery appendFormat:@"&moatSlicerLevel2=%@", [adDict objectForKey:@"placement"]];
     
-    return [NSString stringWithFormat:@"<script src=\"https://%@/%@/%@?%@\" type=\"text/javascript\"></script>", MOAT_SERVER, MOAT_DISPLAY_PARTNER_CODE, MOAT_URL, moatQuery];
+    return [NSString stringWithFormat:@"<script src=\"%@/%@/%@?%@\" type=\"text/javascript\"></script>", MOAT_SERVER, MOAT_DISPLAY_PARTNER_CODE, MOAT_URL, moatQuery];
 }
 
 + (void) sendVideoMoatEvent:(AVPlayer*)player andLayer:(AVPlayerLayer*)layer andView:(UIView*)adView andAdDictionary:(NSDictionary*)adDict {
