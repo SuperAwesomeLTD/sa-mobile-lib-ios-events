@@ -25,7 +25,7 @@
         NSLog(@"%@ responds", @"abc");
     }
     
-    [SAEvents sendCustomEvent:@"https://ads.superawesome.tv/v2" withPlacement:7186 withLineItem:30285 andCreative:30169 andEvent:@"custom.PopJame"];
+    [SAEvents sendCustomEvent:@"https://ads.superawesome.tv/v2" withPlacement:7186 withLineItem:30285 andCreative:30169 andEvent:@"custom.PopJam"];
     [SAEvents sendEventToURL:@"https://ads.superawesome.tv/v2/video/impression?placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=8720845"];
     [SAEvents sendEventToURL:@"https://ads.superawesome.tv/v2/video/tracking?event=start&placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=9833859"];
     
