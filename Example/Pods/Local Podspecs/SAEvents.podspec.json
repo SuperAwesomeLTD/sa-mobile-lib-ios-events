@@ -1,6 +1,6 @@
 {
   "name": "SAEvents",
-  "version": "1.1.2",
+  "version": "1.1.6",
   "summary": "Library that sends Events to AwesomeAds AdServer",
   "description": "Sends custom AA events as well as Moat events",
   "homepage": "https://github.com/SuperAwesomeLTD/sa-mobile-lib-ios-events",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/SuperAwesomeLTD/sa-mobile-lib-ios-events.git",
-    "tag": "1.1.2"
+    "tag": "1.1.6"
   },
   "platforms": {
     "ios": "6.0"
@@ -22,7 +22,7 @@
   "default_subspecs": "Core",
   "dependencies": {
     "SAUtils": [
-      "1.2.3"
+      "1.2.4"
     ],
     "SANetworking": [
       "0.1.1"
