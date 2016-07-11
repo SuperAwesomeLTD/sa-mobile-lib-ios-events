@@ -1,16 +1,16 @@
 PODS:
-  - SAEvents (1.1.6):
-    - SAEvents/Core (= 1.1.6)
-    - SANetworking (= 0.1.1)
+  - SAEvents (1.1.7):
+    - SAEvents/Core (= 1.1.7)
+    - SANetworking (= 0.1.2)
     - SAUtils (= 1.2.4)
-  - SAEvents/Core (1.1.6):
-    - SANetworking (= 0.1.1)
+  - SAEvents/Core (1.1.7):
+    - SANetworking (= 0.1.2)
     - SAUtils (= 1.2.4)
-  - SAEvents/Moat (1.1.6):
+  - SAEvents/Moat (1.1.7):
     - SAEvents/Core
-    - SANetworking (= 0.1.1)
+    - SANetworking (= 0.1.2)
     - SAUtils (= 1.2.4)
-  - SANetworking (0.1.1)
+  - SANetworking (0.1.2)
   - SAUtils (1.2.4)
 
 DEPENDENCIES:
@@ -22,8 +22,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: c783bcfe699f9a593203a8f7961ed7ceb2ea3bd4
-  SANetworking: 13aa56fd53c5b7f5a1a362044cce0d03bd4c3a12
+  SAEvents: 0539594c10cd8648bd64c7a6ffd4011ddfd6f2cc
+  SANetworking: 2e3d79a641857bab4e44d316a42b4725c3573e50
   SAUtils: 938b6c024bd61750b5107ac56f440818166bf2ab
 
 PODFILE CHECKSUM: e4de8515c079c75bdaa6bdbfd4319c76b158419e
