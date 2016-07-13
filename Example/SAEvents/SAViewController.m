@@ -11,7 +11,7 @@
 #import "SAEVents+Moat.h"
 
 @interface SAViewController ()
-
+@property (weak, nonatomic) IBOutlet UIWebView *testWebView;
 @end
 
 @implementation SAViewController
@@ -29,6 +29,19 @@
     [SAEvents sendEventToURL:@"https://ads.superawesome.tv/v2/video/impression?placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=8720845"];
     [SAEvents sendEventToURL:@"https://ads.superawesome.tv/v2/video/tracking?event=start&placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=9833859"];
     
+    NSDictionary *dict = @{
+                           @"advertiser":@(1),
+                           @"campaign":@(117),
+                           @"line_item":@(138),
+                           @"creative":@(114),
+                           @"app":@(105),
+                           @"placement":@(113)
+                           };
+    NSString *moatString = [SAEvents sendDisplayMoatEvent:_testWebView andAdDictionary:dict];
+    NSString *fullString = @"<html><head><title>Test</title></head><body><div>Test HTML</div>_MOAT_</body></html>";
+    fullString = [fullString stringByReplacingOccurrencesOfString:@"_MOAT_" withString:moatString];
+    [_testWebView loadHTMLString:fullString baseURL:NULL];
+    NSLog(@"%@", fullString);
 }
 
 - (void)didReceiveMemoryWarning
