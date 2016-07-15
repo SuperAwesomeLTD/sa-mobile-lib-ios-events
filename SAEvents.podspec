@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SAEvents"
-  s.version          = "1.2.0"
+  s.version          = "1.2.1"
   s.summary          = "Library that sends Events to AwesomeAds AdServer"
   s.description      = <<-DESC
 		       Sends custom AA events as well as Moat events
@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/SuperAwesomeLTD/sa-mobile-lib-ios-events"
   s.license          = { :type => "GNU GENERAL PUBLIC LICENSE Version 3", :file => "LICENSE" }
   s.author           = { "Gabriel Coman" => "gabriel.coman@superawesome.tv" }
-  s.source           = { :git => "https://github.com/SuperAwesomeLTD/sa-mobile-lib-ios-events.git", :tag => "1.2.0" }
+  s.source           = { :git => "https://github.com/SuperAwesomeLTD/sa-mobile-lib-ios-events.git", :tag => "1.2.1" }
   s.platform     = :ios, '6.0'
   s.requires_arc = true
   s.default_subspec = 'Core'
-  s.dependency 'SAUtils', '1.2.5'
+  s.dependency 'SAUtils', '1.2.6'
   s.dependency 'SANetworking', '0.1.2'
   s.subspec 'Core' do |c|
     c.source_files = 'Pod/Classes/**/*'
