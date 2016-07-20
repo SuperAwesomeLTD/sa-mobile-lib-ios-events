@@ -57,7 +57,7 @@
                                      @"level4": [adDict objectForKey:@"creative"],
                                      @"slicer1": [adDict objectForKey:@"app"],
                                      @"slicer2": [adDict objectForKey:@"placement"],
-                                     @"slicer3": [adDict objectForKey:@"slicer"]
+                                     @"slicer3": [adDict objectForKey:@"publisher"]
                                      };
     
     // go ahead
