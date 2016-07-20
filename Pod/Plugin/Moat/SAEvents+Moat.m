@@ -36,6 +36,7 @@
     [moatQuery appendFormat:@"&moatClientLevel4=%@", [adDict objectForKey:@"creative"]];
     [moatQuery appendFormat:@"&moatClientSlicer1=%@", [adDict objectForKey:@"app"]];
     [moatQuery appendFormat:@"&moatClientSlicer2=%@", [adDict objectForKey:@"placement"]];
+    [moatQuery appendFormat:@"&moatClientSlicer3=%@", [adDict objectForKey:@"publisher"]];
     
     return [NSString stringWithFormat:@"<script src=\"%@/%@/%@?%@\" type=\"text/javascript\"></script>", MOAT_SERVER, MOAT_DISPLAY_PARTNER_CODE, MOAT_URL, moatQuery];
 }
@@ -55,7 +56,8 @@
                                      @"level3": [adDict objectForKey:@"line_item"],
                                      @"level4": [adDict objectForKey:@"creative"],
                                      @"slicer1": [adDict objectForKey:@"app"],
-                                     @"slicer2": [adDict objectForKey:@"placement"]
+                                     @"slicer2": [adDict objectForKey:@"placement"],
+                                     @"slicer3": [adDict objectForKey:@"slicer"]
                                      };
     
     // go ahead
