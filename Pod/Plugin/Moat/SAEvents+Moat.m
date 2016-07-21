@@ -27,11 +27,11 @@
 + (NSString*) sendDisplayMoatEvent:(UIWebView*)webView andAdDictionary:(NSDictionary*)adDict{
     
     // make only 1 in 5 moat events OK
-//    NSInteger rand = [SAUtils randomNumberBetween:0 maxNumber:100];
-//    if (rand > 20) {
-//        NSLog(@"[AA:: Info] Moat Display Event not triggered this time");
-//        return @"";
-//    }
+    NSInteger rand = [SAUtils randomNumberBetween:0 maxNumber:100];
+    if (rand > 20) {
+        NSLog(@"[AA:: Info] Moat Display Event not triggered this time");
+        return @"";
+    }
     
 #if HAS_MOAT
     NSLog(@"MOAT can be triggered");
