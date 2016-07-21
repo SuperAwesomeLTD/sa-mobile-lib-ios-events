@@ -35,7 +35,8 @@
                            @"line_item":@(138),
                            @"creative":@(114),
                            @"app":@(105),
-                           @"placement":@(113)
+                           @"placement":@(113),
+                           @"publisher":@(1)
                            };
     NSString *moatString = [SAEvents sendDisplayMoatEvent:_testWebView andAdDictionary:dict];
     NSString *fullString = @"<html><head><title>Test</title></head><body><div>Test HTML</div>_MOAT_</body></html>";
