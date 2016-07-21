@@ -41,7 +41,8 @@
         ]
       },
       "source_files": "Pod/Plugin/Moat/*",
-      "vendored_frameworks": "Pod/Frameworks/SUPMoatMobileAppKit.framework"
+      "vendored_libraries": "Pod/Libraries/libSUPMoatMobileAppKit.a",
+      "libraries": "SUPMoatMobileAppKit"
     }
   ]
 }

@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: 5fe015c5a17f6de20f5a970748fd20167189cd9d
+  SAEvents: ffaa15fe106341937c0ad93fea729280fde0952c
   SANetworking: 2e3d79a641857bab4e44d316a42b4725c3573e50
   SAUtils: 09a55bc8ccf99b96634f374773ec8fccaf07b5cc
 

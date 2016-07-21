@@ -8,8 +8,8 @@
 
 #import "SAEvents+Moat.h"
 #if defined(__has_include)
-#if __has_include("SUPMoatMobileAppKit/SUPMoatMobileAppKit.h")
-    #import "SUPMoatMobileAppKit/SUPMoatMobileAppKit.h"
+#if __has_include("SUPMoatMobileAppKit.h")
+    #import "SUPMoatMobileAppKit.h"
     #define HAS_MOAT true
 #else 
     #define HAS_MOAT false
@@ -27,11 +27,11 @@
 + (NSString*) sendDisplayMoatEvent:(UIWebView*)webView andAdDictionary:(NSDictionary*)adDict{
     
     // make only 1 in 5 moat events OK
-    NSInteger rand = [SAUtils randomNumberBetween:0 maxNumber:100];
-    if (rand > 20) {
-        NSLog(@"[AA:: Info] Moat Display Event not triggered this time");
-        return @"";
-    }
+//    NSInteger rand = [SAUtils randomNumberBetween:0 maxNumber:100];
+//    if (rand > 20) {
+//        NSLog(@"[AA:: Info] Moat Display Event not triggered this time");
+//        return @"";
+//    }
     
 #if HAS_MOAT
     NSLog(@"MOAT can be triggered");
