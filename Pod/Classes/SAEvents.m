@@ -12,11 +12,7 @@
 
 @implementation SAEvents
 
-static bool isSATrackingEnabled = true;
-
 + (void) sendEventToURL:(NSString *)url {
-    if (!isSATrackingEnabled) return;
-    
     SANetwork *network = [[SANetwork alloc] init];
     [network sendGET:url
            withQuery:@{}
@@ -38,8 +34,6 @@ static bool isSATrackingEnabled = true;
                 andEvent:(NSString*) event
 {
     
-    if (!isSATrackingEnabled) return;
-    
     NSDictionary *data = @{
         @"placement": @(placementId),
         @"creative": @(creative),
@@ -54,23 +48,6 @@ static bool isSATrackingEnabled = true;
     
     NSString *url = [NSString stringWithFormat:@"%@/event?%@", baseUrl, [SAUtils formGetQueryFromDict:cjson]];
     [self sendEventToURL:url];
-}
- 
-+ (NSString*) sendDisplayMoatEvent:(UIWebView*)webView andAdDictionary:(NSDictionary*)adDict {
-    return @"";
-}
-
-+ (void) sendVideoMoatEvent:(AVPlayer *)player andLayer:(AVPlayerLayer *)layer andView:(UIView *)adView andAdDictionary:(NSDictionary *)adDict {
-    // do nothing
-}
-
-// functions to enable or disable tracking
-+ (void) enableSATracking {
-    isSATrackingEnabled = true;
-}
-
-+ (void) disableSATracking {
-    isSATrackingEnabled = false;
 }
 
 @end
