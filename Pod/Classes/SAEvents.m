@@ -21,13 +21,14 @@ static bool isSATrackingEnabled = true;
     [network sendGET:url
            withQuery:@{}
            andHeader:@{@"Content-Type":@"application/json",
-                       @"User-Agent":[SAUtils getUserAgent]
-                       }
-          andSuccess:^(NSInteger status, NSString *payload) {
-        // success
-    } andFailure:^{
-        // failure
-    }];
+                       @"User-Agent":[SAUtils getUserAgent]}
+        withResponse:^(NSInteger status, NSString *payload, BOOL success) {
+            if (success) {
+                NSLog(@"Event sent OK!");
+            } else {
+                NSLog(@"Event sent NOK!");
+            }
+        }];
 }
 
 + (void) sendCustomEvent:(NSString*) baseUrl
