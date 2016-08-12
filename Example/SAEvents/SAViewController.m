@@ -48,13 +48,23 @@
                                @"placement":@(113),
                                @"publisher":@(1)
                                };
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [class performSelector:selector withObject:_testWebView withObject:dict];
-#pragma clang diagnostic pop
+        
+        NSMethodSignature *signature = [class methodSignatureForSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:class];
+        [invocation setSelector:selector];
+        [invocation setArgument:&_testWebView atIndex:2];
+        [invocation setArgument:&dict atIndex:3];
+        [invocation retainArguments];
+        [invocation invoke];
+        void *tmpResult;
+        [invocation getReturnValue:&tmpResult];
+        moatString = (__bridge NSString*)tmpResult;
     } else {
         NSLog(@"Does not respond");
     }
+    
+    
     
     fullString = [fullString stringByReplacingOccurrencesOfString:@"_MOAT_" withString:moatString];
     [_testWebView loadHTMLString:fullString baseURL:NULL];
