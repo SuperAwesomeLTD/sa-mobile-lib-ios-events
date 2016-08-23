@@ -32,7 +32,7 @@
     NSArray *tracks = [events filterBy:@"event" withValue:key];
     NSMutableArray *urls = [@[] mutableCopy];
     for (id track in tracks) {
-        NSString *url = [tracks valueForKey:@"URL"];
+        NSString *url = [track valueForKey:@"URL"];
         if (url) {
             [urls addObject:url];
         }
