@@ -26,6 +26,9 @@
     ],
     "SANetworking": [
       "0.1.5"
+    ],
+    "SAModelSpace": [
+      "0.2.2"
     ]
   },
   "subspecs": [
