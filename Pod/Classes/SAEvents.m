@@ -25,17 +25,13 @@
 
 @implementation SAEvents
 
-- (id) init {
-    if (self = [super init]) {
-        
-    }
-    
-    return self;
-}
-
 - (void) setAd:(SAAd *)ad {
     _ad = ad;
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// MARK: Normal events
+////////////////////////////////////////////////////////////////////////////////
 
 - (void) sendEventToURL:(NSString *)url {
     SANetwork *network = [[SANetwork alloc] init];
@@ -56,7 +52,7 @@
     // safety check
     if (_ad == NULL) return;
     
-    
+    // get the necessary events
     NSArray *tracks = [_ad.creative.events filterBy:@"event" withValue:key];
     NSMutableArray *urls = [@[] mutableCopy];
     for (id track in tracks) {
@@ -66,33 +62,15 @@
         }
     }
     
+    // send events
     for (NSString *url in urls) {
         [self sendEventToURL:url];
     }
 }
 
-- (void) sendCustomEvent:(NSString*) baseUrl
-           withPlacement:(NSInteger) placementId
-            withLineItem:(NSInteger) lineItem
-             andCreative:(NSInteger) creative
-                andEvent:(NSString*) event
-{
-    
-    NSDictionary *data = @{
-        @"placement": @(placementId),
-        @"creative": @(creative),
-        @"line_item": @(lineItem),
-        @"event": event
-    };
-    NSDictionary *cjson = @{
-        @"rnd": @([SAUtils getCachebuster]),
-        @"ct": @([SAUtils getNetworkConnectivity]),
-        @"data": [SAUtils encodeJSONDictionaryFromNSDictionary:data]
-    };
-    
-    NSString *url = [NSString stringWithFormat:@"%@/event?%@", baseUrl, [SAUtils formGetQueryFromDict:cjson]];
-    [self sendEventToURL:url];
-}
+////////////////////////////////////////////////////////////////////////////////
+// MARK: Viewable Impression
+////////////////////////////////////////////////////////////////////////////////
 
 - (void) sendViewableForFullscreen {
     // safety check
@@ -157,6 +135,94 @@
     
     // fire the timer
     [_viewabilityTimer fire];
+    
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// MARK: Handle Moat events
+////////////////////////////////////////////////////////////////////////////////
+
+- (NSString*) moatEventForWebPlayer:(id)webplayer {
+    
+    // form the moat dictionary
+    NSDictionary *moatDict = @{
+                               @"advertiser": @(_ad.advertiserId),
+                               @"campaign": @(_ad.campaignId),
+                               @"line_item": @(_ad.lineItemId),
+                               @"creative": @(_ad.creative._id),
+                               @"app": @(_ad.app),
+                               @"placement": @(_ad.placementId),
+                               @"publisher": @(_ad.publisherId)
+                               };
+    
+    // basic moat tracking string
+    NSString *moatString = @"";
+    
+    // get the class
+    Class class = NSClassFromString(@"SAEvents");
+    
+    // get the selector
+    SEL selector = NSSelectorFromString(@"sendDisplayMoatEvent:andAdDictionary:");
+    
+    // try to see if the class responds to the selector
+    if ([class instancesRespondToSelector:selector]) {
+        
+        // form the invocation
+        NSMethodSignature *signature = [class methodSignatureForSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:class];
+        [invocation setSelector:selector];
+        [invocation setArgument:&webplayer atIndex:2];
+        [invocation setArgument:&moatDict atIndex:3];
+        [invocation retainArguments];
+        [invocation invoke];
+        void *tmpResult;
+        [invocation getReturnValue:&tmpResult];
+        
+        // get the result
+        moatString = (__bridge NSString*)tmpResult;
+    }
+    
+    // return the moat-ified string
+    return moatString;
+}
+
+- (void) moatEventForVideoPlayer:(AVPlayer*)player withLayer:(AVPlayerLayer*)layer andView:(UIView*)view {
+    
+    // also get the moat dict, another needed parameter
+    NSDictionary *moatDict = @{
+                               @"advertiser":@(_ad.advertiserId),
+                               @"campaign":@(_ad.campaignId),
+                               @"line_item":@(_ad.lineItemId),
+                               @"creative":@(_ad.creative._id),
+                               @"app":@(_ad.app),
+                               @"placement":@(_ad.placementId),
+                               @"publisher":@(_ad.publisherId)
+                               };
+    
+    // get the class
+    Class class = NSClassFromString(@"SAEvents");
+    
+    // get the selector
+    SEL selector = NSSelectorFromString(@"sendVideoMoatEvent:andLayer:andView:andAdDictionary:");
+    
+    // try to see if the class responds to the selector
+    if ([class respondsToSelector:selector]) {
+        
+        // create the invocation
+        NSMethodSignature *signature = [class methodSignatureForSelector:selector];
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        [invocation setTarget:class];
+        [invocation setSelector:selector];
+        [invocation setArgument:&player atIndex:2];
+        [invocation setArgument:&layer atIndex:3];
+        [invocation setArgument:&view atIndex:4];
+        [invocation setArgument:&moatDict atIndex:5];
+        [invocation retainArguments];
+        
+        // finally invoke
+        [invocation invoke];
+    }
     
 }
 
