@@ -162,33 +162,34 @@
                                @"publisher": @(_ad.publisherId)
                                };
     
-    // basic moat tracking string
+    // invoke the Moat event
     NSString *moatString = @"";
-    
-    // get the class string
-    // Class class = NSClassFromString(@"SAEvents");
-    
-    // get the selector
-    SEL selector = NSSelectorFromString(@"sendDisplayMoatEvent:andAdDictionary:");
-    
-    // try to see if it responds
-    if ([self respondsToSelector:selector]){
-        
-        // form the invocation
-        NSMethodSignature *signature = [self methodSignatureForSelector:selector];
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-        [invocation setTarget:self];
-        [invocation setSelector:selector];
-        [invocation setArgument:&webplayer atIndex:2];
-        [invocation setArgument:&moatDict atIndex:3];
-        [invocation retainArguments];
-        [invocation invoke];
-        void *tmpResult;
-        [invocation getReturnValue:&tmpResult];
-        
-        // get the result
-        moatString = (__bridge NSString*)tmpResult;
+    NSValue *moatValue = [SAUtils invoke:@"sendDisplayMoatEvent:andAdDictionary:" onTarget:self, webplayer, moatDict];
+    if (moatValue) {
+        [moatValue getValue:&moatString];
     }
+    
+//    // get the selector
+//    SEL selector = NSSelectorFromString(@"sendDisplayMoatEvent:andAdDictionary:");
+//    
+//    // try to see if it responds
+//    if ([self respondsToSelector:selector]){
+//        
+//        // form the invocation
+//        NSMethodSignature *signature = [self methodSignatureForSelector:selector];
+//        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+//        [invocation setTarget:self];
+//        [invocation setSelector:selector];
+//        [invocation setArgument:&webplayer atIndex:2];
+//        [invocation setArgument:&moatDict atIndex:3];
+//        [invocation retainArguments];
+//        [invocation invoke];
+//        void* tmpResult;
+//        [invocation getReturnValue:&tmpResult];
+//        
+//        // get the result
+//        moatString = (__bridge NSString*)tmpResult;
+//    }
     
     // return the moat-ified string
     return moatString;
@@ -207,29 +208,29 @@
                                @"publisher":@(_ad.publisherId)
                                };
     
-    // get the class
-    // Class class = NSClassFromString(@"SAEvents");
+    // invoke the moat event
+    [SAUtils invoke:@"sendVideoMoatEvent:andLayer:andView:andAdDictionary:" onTarget:self, player, layer, view, moatDict];
     
-    // get the selector
-    SEL selector = NSSelectorFromString(@"sendVideoMoatEvent:andLayer:andView:andAdDictionary:");
-    
-    // try to see if the class responds to the selector
-    if ([self respondsToSelector:selector]) {
-        
-        // create the invocation
-        NSMethodSignature *signature = [self methodSignatureForSelector:selector];
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-        [invocation setTarget:self];
-        [invocation setSelector:selector];
-        [invocation setArgument:&player atIndex:2];
-        [invocation setArgument:&layer atIndex:3];
-        [invocation setArgument:&view atIndex:4];
-        [invocation setArgument:&moatDict atIndex:5];
-        [invocation retainArguments];
-        
-        // finally invoke
-        [invocation invoke];
-    }
+//    // get the selector
+//    SEL selector = NSSelectorFromString(@"sendVideoMoatEvent:andLayer:andView:andAdDictionary:");
+//    
+//    // try to see if the class responds to the selector
+//    if ([self respondsToSelector:selector]) {
+//        
+//        // create the invocation
+//        NSMethodSignature *signature = [self methodSignatureForSelector:selector];
+//        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+//        [invocation setTarget:self];
+//        [invocation setSelector:selector];
+//        [invocation setArgument:&player atIndex:2];
+//        [invocation setArgument:&layer atIndex:3];
+//        [invocation setArgument:&view atIndex:4];
+//        [invocation setArgument:&moatDict atIndex:5];
+//        [invocation retainArguments];
+//        
+//        // finally invoke
+//        [invocation invoke];
+//    }
     
 }
 

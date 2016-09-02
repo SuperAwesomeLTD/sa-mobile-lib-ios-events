@@ -72,7 +72,7 @@
         [invocation setArgument:&dict atIndex:3];
         [invocation retainArguments];
         [invocation invoke];
-        void *tmpResult;
+        CFTypeRef tmpResult;
         [invocation getReturnValue:&tmpResult];
         moatString = (__bridge NSString*)tmpResult;
     } else {
