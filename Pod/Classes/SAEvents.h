@@ -58,4 +58,13 @@
  */
 - (NSString*) moatEventForWebPlayer:(id)webplayer;
 
+/**
+ *  Method that starts MOAT tracking for video
+ *
+ *  @param player the video player
+ *  @param layer  the video layer
+ *  @param view   the containing view
+ */
+- (void) moatEventForVideoPlayer:(AVPlayer*)player withLayer:(AVPlayerLayer*)layer andView:(UIView*)view;
+
 @end
