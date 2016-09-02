@@ -165,19 +165,19 @@
     // basic moat tracking string
     NSString *moatString = @"";
     
-    // get the class
-    Class class = NSClassFromString(@"SAEvents");
+    // get the class string
+    // Class class = NSClassFromString(@"SAEvents");
     
     // get the selector
     SEL selector = NSSelectorFromString(@"sendDisplayMoatEvent:andAdDictionary:");
     
-    // try to see if the class responds to the selector
-    if ([class instancesRespondToSelector:selector]) {
+    // try to see if it responds
+    if ([self respondsToSelector:selector]){
         
         // form the invocation
-        NSMethodSignature *signature = [class methodSignatureForSelector:selector];
+        NSMethodSignature *signature = [self methodSignatureForSelector:selector];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-        [invocation setTarget:class];
+        [invocation setTarget:self];
         [invocation setSelector:selector];
         [invocation setArgument:&webplayer atIndex:2];
         [invocation setArgument:&moatDict atIndex:3];
@@ -208,18 +208,18 @@
                                };
     
     // get the class
-    Class class = NSClassFromString(@"SAEvents");
+    // Class class = NSClassFromString(@"SAEvents");
     
     // get the selector
     SEL selector = NSSelectorFromString(@"sendVideoMoatEvent:andLayer:andView:andAdDictionary:");
     
     // try to see if the class responds to the selector
-    if ([class respondsToSelector:selector]) {
+    if ([self respondsToSelector:selector]) {
         
         // create the invocation
-        NSMethodSignature *signature = [class methodSignatureForSelector:selector];
+        NSMethodSignature *signature = [self methodSignatureForSelector:selector];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-        [invocation setTarget:class];
+        [invocation setTarget:self];
         [invocation setSelector:selector];
         [invocation setArgument:&player atIndex:2];
         [invocation setArgument:&layer atIndex:3];
