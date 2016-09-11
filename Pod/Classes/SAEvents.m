@@ -27,10 +27,19 @@
 
 @interface SAEvents ()
 @property (nonatomic, strong) SAAd *ad;
+@property (nonatomic, strong) SANetwork *network;
 @property (nonatomic, strong) NSTimer *viewabilityTimer;
 @end
 
 @implementation SAEvents
+
+- (id) init {
+    if (self = [super init]) {
+        _network = [[SANetwork alloc] init];
+    }
+    
+    return self;
+}
 
 - (void) setAd:(SAAd *)ad {
     _ad = ad;
@@ -41,8 +50,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 - (void) sendEventToURL:(NSString *)url {
-    SANetwork *network = [[SANetwork alloc] init];
-    [network sendGET:url
+    [_network sendGET:url
            withQuery:@{}
            andHeader:@{@"Content-Type":@"application/json",
                        @"User-Agent":[SAUtils getUserAgent]}
@@ -151,6 +159,7 @@
     }
     
     _viewabilityTimer = NULL;
+    _network = NULL;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
