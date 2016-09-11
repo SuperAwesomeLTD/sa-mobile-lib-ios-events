@@ -72,7 +72,7 @@
     NSMutableArray *urls = [@[] mutableCopy];
     for (id track in tracks) {
         NSString *url = [track valueForKey:@"URL"];
-        if (url) {
+        if (url != NULL && url != [NSNull null] && ![url isEqualToString:@""]) {
             [urls addObject:url];
         }
     }
