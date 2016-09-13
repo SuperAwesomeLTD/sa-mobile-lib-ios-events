@@ -55,11 +55,7 @@
            andHeader:@{@"Content-Type":@"application/json",
                        @"User-Agent":[SAUtils getUserAgent]}
         withResponse:^(NSInteger status, NSString *payload, BOOL success) {
-            if (success) {
-                NSLog(@"Event sent OK!");
-            } else {
-                NSLog(@"Event sent NOK!");
-            }
+            NSLog(@"Event [%d] | [%ld] | %@", success, (long) status, payload);
         }];
 }
 
