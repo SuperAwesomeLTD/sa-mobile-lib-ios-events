@@ -176,11 +176,7 @@
                                };
     
     // invoke the Moat event
-    NSString *moatString = @"";
-    NSValue *moatValue = [SAUtils invoke:@"sendDisplayMoatEvent:andAdDictionary:" onTarget:self, webplayer, moatDict];
-    if (moatValue) {
-        [moatValue getValue:&moatString];
-    }
+    NSString *moatString = [self performSelector:@selector(sendDisplayMoatEvent:andAdDictionary:) withObject:webplayer withObject:moatDict];
     
     // return the moat-ified string
     return moatString;
