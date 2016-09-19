@@ -68,7 +68,7 @@
     NSMutableArray *urls = [@[] mutableCopy];
     for (id track in tracks) {
         NSString *url = [track valueForKey:@"URL"];
-        if (url != NULL && url != [NSNull null] && ![url isEqualToString:@""]) {
+        if (url != NULL && ((NSNull*)url != [NSNull null]) && ![url isEqualToString:@""]) {
             [urls addObject:url];
         }
     }
@@ -176,9 +176,13 @@
                                };
     
     // invoke the Moat event
-    NSString *moatString = [self performSelector:@selector(sendDisplayMoatEvent:andAdDictionary:) withObject:webplayer withObject:moatDict];
+    NSString *moatString = @"";
+    SEL selector = NSSelectorFromString(@"sendDisplayMoatEvent:andAdDictionary:");
+    if ([self respondsToSelector:selector]) {
+        moatString = [self performSelector:selector withObject:webplayer withObject:moatDict];
+    }
     
-    // return the moat-ified string
+        // return the moat-ified string
     return moatString;
 }
 
