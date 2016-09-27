@@ -14,5 +14,6 @@ typedef NS_ENUM(NSInteger, SACreativeFormat) {
     image = 0,
     video = 1,
     rich = 2,
-    tag = 3
+    tag = 3,
+    gamewall = 4
 };
