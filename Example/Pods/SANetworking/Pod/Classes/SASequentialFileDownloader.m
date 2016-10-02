@@ -172,6 +172,13 @@
             }
             // if I've tried for more than 3 times, just take the next item
             else {
+                
+                // send error responses
+                for (seqDownloadResponse response in [_currentItem responses]) {
+                    response (false, nil);
+                }
+                
+                // go to next on queue
                 [self checkOnQueue];
             }
         }
