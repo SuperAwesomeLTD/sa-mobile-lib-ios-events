@@ -1,7 +1,10 @@
 platform :ios, '7.0'
 
 target 'SAEvents_Example' do
-  pod 'SAEvents', :path => '../'
-  pod 'SAEvents/Moat', :path => '../'
+    pod 'SAEvents', :path => '../'
+    pod 'SAEvents/Moat', :path => '../'
+    
+    target 'SAEvents_Tests' do
+        inherit! :search_paths
+    end 
 end
-

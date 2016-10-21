@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.default_subspec = 'Core'
-  s.dependency 'SAUtils', '1.3.9'
-  s.dependency 'SANetworking', '0.2.1'
-  s.dependency 'SAModelSpace', '0.2.7'
+  s.dependency 'SAUtils', '1.4.3'
+  s.dependency 'SANetworking', '0.2.4'
+  s.dependency 'SAModelSpace', '0.2.8'
   s.subspec 'Core' do |c|
     c.source_files = 'Pod/Classes/**/*'
   end
