@@ -131,7 +131,7 @@
     // now play some events
     __block XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
     
-    [event sendViewableImpressionForView:testView andTicks:10 withResponse:^(BOOL success, NSInteger status) {
+    [event sendViewableImpressionForView:testView andTicks:5 withResponse:^(BOOL success, NSInteger status) {
         XCTAssertFalse(success);
         XCTAssertEqual(status, 0);
         [expectation fulfill];
@@ -153,11 +153,14 @@
         NSLog(@"Removal tick %ld", (long)ticks);
         
         // remove the view after 5 ticks!
-        if (ticks >= 5) {
+        if (ticks >= 2) {
             [testView removeFromSuperview];
             testView = nil;
             [_viewabilityTimer invalidate];
             _viewabilityTimer = nil;
+            
+            XCTAssertNil(testView);
+            XCTAssertNil(_viewabilityTimer);
             
             NSLog(@"Removed view and invalidated timer!");
         }

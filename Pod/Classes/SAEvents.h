@@ -86,4 +86,9 @@ typedef void (^saEventResponse)(BOOL success, NSInteger status);
  */
 - (void) close;
 
+/**
+ *  Disable moat limiting
+ */
+- (void) disableMoatLimiting;
+
 @end

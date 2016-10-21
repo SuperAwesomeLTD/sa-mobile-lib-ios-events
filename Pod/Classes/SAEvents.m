@@ -30,6 +30,7 @@
 @property (nonatomic, strong) SAAd *ad;
 @property (nonatomic, strong) SANetwork *network;
 @property (nonatomic, strong) NSTimer *viewabilityTimer;
+@property (nonatomic, assign) BOOL moatLimiting;
 @end
 
 @implementation SAEvents
@@ -37,6 +38,7 @@
 - (id) init {
     if (self = [super init]) {
         _network = [[SANetwork alloc] init];
+        _moatLimiting = true;
     }
     
     return self;
@@ -197,6 +199,10 @@
 
 - (NSString*) moatEventForWebPlayer:(id)webplayer {
     
+    if (_moatLimiting && [SAUtils randomNumberBetween:0 maxNumber:100] >= 80){
+        return @"";
+    }
+    
     // form the moat dictionary
     NSDictionary *moatDict = @{
                                @"advertiser": @(_ad.advertiserId),
@@ -221,6 +227,10 @@
 
 - (void) moatEventForVideoPlayer:(AVPlayer*)player withLayer:(AVPlayerLayer*)layer andView:(UIView*)view {
     
+    if (_moatLimiting && [SAUtils randomNumberBetween:0 maxNumber:100] >= 80) {
+        return;
+    }
+    
     // also get the moat dict, another needed parameter
     NSDictionary *moatDict = @{
                                @"advertiser":@(_ad.advertiserId),
@@ -235,6 +245,10 @@
     // invoke the moat event
     [SAUtils invoke:@"sendVideoMoatEvent:andLayer:andView:andAdDictionary:" onTarget:self, player, layer, view, moatDict];
     
+}
+
+- (void) disableMoatLimiting {
+    _moatLimiting = false;
 }
 
 @end
