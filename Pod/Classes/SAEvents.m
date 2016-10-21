@@ -90,7 +90,7 @@
     
     // some vars to keep track of events
     __block NSInteger max = [urls count];
-    __block NSInteger successfull = 0;
+    __block NSInteger successful = 0;
     __block NSInteger current = 0;
     
     // send events
@@ -98,17 +98,19 @@
         for (NSString *url in urls) {
             [self sendEventToURL:url withResponse:^(BOOL success, NSInteger status) {
                 // increment
-                successfull += success ? 1 : 0;
+                successful += success ? 1 : 0;
                 current += 1;
                 
                 // once you reach the end
                 if (current == max && response != nil) {
-                    response (current == successfull ? true : false, current == successfull ? 200 : 0);
+                    response (current == successful ? true : false, current == successful ? 200 : 0);
                 }
             }];
         }
     } else {
-        response (false, 0);
+        if (response != nil) {
+            response (false, 0);
+        }
     }
 }
 

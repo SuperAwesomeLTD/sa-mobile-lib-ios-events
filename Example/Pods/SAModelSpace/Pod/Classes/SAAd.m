@@ -72,7 +72,7 @@
     _app = 0;
     _lineItemId = 0;
     _campaignId = 0;
-    _publisherId = 0;
+    _placementId = 0;
     _campaignType = cpm;
     _test = false;
     _isFallback = false;
