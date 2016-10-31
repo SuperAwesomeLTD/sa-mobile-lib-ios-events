@@ -168,5 +168,30 @@
     }];
 }
 
+- (void) testSendAllEvents7 {
+    // given
+    SAEvents *event = [[SAEvents alloc] init];
+    
+    XCTAssertNotNil(event);
+    
+    // do not set add
+    [event setAd:nil];
+    
+    // now play some events
+    __block XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
+    
+    [event sendAllEventsForKey:@"err_impression" withResponse:^(BOOL success, NSInteger status) {
+        XCTAssertFalse(success);
+        XCTAssertEqual(status, 0);
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:15.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
 
 @end

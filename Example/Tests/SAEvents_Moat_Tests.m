@@ -69,4 +69,30 @@
     XCTAssertTrue([moatString rangeOfString:@"moatClientSlicer3=1"].location != NSNotFound);    
 }
 
+- (void) testMoat2 {
+    // setup
+    SAEvents *moatEvt = [[SAEvents alloc] init];
+    [moatEvt disableMoatLimiting];
+    
+    XCTAssertNotNil(_ad);
+    
+    XCTAssertNotNil(moatEvt);
+    XCTAssertNotNil(_vc);
+    XCTAssertNotNil(_vc.view);
+    
+    // add a new ad for the viewable impression to work OK
+    // [event setAd:_ad];
+    
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(30, 50, 300, 250)];
+    
+    XCTAssertNotNil(webView);
+    
+    [_vc.view addSubview:webView];
+    
+    NSString *moatString = [moatEvt moatEventForWebPlayer:webView];
+    
+    XCTAssertNotNil(moatString);
+    XCTAssertTrue([moatString isEqualToString:@""]);
+}
+
 @end

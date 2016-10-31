@@ -115,6 +115,41 @@
     XCTAssertNotNil(_vc.view);
     
     // create a new view
+    UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(-50, -30, 120, 50)];
+    [_vc.view addSubview:testView];
+    
+    // given
+    SAEvents *event = [[SAEvents alloc] init];
+    
+    XCTAssertNotNil(_ad);
+    XCTAssertNotNil(_ad.creative.events);
+    XCTAssertNotNil(event);
+    
+    // add a new ad for the viewable impression to work OK
+    // [event setAd:_ad];
+    
+    // now play some events
+    __block XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
+    
+    [event sendViewableImpressionForView:testView andTicks:2 withResponse:^(BOOL success, NSInteger status) {
+        XCTAssertFalse(success);
+        XCTAssertEqual(status, 0);
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:15.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
+- (void) testViewableImpression4 {
+    // assert
+    XCTAssertNotNil(_vc);
+    XCTAssertNotNil(_vc.view);
+    
+    // create a new view
     __block UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 300, 250)];
     [_vc.view addSubview:testView];
     
