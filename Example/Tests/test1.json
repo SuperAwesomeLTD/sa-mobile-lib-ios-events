@@ -92,11 +92,11 @@
                    },
                    {
                    "event": "impression",
-                   "URL": "https://ads.staging.superawesome.tv/v2/video/impression?placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=8832683&dauid=8798453893251470766&device=phone"
+                   "URL": "https://ads.superawesome.tv/v2/video/impression?placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=9305456&device=web"
                    },
                    {
                    "event": "impression",
-                   "URL": "https://ads.staging.superawesome.tv/v2/video/impression?placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=8832683&dauid=8798453893251470766&device=phone"
+                   "URL": "https://ads.superawesome.tv/v2/video/impression?placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=9305456&device=web"
                    },
                    {
                    "event": "err_impression",
