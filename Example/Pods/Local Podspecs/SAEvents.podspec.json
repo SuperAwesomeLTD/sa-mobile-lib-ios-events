@@ -22,13 +22,13 @@
   "default_subspecs": "Core",
   "dependencies": {
     "SAUtils": [
-      "1.4.5"
+      "1.4.6"
     ],
     "SANetworking": [
-      "0.2.5"
+      "0.2.6"
     ],
     "SAModelSpace": [
-      "0.3.2"
+      "0.3.4"
     ]
   },
   "subspecs": [
