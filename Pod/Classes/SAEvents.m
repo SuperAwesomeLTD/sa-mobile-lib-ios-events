@@ -235,7 +235,7 @@
 - (NSString*) moatEventForWebPlayer:(id)webplayer {
     
     // here calc if moat should be displayed
-    int moatRandInt = [SAUtils randomNumberBetween:0 maxNumber:100];
+    NSInteger moatRandInt = [SAUtils randomNumberBetween:0 maxNumber:100];
     CGFloat moatRand = (CGFloat) (moatRandInt / 100.0f);
     
     if (_ad == nil || (_moatLimiting && moatRand > _ad.moat)) {
@@ -269,7 +269,7 @@
 - (void) moatEventForVideoPlayer:(AVPlayer*)player withLayer:(AVPlayerLayer*)layer andView:(UIView*)view {
     
     // here calc if moat should be displayed
-    int moatRandInt = [SAUtils randomNumberBetween:0 maxNumber:100];
+    NSInteger moatRandInt = [SAUtils randomNumberBetween:0 maxNumber:100];
     CGFloat moatRand = (CGFloat) (moatRandInt / 100.0f);
     
     if (_ad == nil || (_moatLimiting && moatRand > _ad.moat)) {
