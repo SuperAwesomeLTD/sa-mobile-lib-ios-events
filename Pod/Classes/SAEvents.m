@@ -238,6 +238,8 @@
     NSInteger moatRandInt = [SAUtils randomNumberBetween:0 maxNumber:100];
     CGFloat moatRand = (CGFloat) (moatRandInt / 100.0f);
     
+    NSLog(@"Moat rand %.2f vs. ad.moat %.2f", moatRand, _ad.moat);
+    
     if (_ad == nil || (_moatLimiting && moatRand > _ad.moat)) {
         return @"";
     }
