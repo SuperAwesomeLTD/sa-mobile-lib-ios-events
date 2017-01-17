@@ -11,6 +11,8 @@
 #import "SAEvents+Moat.h"
 #import "SAViewController.h"
 #import "SAAd.h"
+#import "SAWebPlayer.h"
+#import "SAVideoPlayer.h"
 
 @interface SAEvents_Moat_Tests : XCTestCase
 @property (nonatomic, strong) SAViewController *vc;
@@ -19,7 +21,7 @@
 
 @implementation SAEvents_Moat_Tests
 
-- (void)setUp {
+- (void) setUp {
     // super setup
     [super setUp];
     
@@ -32,7 +34,7 @@
     _vc = (SAViewController*)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainVC"];
 }
 
-- (void)tearDown {
+- (void) tearDown {
     [super tearDown];
 }
 
@@ -49,13 +51,13 @@
     XCTAssertNotNil(_vc);
     XCTAssertNotNil(_vc.view);
     
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(30, 50, 300, 250)];
+    SAWebPlayer *webplayer = [[SAWebPlayer alloc] initWithFrame:CGRectMake(30, 50, 300, 250)];
     
-    XCTAssertNotNil(webView);
+    XCTAssertNotNil(webplayer);
     
-    [_vc.view addSubview:webView];
+    [_vc.view addSubview:webplayer];
     
-    NSString *moatString = [moatEvt moatEventForWebPlayer:webView];
+    NSString *moatString = [moatEvt moatEventForWebPlayer:webplayer];
     
     XCTAssertNotNil(moatString);
     XCTAssertTrue([moatString rangeOfString:@"https://z.moatads.com/"].location != NSNotFound);
@@ -83,16 +85,42 @@
     // add a new ad for the viewable impression to work OK
     // [event setAd:_ad];
     
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(30, 50, 300, 250)];
+    SAWebPlayer *webplayer = [[SAWebPlayer alloc] initWithFrame:CGRectMake(30, 50, 300, 250)];
     
-    XCTAssertNotNil(webView);
+    XCTAssertNotNil(webplayer);
     
-    [_vc.view addSubview:webView];
+    [_vc.view addSubview:webplayer];
     
-    NSString *moatString = [moatEvt moatEventForWebPlayer:webView];
+    NSString *moatString = [moatEvt moatEventForWebPlayer:webplayer];
     
     XCTAssertNotNil(moatString);
     XCTAssertTrue([moatString isEqualToString:@""]);
+}
+
+- (void) testMoat3 {
+    // setup
+    SAEvents *moatEvt = [[SAEvents alloc] init];
+    [moatEvt disableMoatLimiting];
+    
+    XCTAssertNotNil(_ad);
+    
+    [moatEvt setAd:_ad];
+    
+    XCTAssertNotNil(moatEvt);
+    XCTAssertNotNil(_vc);
+    XCTAssertNotNil(_vc.view);
+    
+    SAVideoPlayer *videoPlayer = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(30, 50, 300, 250)];
+    
+    XCTAssertNotNil(videoPlayer);
+    
+    [_vc.view addSubview:videoPlayer];
+    
+    BOOL moatVideo = [moatEvt moatEventForVideoPlayer:[videoPlayer getPlayer]
+                                            withLayer:[videoPlayer getPlayerLayer]
+                                              andView:_vc.view];
+    
+    XCTAssertTrue(moatVideo);
 }
 
 @end

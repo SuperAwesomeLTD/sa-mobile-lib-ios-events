@@ -21,7 +21,7 @@
 		<key>SAEvents 2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>10</integer>
 		</dict>
 		<key>SAEvents.xcscheme</key>
 		<dict>
@@ -58,40 +58,64 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>SAVideoPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>SAWebPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07BD039E06988B4CCE848276527B6700</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0E469B218ED0F84E18EA155DE0DE364A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2521769031FF0A4A1EAB33DDBBA9102E</key>
+		<key>1C28F4EFF9235CDE0C31021959F1EFB8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D122B44946188765375062DDB6055D2</key>
+		<key>30BAD18CD7CFF0D97E395288F672BD8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B33A1FD869D4CAC812429E5503C6B664</key>
+		<key>3AFD540165D704DB53E57D5E869F2103</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5BBF559D4F62FC6C74E98249A2290D0</key>
+		<key>4AFBB3637942B601F6F12FF485F8C6A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E63AD0CBD22646B0D4EC802421600049</key>
+		<key>6C0276C74472A4A6647E5AD4CD72B379</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E06D8583D0C2F829285BC653FFDE0D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6EDF813174CF7B062ED5CCD76D30098</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBE2E626DA046CDB62F8C2C2DC8B0E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,39 +1,45 @@
 PODS:
-  - SAEvents (1.6.6):
-    - SAEvents/Core (= 1.6.6)
-    - SAModelSpace (= 0.3.7)
-    - SANetworking (= 0.2.8)
-    - SAUtils (= 1.4.7)
-  - SAEvents/Core (1.6.6):
-    - SAModelSpace (= 0.3.7)
-    - SANetworking (= 0.2.8)
-    - SAUtils (= 1.4.7)
-  - SAEvents/Moat (1.6.6):
+  - SAEvents (1.6.8):
+    - SAEvents/Core (= 1.6.8)
+    - SAModelSpace (= 0.3.8)
+    - SANetworking (= 0.2.9)
+    - SAUtils (= 1.5.0)
+  - SAEvents/Core (1.6.8):
+    - SAModelSpace (= 0.3.8)
+    - SANetworking (= 0.2.9)
+    - SAUtils (= 1.5.0)
+  - SAEvents/Moat (1.6.8):
     - SAEvents/Core
-    - SAModelSpace (= 0.3.7)
-    - SANetworking (= 0.2.8)
-    - SAUtils (= 1.4.7)
-  - SAJsonParser (1.3.1)
-  - SAModelSpace (0.3.7):
-    - SAJsonParser (= 1.3.1)
-  - SANetworking (0.2.8)
-  - SAUtils (1.4.7)
+    - SAModelSpace (= 0.3.8)
+    - SANetworking (= 0.2.9)
+    - SAUtils (= 1.5.0)
+  - SAJsonParser (1.3.2)
+  - SAModelSpace (0.3.8):
+    - SAJsonParser (= 1.3.2)
+  - SANetworking (0.2.9)
+  - SAUtils (1.5.0)
+  - SAVideoPlayer (1.1.9)
+  - SAWebPlayer (1.1.1)
 
 DEPENDENCIES:
   - SAEvents (from `../`)
   - SAEvents/Moat (from `../`)
+  - SAVideoPlayer
+  - SAWebPlayer
 
 EXTERNAL SOURCES:
   SAEvents:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: 6d9853cb6534d2f9f5d252d820dac7360cf4cdac
-  SAJsonParser: ba97da3b149e2892efa10bf868b6fe6c42e54829
-  SAModelSpace: ac8994d371ac6f1f7a3d492595de63718ede8146
-  SANetworking: 2aa3cce4a0cdd6e07844c52efc159d675495df8a
-  SAUtils: 4269eb6241847999c45cf776d99888b7632dad3d
+  SAEvents: fd790ad3eb878aa65bc07e2b10d9c7fc0eaee385
+  SAJsonParser: d0db6d8c737c04f8bf4e9474e82825347aa24f58
+  SAModelSpace: 980d28480ba22ac98d6d7a866ae061a530ccd4af
+  SANetworking: 40e2a8ffd5c680be57dfd91426f3c74933ad1d80
+  SAUtils: 1e8b881ca8c7fac2749c8fd9b851f0b344611035
+  SAVideoPlayer: 184e92d57c1b11e45534279649eb5b6a39b3c0d3
+  SAWebPlayer: 658c7265582295ded0b3a38e5720647692992a1a
 
-PODFILE CHECKSUM: ecb354d1f9c12e3b03b8744a776d67c5715868bd
+PODFILE CHECKSUM: f79a1b2e410e11bbfc9d8b2587261f1208959e3e
 
 COCOAPODS: 1.2.0.beta.1

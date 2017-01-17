@@ -1,17 +1,18 @@
-//
-//  SADetails.m
-//  Pods
-//
-//  Copyright (c) 2015 SuperAwesome Ltd. All rights reserved.
-//
-//  Created by Gabriel Coman on 28/09/2015.
-//
-//
+/**
+ * @Copyright:   SuperAwesome Trading Limited 2017
+ * @Author:      Gabriel Coman (gabriel.coman@superawesome.tv)
+ */
 
 #import "SADetails.h"
+#import "SAMedia.h"
 
 @implementation SADetails
 
+/**
+ * Base init method
+ *
+ * @return a new instance of the object
+ */
 - (id) init {
     if (self = [super init]) {
         [self initDefaults];
@@ -19,6 +20,14 @@
     return self;
 }
 
+/**
+ * Overridden "initWithJsonDictionary" init method from the
+ * SADeserializationProtocol protocol that describes how this model gets
+ * initialised from the fields of a NSDictionary object (create from a
+ * JSON string)
+ *
+ * @return a new instance of the object
+ */
 - (id) initWithJsonDictionary:(NSDictionary *)jsonDictionary {
     if (self = [super initWithJsonDictionary:jsonDictionary]) {
         
@@ -50,6 +59,45 @@
     return self;
 }
 
+/**
+ * Overridden "isValid" method from the SADeserializationProtocol protocol
+ *
+ * @return true or false
+ */
+- (BOOL) isValid {
+    return true;
+}
+
+/**
+ * Overridden "dictionaryRepresentation" method from the
+ * SADeserializationProtocol protocol that describes how this model is
+ * going to get translated to a dictionary
+ *
+ * @return a NSDictionary object representing all the members of this object
+ */
+- (NSDictionary*) dictionaryRepresentation {
+    return @{
+             @"width": @(_width),
+             @"height": @(_height),
+             @"name": nullSafe(_name),
+             @"placement_format": nullSafe(_placementFormat),
+             @"bitrate": @(_bitrate),
+             @"duration": @(_duration),
+             @"value": @(_value),
+             @"image": nullSafe(_image),
+             @"video": nullSafe(_video),
+             @"vast": nullSafe(_vast),
+             @"tag": nullSafe(_tag),
+             @"zipFile": nullSafe(_zipFile),
+             @"url": nullSafe(_url),
+             @"cdnUrl": nullSafe(_cdnUrl),
+             @"media": nullSafe([_media dictionaryRepresentation])
+             };
+}
+
+/**
+ * Method that initializes all the values for the model
+ */
 - (void) initDefaults {
     
     // setup defaults
@@ -70,26 +118,6 @@
     
     // media
     _media = [[SAMedia alloc] init];
-}
-
-- (NSDictionary*) dictionaryRepresentation {
-    return @{
-             @"width": @(_width),
-             @"height": @(_height),
-             @"name": nullSafe(_name),
-             @"placement_format": nullSafe(_placementFormat),
-             @"bitrate": @(_bitrate),
-             @"duration": @(_duration),
-             @"value": @(_value),
-             @"image": nullSafe(_image),
-             @"video": nullSafe(_video),
-             @"vast": nullSafe(_vast),
-             @"tag": nullSafe(_tag),
-             @"zipFile": nullSafe(_zipFile),
-             @"url": nullSafe(_url),
-             @"cdnUrl": nullSafe(_cdnUrl),
-             @"media": nullSafe([_media dictionaryRepresentation])
-             };
 }
 
 @end
