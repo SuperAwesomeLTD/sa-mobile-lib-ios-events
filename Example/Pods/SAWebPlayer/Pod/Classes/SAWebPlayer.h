@@ -21,20 +21,20 @@
 - (id) initWithContentSize:(CGSize) contentSize
             andParentFrame:(CGRect) parentRect;
 
-/**
- * Method that loads a HTML string into the Web Player
- *
- * @param html a valid HTML string
- */
-- (void) loadHTML:(NSString*)html;
-
 /*
  * Method that updates the content of the Web Player to a new frame it may
  * have transitioned to.
  *
  * @param frame the new Web Player frame
  */
-- (void) updateToFrame:(CGRect)frame;
+- (void) updateParentFrame:(CGRect)frame;
+
+/**
+ * Method that loads a HTML string into the Web Player
+ *
+ * @param html a valid HTML string
+ */
+- (void) loadHTML:(NSString*)html;
 
 /*
  * Setter for the event handler
@@ -51,5 +51,12 @@
  *                  saWebPlayerDidReceiveClick method callback
  */
 - (void) setClickHandler:(saWebPlayerDidReceiveClick)handler;
+
+/**
+ * Getter for the web view
+ *
+ * @return the current used instance of the web view
+ */
+- (UIWebView*) getWebView;
 
 @end
