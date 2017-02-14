@@ -47,7 +47,7 @@
     // now play some events
     __block XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
     
-    [event sendAllEventsForKey:@"impression" withResponse:^(BOOL success, NSInteger status) {
+    [event sendAllEventsForKey:@"superawesome_impression" withResponse:^(BOOL success, NSInteger status) {
         XCTAssertTrue(success);
         XCTAssertEqual(status, 200);
         [expectation fulfill];
@@ -74,7 +74,7 @@
     // now play some events
     __block XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
     
-    [event sendAllEventsForKey:@"err_impression" withResponse:^(BOOL success, NSInteger status) {
+    [event sendAllEventsForKey:@"vast_error" withResponse:^(BOOL success, NSInteger status) {
         XCTAssertFalse(success);
         XCTAssertEqual(status, 0);
         [expectation fulfill];
@@ -180,7 +180,7 @@
     // now play some events
     __block XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
     
-    [event sendAllEventsForKey:@"err_impression" withResponse:^(BOOL success, NSInteger status) {
+    [event sendAllEventsForKey:@"vast_error" withResponse:^(BOOL success, NSInteger status) {
         XCTAssertFalse(success);
         XCTAssertEqual(status, 0);
         [expectation fulfill];

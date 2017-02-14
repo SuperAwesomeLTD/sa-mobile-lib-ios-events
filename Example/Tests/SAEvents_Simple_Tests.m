@@ -45,7 +45,7 @@
     [event setAd:_ad];
     
     // now play some events
-    NSArray<SATracking*> *tracks = [_ad.creative.events filterBy:@"event" withValue:@"impression"];
+    NSArray<SATracking*> *tracks = [_ad.creative.events filterBy:@"event" withValue:@"superawesome_impression"];
     SATracking *track = [tracks firstObject];
     
     XCTAssertNotNil(tracks);
@@ -78,7 +78,7 @@
     [event setAd:_ad];
     
     // now play some events
-    NSArray<SATracking*> *tracks = [_ad.creative.events filterBy:@"event" withValue:@"pg_success"];
+    NSArray<SATracking*> *tracks = [_ad.creative.events filterBy:@"event" withValue:@"superawesome_pg_success"];
     SATracking *track = [tracks firstObject];
     
     XCTAssertNotNil(tracks);
@@ -111,7 +111,7 @@
     [event setAd:_ad];
     
     // now play some events
-    NSArray<SATracking*> *tracks = [_ad.creative.events filterBy:@"event" withValue:@"firstQuartile"];
+    NSArray<SATracking*> *tracks = [_ad.creative.events filterBy:@"event" withValue:@"vast_firstQuartile"];
     SATracking *track = [tracks firstObject];
     
     XCTAssertNotNil(tracks);

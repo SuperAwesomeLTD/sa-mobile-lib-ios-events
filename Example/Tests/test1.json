@@ -7,107 +7,107 @@
         "creativeFormat": 1,
         "events": [
                    {
-                   "event": "sa_tracking",
+                   "event": "superawesome_click",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/click?creative=4907&line_item=932&placement=481&ct=0&rnd=1267293&sdkVersion=ios_5.2.3"
                    },
                    {
-                   "event": "viewable_impr",
+                   "event": "superawesome_viewable_impression",
                    "URL": "https://ads.staging.superawesome.tv/v2/event?rnd=1469903&ct=0&data=%7B%22creative%22%3A4907%2C%22line_item%22%3A932%2C%22placement%22%3A481%2C%22type%22%3A%22viewable_impression%22%7D&sdkVersion=ios_5.2.3"
                    },
                    {
-                   "event": "pg_success",
+                   "event": "superawesome_pg_success",
                    "URL": "https://ads.staging.superawesome.tv/v2/event?rnd=1440263&ct=0&data=%7B%22creative%22%3A4907%2C%22line_item%22%3A932%2C%22placement%22%3A481%2C%22type%22%3A%22parentalGateSuccess%22%7D&sdkVersion=ios_5.2.3"
                    },
                    {
-                   "event": "pg_open",
+                   "event": "superawesome_pg_open",
                    "URL": "https://ads.staging.superawesome.tv/v2/event?rnd=1438899&ct=0&data=%7B%22creative%22%3A4907%2C%22line_item%22%3A932%2C%22placement%22%3A481%2C%22type%22%3A%22parentalGateOpen%22%7D&sdkVersion=ios_5.2.3"
                    },
                    {
-                   "event": "pg_close",
+                   "event": "superawesome_pg_close",
                    "URL": "https://ads.staging.superawesome.tv/v2/event?rnd=1370068&ct=0&data=%7B%22creative%22%3A4907%2C%22line_item%22%3A932%2C%22placement%22%3A481%2C%22type%22%3A%22parentalGateClose%22%7D&sdkVersion=ios_5.2.3"
                    },
                    {
-                   "event": "pg_fail",
+                   "event": "superawesome_pg_fail",
                    "URL": "https://ads.staging.superawesome.tv/v2/event?rnd=1320452&ct=0&data=%7B%22creative%22%3A4907%2C%22line_item%22%3A932%2C%22placement%22%3A481%2C%22type%22%3A%22parentalGateFail%22%7D&sdkVersion=ios_5.2.3"
                    },
                    {
-                   "event": "sa_impr",
+                   "event": "superawesome_impression",
                    "URL": "https://ads.staging.superawesome.tv/v2/impression?creative=4907&line_item=932&placement=481&rnd=1151004&sdkVersion=ios_5.2.3&no_image=1"
                    },
                    {
-                   "event": "click_through",
+                   "event": "vast_click_through",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/click?placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=8205269&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "creativeView",
+                   "event": "vast_creativeView",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=creativeView&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=8903022&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "start",
+                   "event": "vast_start",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=start&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=8592053&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "firstQuartile",
+                   "event": "vast_firstQuartile",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=firstQuartile&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=1482271&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "midpoint",
+                   "event": "vast_midpoint",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=midpoint&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=6617407&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "thirdQuartile",
+                   "event": "vast_thirdQuartile",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=thirdQuartile&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=9813644&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "complete",
+                   "event": "vast_complete",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=complete&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=366666&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "mute",
+                   "event": "vast_mute",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=mute&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=9234219&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "unmute",
+                   "event": "vast_unmute",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=unmute&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=5763996&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "pause",
+                   "event": "vast_pause",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=pause&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=872445&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "rewind",
+                   "event": "vast_rewind",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=rewind&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=3073143&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "resume",
+                   "event": "vast_resume",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=resume&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=1385198&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "skip",
+                   "event": "vast_skip",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=skip&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=1570851&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "error",
+                   "event": "vast_error",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/error?placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=5391079&dauid=8798453893251470766&device=phone&code=[ERRORCODE]"
                    },
                    {
-                   "event": "impression",
+                   "event": "vast_impression",
                    "URL": "https://ads.superawesome.tv/v2/video/impression?placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=9305456&device=web"
                    },
                    {
-                   "event": "impression",
+                   "event": "vast_impression",
                    "URL": "https://ads.superawesome.tv/v2/video/impression?placement=28000&creative=-1&line_item=-1&sdkVersion=unknown&rnd=9305456&device=web"
                    },
                    {
-                   "event": "err_impression",
+                   "event": "vast_error",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/impression?placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=8832683&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "err_impression",
+                   "event": "vast_error",
                    "URL": "https://ads.staging.superawesome.tv/v2/video/tracking?event=skip&placement=481&creative=4907&line_item=932&sdkVersion=ios_5.2.3&rnd=1570851&dauid=8798453893251470766&device=phone"
                    },
                    {
-                   "event": "err_impression",
+                   "event": "vast_error",
                    "URL": "https://ads.staging"
                    }
                    ],
