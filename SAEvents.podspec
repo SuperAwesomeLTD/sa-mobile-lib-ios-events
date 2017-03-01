@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Core'
   s.dependency 'SAUtils', '1.5.0'
   s.dependency 'SANetworking', '0.2.9'
-  s.dependency 'SAModelSpace', '0.4.3'
+  s.dependency 'SAModelSpace', '0.4.5'
+  s.dependency 'SASession', '0.3.5'
   s.subspec 'Core' do |c|
     c.source_files = 'Pod/Classes/**/*'
   end

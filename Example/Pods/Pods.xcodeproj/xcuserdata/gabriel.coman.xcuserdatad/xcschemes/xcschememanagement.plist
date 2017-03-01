@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SASession.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SAUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,42 +62,47 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C28F4EFF9235CDE0C31021959F1EFB8</key>
+		<key>306C2BEDC9AD046F7F772F9E2630851A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30BAD18CD7CFF0D97E395288F672BD8D</key>
+		<key>3B40C13F5C8297FF5C2B933D3107E109</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3AFD540165D704DB53E57D5E869F2103</key>
+		<key>6A1861282BEC398DD993B8C69FD503DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C0276C74472A4A6647E5AD4CD72B379</key>
+		<key>6F2EF6B9F91D4FB32D6E0C0A067CD5EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>933FA08A3B997CD92E6598DAD06AA28C</key>
+		<key>907013C72A6681FD0C4A8C6DD7398E34</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E06D8583D0C2F829285BC653FFDE0D2</key>
+		<key>AB8A80834C304EDF7237D0FCBC371167</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6EDF813174CF7B062ED5CCD76D30098</key>
+		<key>BE5C264A0FEC3B137F52D6C613AA2A36</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EBE2E626DA046CDB62F8C2C2DC8B0E10</key>
+		<key>D2EC3EC8549E403B82C4996BA635AF08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4E63953D920863F778601DA5EFC0F27</key>
 		<dict>
 			<key>primary</key>
 			<true/>
