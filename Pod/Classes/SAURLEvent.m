@@ -12,7 +12,7 @@
 @implementation SAURLEvent
 
 - (id) initWithUrl: (NSString*) vastUrl {
-    if (self = [super init]) {
+    if (self = [super initWithAd:nil andSession:nil]) {
         _vastUrl = vastUrl;
     }
     

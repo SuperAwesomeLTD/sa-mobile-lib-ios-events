@@ -80,7 +80,7 @@
     return _vastModule ? [_vastModule getVASTClickThroughEvent] : @"";
 }
 
-- (void) triggerVSATClickThroughEvent {
+- (void) triggerVASTClickThroughEvent {
     if (_vastModule) {
         [_vastModule triggerVASTClickThroughEvent];
     }
