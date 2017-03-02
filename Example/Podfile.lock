@@ -1,16 +1,16 @@
 PODS:
-  - SAEvents (1.7.9):
-    - SAEvents/Core (= 1.7.9)
+  - SAEvents (1.8.0):
+    - SAEvents/Core (= 1.8.0)
     - SAModelSpace (= 0.4.5)
     - SANetworking (= 0.2.9)
     - SASession (= 0.3.5)
     - SAUtils (= 1.5.0)
-  - SAEvents/Core (1.7.9):
+  - SAEvents/Core (1.8.0):
     - SAModelSpace (= 0.4.5)
     - SANetworking (= 0.2.9)
     - SASession (= 0.3.5)
     - SAUtils (= 1.5.0)
-  - SAEvents/Moat (1.7.9):
+  - SAEvents/Moat (1.8.0):
     - SAEvents/Core
     - SAModelSpace (= 0.4.5)
     - SANetworking (= 0.2.9)
@@ -38,7 +38,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: e570ac4cc441b47682a55a044998b3b8402b5afa
+  SAEvents: a7dffd528080d6fce526c1f4ba5051c2fe615d04
   SAJsonParser: d0db6d8c737c04f8bf4e9474e82825347aa24f58
   SAModelSpace: 026bb1509bfce0005a3ff69f8ce2bd9455a07555
   SANetworking: 40e2a8ffd5c680be57dfd91426f3c74933ad1d80
@@ -47,6 +47,6 @@ SPEC CHECKSUMS:
   SAVideoPlayer: ca3a28494337373e18cd00b51ada7549c701b579
   SAWebPlayer: 7f5053de3af757bee012380656c74c8b387c3524
 
-PODFILE CHECKSUM: f79a1b2e410e11bbfc9d8b2587261f1208959e3e
+PODFILE CHECKSUM: 2500cc21ee0036a9a3cd18944a82361e1d8f9b90
 
 COCOAPODS: 1.2.0.beta.1
