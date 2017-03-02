@@ -15,10 +15,10 @@
 
 @implementation SAServerEvent
 
-- (id) initWithAd: (SAAd*) ad andSession: (SASession*) session {
+- (id) initWithAd: (SAAd*) newAd andSession: (SASession*) newSession {
     if (self = [super init]) {
-        self->ad = ad;
-        self->session = session;
+        ad = newAd;
+        session = newSession;
         _network = [[SANetwork alloc] init];
     }
     
