@@ -74,6 +74,13 @@
     return _vastClickThrough ? [_vastClickThrough getUrl] : @"";
 }
 
+
+- (void) triggerVASTClickThroughEvent {
+    if (_vastClickThrough) {
+        [_vastClickThrough triggerEvent];
+    }
+}
+
 - (void) triggerVASTErrorEvent {
     for (SAURLEvent *event in _vastError) {
         [event triggerEvent];

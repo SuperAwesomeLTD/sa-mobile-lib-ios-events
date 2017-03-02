@@ -25,6 +25,7 @@
 
 - (NSString*) getVASTClickThroughEvent;
 
+- (void) triggerVASTClickThroughEvent;
 - (void) triggerVASTErrorEvent;
 - (void) triggerVASTImpressionEvent;
 - (void) triggerVASTCreativeViewEvent;
