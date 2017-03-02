@@ -39,6 +39,7 @@
 - (void) triggerPgFailEvent;
 - (void) triggerPgSuccessEvent;
 - (NSString*) getVASTClickThroughEvent;
+- (void) triggerVSATClickThroughEvent;
 - (void) triggerVASTErrorEvent;
 - (void) triggerVASTImpressionEvent;
 - (void) triggerVASTCreativeViewEvent;
