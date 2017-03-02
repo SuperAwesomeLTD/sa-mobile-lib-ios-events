@@ -8,6 +8,12 @@
 #import "SACreative.h"
 #import "SAUtils.h"
 
+#if defined(__has_include)
+#if __has_include("SAEvents+Moat.h")
+#import "SAEvents+Moat.h"
+#endif
+#endif
+
 @interface SAMoatModule ()
 @property (nonatomic, assign) BOOL moatLimiting;
 @property (nonatomic, strong) SAAd *ad;

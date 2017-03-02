@@ -7,6 +7,8 @@
 //
 
 #import "SAViewController.h"
+#import "SAMoatModule.h"
+#import "SAEvents_Aux.h"
 
 @interface SAViewController ()
 @end
@@ -15,6 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
+    [self.view addSubview:webView];
+    
+    SAAd *ad = [SAEvents_Aux getTestAd];
+    
+    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
+    
+    NSString *moat = [module moatEventForWebPlayer:webView];
+    
+    NSLog(@"Moat is: %@", moat);
 }
 
 - (void)didReceiveMemoryWarning {

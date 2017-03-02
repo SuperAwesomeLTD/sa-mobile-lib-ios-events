@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B0D3DFE1DB9336400599351 /* SAEvents_Simple_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D3DFD1DB9336400599351 /* SAEvents_Simple_Tests.m */; };
-		1B0D3E001DB9336E00599351 /* SAEvents_Moat_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0D3DFF1DB9336E00599351 /* SAEvents_Moat_Tests.m */; };
-		1BC8553C1DBA1AC100763B9F /* test1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BC8553B1DBA1AC100763B9F /* test1.json */; };
-		1BC8553D1DBA1AC100763B9F /* test1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BC8553B1DBA1AC100763B9F /* test1.json */; };
-		1BC8553F1DBA376100763B9F /* SAEvents_AllEvents_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC8553E1DBA376100763B9F /* SAEvents_AllEvents_Test.m */; };
-		1BC855411DBA376B00763B9F /* SAEvents_Viewable_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC855401DBA376B00763B9F /* SAEvents_Viewable_Tests.m */; };
+		1B7678C51E681E4400F2272F /* SAEvents_SAEvents_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7678C41E681E4400F2272F /* SAEvents_SAEvents_Tests.m */; };
+		1B7678C71E681F4000F2272F /* SAEvents_SAServerModule_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7678C61E681F4000F2272F /* SAEvents_SAServerModule_Tests.m */; };
+		1B7678C91E681FCE00F2272F /* SAEvents_SAURLEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7678C81E681FCE00F2272F /* SAEvents_SAURLEvent_Tests.m */; };
+		1B7678CB1E681FDA00F2272F /* SAEvents_SAServerEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7678CA1E681FDA00F2272F /* SAEvents_SAServerEvent_Tests.m */; };
+		1B7678CD1E681FE900F2272F /* SAEvents_SAViewableModule_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7678CC1E681FE900F2272F /* SAEvents_SAViewableModule_Tests.m */; };
+		1B7678CF1E681FF400F2272F /* SAEvents_SAMoatModule_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7678CE1E681FF400F2272F /* SAEvents_SAMoatModule_Tests.m */; };
+		1B7678D11E6821F000F2272F /* SAEvents_SAVASTModule_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7678D01E6821F000F2272F /* SAEvents_SAVASTModule_Tests.m */; };
+		1BE1BF531E672BB300C4B3B9 /* SAEvents_Aux.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF521E672BB300C4B3B9 /* SAEvents_Aux.m */; };
+		1BE1BF541E672BBD00C4B3B9 /* SAEvents_Aux.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF521E672BB300C4B3B9 /* SAEvents_Aux.m */; };
+		1BE1BF561E672F0A00C4B3B9 /* SAEvents_SAClickEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF551E672F0A00C4B3B9 /* SAEvents_SAClickEvent_Tests.m */; };
+		1BE1BF581E67336900C4B3B9 /* SAEvents_SAImpressionEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF571E67336900C4B3B9 /* SAEvents_SAImpressionEvent_Tests.m */; };
+		1BE1BF5A1E6734FC00C4B3B9 /* SAEvents_SAViewableImpressionEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF591E6734FC00C4B3B9 /* SAEvents_SAViewableImpressionEvent_Tests.m */; };
+		1BE1BF5C1E6737F600C4B3B9 /* SAEvents_PGCloseEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF5B1E6737F600C4B3B9 /* SAEvents_PGCloseEvent_Tests.m */; };
+		1BE1BF5E1E67380100C4B3B9 /* SAEvents_PGFailEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF5D1E67380100C4B3B9 /* SAEvents_PGFailEvent_Tests.m */; };
+		1BE1BF601E67380C00C4B3B9 /* SAEvents_PGOpenEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF5F1E67380C00C4B3B9 /* SAEvents_PGOpenEvent_Tests.m */; };
+		1BE1BF621E67381700C4B3B9 /* SAEvents_PGSuccessEvent_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1BF611E67381700C4B3B9 /* SAEvents_PGSuccessEvent_Tests.m */; };
 		1F965FA5558E8049EE837979 /* libPods-SAEvents_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8C1E9C8B8A5508A73E2BDF /* libPods-SAEvents_Tests.a */; };
 		379D25FBC49AE8DAA05C8F5D /* libPods-SAEvents_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C38EBC7D04169B0E5517E2FD /* libPods-SAEvents_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -41,11 +51,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B0D3DFD1DB9336400599351 /* SAEvents_Simple_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_Simple_Tests.m; sourceTree = "<group>"; };
-		1B0D3DFF1DB9336E00599351 /* SAEvents_Moat_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_Moat_Tests.m; sourceTree = "<group>"; };
-		1BC8553B1DBA1AC100763B9F /* test1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test1.json; sourceTree = "<group>"; };
-		1BC8553E1DBA376100763B9F /* SAEvents_AllEvents_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_AllEvents_Test.m; sourceTree = "<group>"; };
-		1BC855401DBA376B00763B9F /* SAEvents_Viewable_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_Viewable_Tests.m; sourceTree = "<group>"; };
+		1B7678C41E681E4400F2272F /* SAEvents_SAEvents_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAEvents_Tests.m; sourceTree = "<group>"; };
+		1B7678C61E681F4000F2272F /* SAEvents_SAServerModule_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAServerModule_Tests.m; sourceTree = "<group>"; };
+		1B7678C81E681FCE00F2272F /* SAEvents_SAURLEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAURLEvent_Tests.m; sourceTree = "<group>"; };
+		1B7678CA1E681FDA00F2272F /* SAEvents_SAServerEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAServerEvent_Tests.m; sourceTree = "<group>"; };
+		1B7678CC1E681FE900F2272F /* SAEvents_SAViewableModule_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAViewableModule_Tests.m; sourceTree = "<group>"; };
+		1B7678CE1E681FF400F2272F /* SAEvents_SAMoatModule_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAMoatModule_Tests.m; sourceTree = "<group>"; };
+		1B7678D01E6821F000F2272F /* SAEvents_SAVASTModule_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAVASTModule_Tests.m; sourceTree = "<group>"; };
+		1BE1BF511E672BB300C4B3B9 /* SAEvents_Aux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAEvents_Aux.h; sourceTree = "<group>"; };
+		1BE1BF521E672BB300C4B3B9 /* SAEvents_Aux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_Aux.m; sourceTree = "<group>"; };
+		1BE1BF551E672F0A00C4B3B9 /* SAEvents_SAClickEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAClickEvent_Tests.m; sourceTree = "<group>"; };
+		1BE1BF571E67336900C4B3B9 /* SAEvents_SAImpressionEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAImpressionEvent_Tests.m; sourceTree = "<group>"; };
+		1BE1BF591E6734FC00C4B3B9 /* SAEvents_SAViewableImpressionEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_SAViewableImpressionEvent_Tests.m; sourceTree = "<group>"; };
+		1BE1BF5B1E6737F600C4B3B9 /* SAEvents_PGCloseEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_PGCloseEvent_Tests.m; sourceTree = "<group>"; };
+		1BE1BF5D1E67380100C4B3B9 /* SAEvents_PGFailEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_PGFailEvent_Tests.m; sourceTree = "<group>"; };
+		1BE1BF5F1E67380C00C4B3B9 /* SAEvents_PGOpenEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_PGOpenEvent_Tests.m; sourceTree = "<group>"; };
+		1BE1BF611E67381700C4B3B9 /* SAEvents_PGSuccessEvent_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAEvents_PGSuccessEvent_Tests.m; sourceTree = "<group>"; };
 		4E76B0E9377064986BEAE58A /* Pods-SAEvents_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SAEvents_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SAEvents_Tests/Pods-SAEvents_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SAEvents_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAEvents_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -176,12 +197,23 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1BC8553B1DBA1AC100763B9F /* test1.json */,
-				1B0D3DFD1DB9336400599351 /* SAEvents_Simple_Tests.m */,
-				1BC8553E1DBA376100763B9F /* SAEvents_AllEvents_Test.m */,
-				1BC855401DBA376B00763B9F /* SAEvents_Viewable_Tests.m */,
-				1B0D3DFF1DB9336E00599351 /* SAEvents_Moat_Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				1BE1BF511E672BB300C4B3B9 /* SAEvents_Aux.h */,
+				1BE1BF521E672BB300C4B3B9 /* SAEvents_Aux.m */,
+				1BE1BF551E672F0A00C4B3B9 /* SAEvents_SAClickEvent_Tests.m */,
+				1BE1BF571E67336900C4B3B9 /* SAEvents_SAImpressionEvent_Tests.m */,
+				1BE1BF591E6734FC00C4B3B9 /* SAEvents_SAViewableImpressionEvent_Tests.m */,
+				1BE1BF5B1E6737F600C4B3B9 /* SAEvents_PGCloseEvent_Tests.m */,
+				1BE1BF5D1E67380100C4B3B9 /* SAEvents_PGFailEvent_Tests.m */,
+				1BE1BF5F1E67380C00C4B3B9 /* SAEvents_PGOpenEvent_Tests.m */,
+				1BE1BF611E67381700C4B3B9 /* SAEvents_PGSuccessEvent_Tests.m */,
+				1B7678C41E681E4400F2272F /* SAEvents_SAEvents_Tests.m */,
+				1B7678C61E681F4000F2272F /* SAEvents_SAServerModule_Tests.m */,
+				1B7678C81E681FCE00F2272F /* SAEvents_SAURLEvent_Tests.m */,
+				1B7678CA1E681FDA00F2272F /* SAEvents_SAServerEvent_Tests.m */,
+				1B7678CC1E681FE900F2272F /* SAEvents_SAViewableModule_Tests.m */,
+				1B7678CE1E681FF400F2272F /* SAEvents_SAMoatModule_Tests.m */,
+				1B7678D01E6821F000F2272F /* SAEvents_SAVASTModule_Tests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -296,7 +328,6 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				1BC8553C1DBA1AC100763B9F /* test1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +336,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
-				1BC8553D1DBA1AC100763B9F /* test1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +442,7 @@
 				6003F59E195388D20070C39A /* SAAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SAViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				1BE1BF531E672BB300C4B3B9 /* SAEvents_Aux.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,10 +450,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC8553F1DBA376100763B9F /* SAEvents_AllEvents_Test.m in Sources */,
-				1BC855411DBA376B00763B9F /* SAEvents_Viewable_Tests.m in Sources */,
-				1B0D3DFE1DB9336400599351 /* SAEvents_Simple_Tests.m in Sources */,
-				1B0D3E001DB9336E00599351 /* SAEvents_Moat_Tests.m in Sources */,
+				1B7678D11E6821F000F2272F /* SAEvents_SAVASTModule_Tests.m in Sources */,
+				1B7678C51E681E4400F2272F /* SAEvents_SAEvents_Tests.m in Sources */,
+				1B7678CF1E681FF400F2272F /* SAEvents_SAMoatModule_Tests.m in Sources */,
+				1B7678CD1E681FE900F2272F /* SAEvents_SAViewableModule_Tests.m in Sources */,
+				1BE1BF561E672F0A00C4B3B9 /* SAEvents_SAClickEvent_Tests.m in Sources */,
+				1BE1BF601E67380C00C4B3B9 /* SAEvents_PGOpenEvent_Tests.m in Sources */,
+				1BE1BF5A1E6734FC00C4B3B9 /* SAEvents_SAViewableImpressionEvent_Tests.m in Sources */,
+				1B7678CB1E681FDA00F2272F /* SAEvents_SAServerEvent_Tests.m in Sources */,
+				1BE1BF5E1E67380100C4B3B9 /* SAEvents_PGFailEvent_Tests.m in Sources */,
+				1BE1BF581E67336900C4B3B9 /* SAEvents_SAImpressionEvent_Tests.m in Sources */,
+				1BE1BF5C1E6737F600C4B3B9 /* SAEvents_PGCloseEvent_Tests.m in Sources */,
+				1BE1BF621E67381700C4B3B9 /* SAEvents_PGSuccessEvent_Tests.m in Sources */,
+				1BE1BF541E672BBD00C4B3B9 /* SAEvents_Aux.m in Sources */,
+				1B7678C71E681F4000F2272F /* SAEvents_SAServerModule_Tests.m in Sources */,
+				1B7678C91E681FCE00F2272F /* SAEvents_SAURLEvent_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

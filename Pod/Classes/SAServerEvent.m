@@ -17,8 +17,8 @@
 
 - (id) initWithAd: (SAAd*) ad andSession: (SASession*) session {
     if (self = [super init]) {
-        ad = ad;
-        session = session;
+        self->ad = ad;
+        self->session = session;
         _network = [[SANetwork alloc] init];
     }
     
