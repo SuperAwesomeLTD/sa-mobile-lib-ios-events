@@ -23,12 +23,16 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Moat' do |mo|
+    mo.frameworks = 'AdSupport', 'WebKit'
     mo.dependency 'SAEvents/Core'
     mo.source_files = "Pod/Plugin/Moat/*"
     # mo.vendored_frameworks = "Pod/Frameworks/SUPMoatMobileAppKit.framework"
     # mo.preserve_paths = "Pod/Libraries/SUPMoatMobileAppKitHeaders/*.h"
-    mo.vendored_libraries = "Pod/Libraries/libSUPMoatMobileAppKit.a"
-    mo.libraries = 'SUPMoatMobileAppKit'
+    # to delete & replace with a .a version
+    mo.vendored_frameworks = "Pod/Frameworks/SUPMoatMobileAppKit.framework"
+    # mo.vendored_libraries = "Pod/Libraries/libSUPMoatMobileAppKit.a"
+    # mo.libraries = 'SUPMoatMobileAppKit'
+    # mo.libraries = 'SUPMoatMobileAppKit332'
     # mo.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/#{s.name}/Pod/Libraries/SUPMoatMobileAppKitHeaders' }
   end
 end

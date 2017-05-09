@@ -25,7 +25,8 @@ PODS:
     - SAUtils (= 1.5.0)
   - SAUtils (1.5.0)
   - SAVideoPlayer (1.2.1)
-  - SAWebPlayer (1.1.9)
+  - SAWebPlayer (1.2.0):
+    - SANetworking (= 0.2.9)
 
 DEPENDENCIES:
   - SAEvents (from `../`)
@@ -38,15 +39,15 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: 11a1a152bc85878075ee32494f5c288d1d2a3649
+  SAEvents: d25954a36b3c80404c5b6776e3582561cf42ef7b
   SAJsonParser: d0db6d8c737c04f8bf4e9474e82825347aa24f58
   SAModelSpace: c0fceb7fdbc51bf3455864a9e73496630d801223
   SANetworking: 40e2a8ffd5c680be57dfd91426f3c74933ad1d80
   SASession: 132766325ba7bf55d283bb3bfa4bc5a8c470347e
   SAUtils: 1e8b881ca8c7fac2749c8fd9b851f0b344611035
   SAVideoPlayer: ca3a28494337373e18cd00b51ada7549c701b579
-  SAWebPlayer: 69f56d3e75f33b25992f060bf20a309b1d5a8ae5
+  SAWebPlayer: 9224cbbc45aa7f8b28077e9924b766b7417fd242
 
 PODFILE CHECKSUM: 2500cc21ee0036a9a3cd18944a82361e1d8f9b90
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.1
