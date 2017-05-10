@@ -12,14 +12,14 @@
 		0568C5660F40DBB5B0DDDA871178024C /* SAAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = A80713F71498400D8BD13030C1A671E8 /* SAAlert.m */; };
 		05C513672C481B4306294C3C3B78BC5D /* SAVASTAd.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC8C0CB227F40C7C259ABE2B589ABD7 /* SAVASTAd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06B86DCEA0564354706549B98B69AC75 /* SAPGSuccessEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 985C6E94795C3481FF69EB286159A76C /* SAPGSuccessEvent.m */; };
-		080624690281D0946092DAF55DC064E7 /* SAEvents+Moat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4C0E865BCA30225762BD802952AB8 /* SAEvents+Moat.m */; };
+		080624690281D0946092DAF55DC064E7 /* SAEvents+Moat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD960B128CDDBF25BBDE43CDFA4ADC /* SAEvents+Moat.m */; };
 		091B216D6E71498B7B2401A26550ED7C /* SAVASTMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E86017C2E4A07D4FCF9E9DE0AFA9D9 /* SAVASTMedia.m */; };
 		0B215F52C066020A81A15074731B19FD /* SAClickEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F590C4FC616A917323AD2C50AC8BA806 /* SAClickEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DAB29EC2716D86FCA121DEBEDC36458 /* NSArray+SAJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6E71DEDF80C526A01EFE780E7A9334 /* NSArray+SAJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E227BB84A6463A2EEBEC5A2FD5D9B03 /* SUPMoatVideoTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB0F70C9FEA8572E1D70A544339A015 /* SUPMoatVideoTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E227BB84A6463A2EEBEC5A2FD5D9B03 /* SUPMoatVideoTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFD48424CB2124EF541FE7D826C8964 /* SUPMoatVideoTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EA073651C60D0F224B394A03E3AF350 /* SAMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 858DF9BAAF6D6B1D6EE7AA43CE8561FF /* SAMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0FA7E15FD61EB496DAB343C1BBD18191 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1074FB9930F0252440D1E67163ADF97E /* WebKit.framework */; };
-		1060E2BA68F1A4727CA823FE929B5409 /* SUPMoatNativeDisplayTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4136FB5430616764ED58EB1D0869A652 /* SUPMoatNativeDisplayTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1060E2BA68F1A4727CA823FE929B5409 /* SUPMoatNativeDisplayTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = F60F887A98121CC4FA8FAC150C9C1033 /* SUPMoatNativeDisplayTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10796EE378B0A1DB58A7252C4205CCE6 /* NSDictionary+SAJson.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC36A56E9B76CB57C5EA8D5897C4486 /* NSDictionary+SAJson.m */; };
 		13F091869E851B3AC57FD5B268274B26 /* SAVASTMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E979A416D25CBD42B97E251BE153768 /* SAVASTMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		155063471DB3AAF1D51A70EE2839D2EA /* SAVideoPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B478EAC8FAB207B2E7CEAAF9EF49E82 /* SAVideoPlayer-dummy.m */; };
@@ -30,10 +30,10 @@
 		18D0EBE7B07C5C5BCB635A9FBFB125D9 /* SAImpressionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B37FADC0F4467B8C74542F7DAB1128 /* SAImpressionEvent.m */; };
 		19FF9549BE773C67A426D361B99608E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1477E18964062E964AF695D5524A4309 /* SystemConfiguration.framework */; };
 		1BE15C99BBC52B04DC3268AB5F05735A /* SAVASTModule.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5756DC3B63E6C287DB5691E6DCB19E /* SAVASTModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F22A34BC5FC1456B42587BCD740CF54 /* SAEvents+Moat.h in Headers */ = {isa = PBXBuildFile; fileRef = 704DF3512A7D5B609E33841B53F1AB2E /* SAEvents+Moat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F22A34BC5FC1456B42587BCD740CF54 /* SAEvents+Moat.h in Headers */ = {isa = PBXBuildFile; fileRef = A99F8CA1510E752DEC07FD3EFDFA53E8 /* SAEvents+Moat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		229B1B205900F5A21DF77D2C7389D465 /* SAURLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1475BEDD342609AE0A2112539B64A0 /* SAURLEvent.m */; };
 		2341A865D8795B8E85B55F7C391208ED /* SAUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B1A151D28219A189090D1EC8ED14178B /* SAUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		244006C419FE7DF74AD81333B10DE505 /* SUPMoatBaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 406E81129BDDD716354E0054E7F6FDB9 /* SUPMoatBaseTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		244006C419FE7DF74AD81333B10DE505 /* SUPMoatBaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 68A8640FEE8E486A506E05A654AD7745 /* SUPMoatBaseTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		247B909FF209176E8EC2951F3BEFE676 /* SACronograph.m in Sources */ = {isa = PBXBuildFile; fileRef = B186A1716318FBAE0B726A391F7091C7 /* SACronograph.m */; };
 		25A5C6E28D3C097DFEBEE4E13D8EB704 /* SAWebPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814D2312B712B99AEEE8B95759AE2C5 /* SAWebPlayer-dummy.m */; };
 		2815555173F5083032A3180FCBC770A3 /* SABlackMask.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56B77D573A63FE900168281B2B0834 /* SABlackMask.m */; };
@@ -54,12 +54,12 @@
 		457D7D176078DC00E98EFE7816D346D0 /* SADetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE79C237A63D5E030FA8A519EC0925 /* SADetails.m */; };
 		471F5A3FC46D64A50B9D2834560DA78A /* SAFileDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD22729258479BB284C40EF9359B8EC /* SAFileDownloader.m */; };
 		484F48F0427BAA5BF817A30FF1742A9E /* SAEvents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 846069CA50D9CF9DD4481892722C281A /* SAEvents-dummy.m */; };
-		49319DA35F8A4992A436DE5DFF339ABC /* SUPMoatGMAInterstitialTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 91BC4B63B51CC2D69837641A876690C3 /* SUPMoatGMAInterstitialTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49319DA35F8A4992A436DE5DFF339ABC /* SUPMoatGMAInterstitialTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = BF87FCBA2E76E14BB6147F45A0B54798 /* SUPMoatGMAInterstitialTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BCCAE5A7005E7D2328DC8C7473CF651 /* SAServerEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = F0186D24F1BEEA42E521793C25BA9424 /* SAServerEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C72A8B6B47FFA4459C7F663B7FD8057 /* SACapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB18D2C991BBDB6B15E4D6BBD637981C /* SACapper.m */; };
 		4D7ED3D758D7F6DED056AC39DB432535 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF6F859B0E1F4F4A68699F2EFA8B713 /* Foundation.framework */; };
 		51F82BF2B8E236C212C5481B6AA8BB4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF6F859B0E1F4F4A68699F2EFA8B713 /* Foundation.framework */; };
-		536CC7F1C3A9925564D7D4553F4CB168 /* SUPMoatMobileAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1FC2EAA725624AB684BBA78EFA8C71 /* SUPMoatMobileAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		536CC7F1C3A9925564D7D4553F4CB168 /* SUPMoatMobileAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 679F28519A3A2DBC7DA019051D2AE014 /* SUPMoatMobileAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55796B4E600EFD3224B68A083B54711B /* SANetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 514970EDF559F62A34C19386303E374E /* SANetwork.m */; };
 		58159168D0EBED2E382868345C85ED1A /* Pods-SAEvents_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF84D36B670097711087700303051F60 /* Pods-SAEvents_Tests-dummy.m */; };
 		58C23C421DE0BE80AE02DB2D1856A054 /* SAPGOpenEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4F2E8360AECB30B96C7C5717E2075D /* SAPGOpenEvent.m */; };
@@ -93,7 +93,7 @@
 		908CCB47FCED2A4C9773F6E02B917306 /* SASession.h in Headers */ = {isa = PBXBuildFile; fileRef = CA6DDF498C39BD220A86BCC44886AD0B /* SASession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9120C6298A71DF0FC429D6F3ED2866D0 /* SAVASTModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE401810CEBA6211292C8A4000A0BF5 /* SAVASTModule.m */; };
 		91A5256119484706694D0DCDE8AE02F0 /* SAMoatModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F98F402B12DD758918D9920612E49ECA /* SAMoatModule.m */; };
-		93655CDD2434EDCFF9B833E74D3E4A18 /* SUPMoatWebTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0662FC662AE28DAA43CD8CF6BF7BE12D /* SUPMoatWebTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93655CDD2434EDCFF9B833E74D3E4A18 /* SUPMoatWebTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DEC6469084C7EDDFB3111DB9AA169F /* SUPMoatWebTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93A0F91BF1300E8C8E0BF6A45F618E29 /* SAWebPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = ECD4697E8E663DF08C4A7496B6C9C179 /* SAWebPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		958E135F36B9913B46B4EAC99002B425 /* SAWebPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB986C84CDA6ED7A700B5227F14F1CF /* SAWebPlayer.m */; };
 		95904AF3EF543143580A381B922386C9 /* SAExpandedWebPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A9D565B510172B672141EDF1614E7 /* SAExpandedWebPlayer.m */; };
@@ -118,7 +118,7 @@
 		C1C33BAA27753BBE1441672E7997715B /* SAResizedWebPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0592420E8C21F9D6268D1096C953C5 /* SAResizedWebPlayer.m */; };
 		CA03508D4E71545A3898A3B285A797AD /* SAViewableModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A1DB92FE055F30411DCC4E1DF8B46 /* SAViewableModule.m */; };
 		CC427F25AACAD2ED868DB91BF7F3DADE /* NSDictionary+SafeHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FE1E281B2130FF2735211CC4E89B26 /* NSDictionary+SafeHandling.m */; };
-		CC9FF109F963A246396138036C3B8406 /* SUPMoatAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 20655BAE5851E9C3B60FDE274277863C /* SUPMoatAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC9FF109F963A246396138036C3B8406 /* SUPMoatAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 24598E186A9B3B0CA693BA19E34D6E6E /* SUPMoatAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D11A5A1F9A9DAED9EA5AA45582B04208 /* SAServerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F7FF097B5BDE05EAB6CEA8301EBBC /* SAServerModule.m */; };
 		D8C9CBD9670A50F372063AEC115D480E /* SAImageUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FD15B753527A41AD6B3CD59E22949BC2 /* SAImageUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAD6E13CD10F49555244A5A3672359BA /* SAViewableImpressionEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C4FB95473DE58F52477B3EA7B9975 /* SAViewableImpressionEvent.m */; };
@@ -264,7 +264,6 @@
 		02FC2BDC75E1E5670B2083C1A3B2815D /* SANetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SANetworking-prefix.pch"; sourceTree = "<group>"; };
 		031575EABD6A9414DD4FB63905B64283 /* libSAModelSpace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSAModelSpace.a; path = libSAModelSpace.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		060C5192093EC1C60A7C378BA5C69DB9 /* SAEvents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAEvents-prefix.pch"; sourceTree = "<group>"; };
-		0662FC662AE28DAA43CD8CF6BF7BE12D /* SUPMoatWebTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatWebTracker.h; sourceTree = "<group>"; };
 		0A2442F0416A6A7577424265825919D6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		0C12E310C5542A12EA3884F71F012FD5 /* libSAEvents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSAEvents.a; path = libSAEvents.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F3718103ADF4411FB1FE3C6425F42 /* SABaseObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SABaseObject.h; path = Pod/Classes/SABaseObject.h; sourceTree = "<group>"; };
@@ -283,10 +282,11 @@
 		1F04F8414A63A6ABEC8846326FA6953E /* SAWebPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAWebPlayer-prefix.pch"; sourceTree = "<group>"; };
 		1F6E71DEDF80C526A01EFE780E7A9334 /* NSArray+SAJson.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+SAJson.h"; path = "Pod/Classes/NSArray+SAJson.h"; sourceTree = "<group>"; };
 		1FDD06C47BADFE1C2AB1AE3EE999B8C0 /* SAFileItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAFileItem.m; path = Pod/Classes/File/SAFileItem.m; sourceTree = "<group>"; };
-		20655BAE5851E9C3B60FDE274277863C /* SUPMoatAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatAnalytics.h; sourceTree = "<group>"; };
+		1FFD48424CB2124EF541FE7D826C8964 /* SUPMoatVideoTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatVideoTracker.h; sourceTree = "<group>"; };
 		220826288E135865FCD3BDDD24586FE0 /* Pods-SAEvents_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SAEvents_Tests-resources.sh"; sourceTree = "<group>"; };
 		228178B092EEE554BB57F67210145FD8 /* Pods-SAEvents_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SAEvents_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2449253AB5B3AA37FEFE37AFEB3E5529 /* SAFileQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAFileQueue.m; path = Pod/Classes/File/SAFileQueue.m; sourceTree = "<group>"; };
+		24598E186A9B3B0CA693BA19E34D6E6E /* SUPMoatAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatAnalytics.h; sourceTree = "<group>"; };
 		264AC6B263F55ED6EAE0DF73EE3305AE /* NSArray+SAJson.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+SAJson.m"; path = "Pod/Classes/NSArray+SAJson.m"; sourceTree = "<group>"; };
 		2A23F7C86608CBAD401AC0ECB842BA02 /* SAModelSpace-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAModelSpace-dummy.m"; sourceTree = "<group>"; };
 		2A2ADB406DC2946B910F7F50A09F2431 /* SAPGFailEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAPGFailEvent.h; sourceTree = "<group>"; };
@@ -304,11 +304,11 @@
 		3EF6F859B0E1F4F4A68699F2EFA8B713 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F2B6B9BDA19C3B3A3FAA124B1D4CA16 /* SAPGOpenEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAPGOpenEvent.h; sourceTree = "<group>"; };
 		3F6CBB98553DFC8FCB4B67C455215E56 /* SAFileItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAFileItem.h; path = Pod/Classes/File/SAFileItem.h; sourceTree = "<group>"; };
+		3FAD960B128CDDBF25BBDE43CDFA4ADC /* SAEvents+Moat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAEvents+Moat.m"; sourceTree = "<group>"; };
 		40421C25B604E0A4A20B9AF9078E5DE6 /* SAWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAWebView.h; path = Pod/Classes/SAWebView.h; sourceTree = "<group>"; };
-		406E81129BDDD716354E0054E7F6FDB9 /* SUPMoatBaseTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatBaseTracker.h; sourceTree = "<group>"; };
-		4136FB5430616764ED58EB1D0869A652 /* SUPMoatNativeDisplayTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatNativeDisplayTracker.h; sourceTree = "<group>"; };
 		4144A21D92BE313060466865D9046A7B /* SANetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SANetworking.xcconfig; sourceTree = "<group>"; };
 		43CDC2E0DC25F1785D194C634CF85131 /* SAExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAExtensions.h; path = Pod/Classes/SAExtensions.h; sourceTree = "<group>"; };
+		44DEC6469084C7EDDFB3111DB9AA169F /* SUPMoatWebTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatWebTracker.h; sourceTree = "<group>"; };
 		45E3DB88C8F97361CDDD0CD85C503E21 /* Pods-SAEvents_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SAEvents_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		46425A4D78579450B92062DCBEE6B7E7 /* Pods-SAEvents_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SAEvents_Example-frameworks.sh"; sourceTree = "<group>"; };
 		46AC25A7A8AB7EFB60ED2D1FF79AA8CF /* SAPGCloseEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAPGCloseEvent.m; sourceTree = "<group>"; };
@@ -320,16 +320,16 @@
 		51275BD8A4717AE37D8F69726F8DB7A1 /* SASession-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SASession-prefix.pch"; sourceTree = "<group>"; };
 		514970EDF559F62A34C19386303E374E /* SANetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SANetwork.m; path = Pod/Classes/Request/SANetwork.m; sourceTree = "<group>"; };
 		5969E317FF6DD10C871F6D12BF115E13 /* SAVideoPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAVideoPlayer.m; path = Pod/Classes/SAVideoPlayer.m; sourceTree = "<group>"; };
-		5AA4C0E865BCA30225762BD802952AB8 /* SAEvents+Moat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAEvents+Moat.m"; sourceTree = "<group>"; };
 		5DD2692E6AC1DE33EDE4F995D09211B3 /* SAExpandedWebPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAExpandedWebPlayer.h; path = Pod/Classes/SAExpandedWebPlayer.h; sourceTree = "<group>"; };
 		5E0DEE0D8A8D62DEBC49E0E886D48E77 /* SALoadScreen.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SALoadScreen.m; path = Pod/Classes/SALoadScreen.m; sourceTree = "<group>"; };
 		5E1FFCCFFB8F4FE91389594D75F0891C /* Pods-SAEvents_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SAEvents_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		5EE52D24775A39DAB8D464C6CBEE7DA8 /* libSAWebPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSAWebPlayer.a; path = libSAWebPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B37FADC0F4467B8C74542F7DAB1128 /* SAImpressionEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAImpressionEvent.m; sourceTree = "<group>"; };
 		619778F92CDBC69047C21CCEEBCABD61 /* SAUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAUtils.m; path = Pod/Classes/SAUtils.m; sourceTree = "<group>"; };
+		679F28519A3A2DBC7DA019051D2AE014 /* SUPMoatMobileAppKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatMobileAppKit.h; sourceTree = "<group>"; };
+		68A8640FEE8E486A506E05A654AD7745 /* SUPMoatBaseTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatBaseTracker.h; sourceTree = "<group>"; };
 		6CE8D8A934EAE987DD133D10963C097C /* libSANetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSANetworking.a; path = libSANetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D1475BEDD342609AE0A2112539B64A0 /* SAURLEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAURLEvent.m; sourceTree = "<group>"; };
-		704DF3512A7D5B609E33841B53F1AB2E /* SAEvents+Moat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAEvents+Moat.h"; sourceTree = "<group>"; };
 		70564532286713C524C22BBA810A2F73 /* SAServerModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAServerModule.h; sourceTree = "<group>"; };
 		708A88EB6B113365AA6BAD55BCF53819 /* SAEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAEvents.m; sourceTree = "<group>"; };
 		72B1E497E6C8BBBF6E1B0EE4B772817F /* SAClickEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAClickEvent.m; sourceTree = "<group>"; };
@@ -348,16 +348,15 @@
 		8672A70C9A76C610F54C89F451F52E3D /* SAAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAAlert.h; path = Pod/Classes/SAAlert.h; sourceTree = "<group>"; };
 		8B8D7772E2222A0574A0C02F9946CE44 /* SAPGSuccessEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAPGSuccessEvent.h; sourceTree = "<group>"; };
 		90AD4983B88E7B89131B91E26406D694 /* SAJsonParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAJsonParser.xcconfig; sourceTree = "<group>"; };
-		91BC4B63B51CC2D69837641A876690C3 /* SUPMoatGMAInterstitialTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatGMAInterstitialTracker.h; sourceTree = "<group>"; };
 		921CEF83E0F60D5E669D1E6B4884E47B /* libPods-SAEvents_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SAEvents_Example.a"; path = "libPods-SAEvents_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		985C6E94795C3481FF69EB286159A76C /* SAPGSuccessEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAPGSuccessEvent.m; sourceTree = "<group>"; };
 		9BE401810CEBA6211292C8A4000A0BF5 /* SAVASTModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAVASTModule.m; sourceTree = "<group>"; };
-		9F1FC2EAA725624AB684BBA78EFA8C71 /* SUPMoatMobileAppKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatMobileAppKit.h; sourceTree = "<group>"; };
 		A21032BEE0442C3A922D5392E82E4104 /* SAServerEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAServerEvent.m; sourceTree = "<group>"; };
 		A23F613E2EA0CBCB5945DA09D968C712 /* SABaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SABaseObject.m; path = Pod/Classes/SABaseObject.m; sourceTree = "<group>"; };
 		A5439E934B9FF6307CA6FA3152B4D328 /* SAMedia.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAMedia.m; path = Pod/Classes/SAMedia.m; sourceTree = "<group>"; };
 		A80713F71498400D8BD13030C1A671E8 /* SAAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAAlert.m; path = Pod/Classes/SAAlert.m; sourceTree = "<group>"; };
+		A99F8CA1510E752DEC07FD3EFDFA53E8 /* SAEvents+Moat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAEvents+Moat.h"; sourceTree = "<group>"; };
 		AAB5A37BA72642F815A7E5467EFC6124 /* SAVideoPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAVideoPlayer.xcconfig; sourceTree = "<group>"; };
 		AC70A0165D6C392116BEE50CF63C23B0 /* SAResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAResponse.h; path = Pod/Classes/SAResponse.h; sourceTree = "<group>"; };
 		ADD959E5117BD121B83108F65783ED42 /* SACronograph.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SACronograph.h; path = Pod/Classes/SACronograph.h; sourceTree = "<group>"; };
@@ -374,6 +373,7 @@
 		BE17301FEDE31C4F71E800E4FB72CC4D /* SASession.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SASession.xcconfig; sourceTree = "<group>"; };
 		BE47DA5AB77D9BB49183B3619C17A307 /* libSAVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSAVideoPlayer.a; path = libSAVideoPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECA7CCA5E41848582A947974E83D852 /* SAViewableImpressionEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAViewableImpressionEvent.h; sourceTree = "<group>"; };
+		BF87FCBA2E76E14BB6147F45A0B54798 /* SUPMoatGMAInterstitialTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatGMAInterstitialTracker.h; sourceTree = "<group>"; };
 		C69966B7D304A8BDDF0B99AE23519F70 /* SAUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAUtils-prefix.pch"; sourceTree = "<group>"; };
 		C7A411CAEB28D405D01E59212FA606F9 /* NSDictionary+SAJson.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+SAJson.h"; path = "Pod/Classes/NSDictionary+SAJson.h"; sourceTree = "<group>"; };
 		C93A8537B86DF89748AA401D11CCCAE6 /* SAResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAResponse.m; path = Pod/Classes/SAResponse.m; sourceTree = "<group>"; };
@@ -391,7 +391,6 @@
 		DB0CBF17F5B428E93F6F3549E576B822 /* SAFileDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAFileDownloader.h; path = Pod/Classes/File/SAFileDownloader.h; sourceTree = "<group>"; };
 		DB501ABB328E62A478740537E1DC2854 /* SANetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SANetworking-dummy.m"; sourceTree = "<group>"; };
 		DBD22729258479BB284C40EF9359B8EC /* SAFileDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAFileDownloader.m; path = Pod/Classes/File/SAFileDownloader.m; sourceTree = "<group>"; };
-		DDB0F70C9FEA8572E1D70A544339A015 /* SUPMoatVideoTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatVideoTracker.h; sourceTree = "<group>"; };
 		DDF11CC07CB1828BE33CEA19AE310756 /* SAURLClicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SAURLClicker.m; path = Pod/Classes/SAURLClicker.m; sourceTree = "<group>"; };
 		DE5C051E00F1E72871F9F11ED0B190F9 /* libSAUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSAUtils.a; path = libSAUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF12EE2738480E9AA0BF0FBB58F5D02 /* Pods-SAEvents_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SAEvents_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -400,6 +399,7 @@
 		E0509050C115DBC357C7452E76873343 /* Pods-SAEvents_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SAEvents_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E2B773329307E58A603CCB960B5CF29E /* SASession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SASession.m; path = Pod/Classes/SASession.m; sourceTree = "<group>"; };
 		E5C34D563A84498D0EEFB7D645532C69 /* NSDictionary+SafeHandling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+SafeHandling.h"; path = "Pod/Classes/NSDictionary+SafeHandling.h"; sourceTree = "<group>"; };
+		E687DA12A60EF06D51074B986DFC0D45 /* SUPMoatMobileAppKit */ = {isa = PBXFileReference; includeInIndex = 1; name = SUPMoatMobileAppKit; path = Pod/Libraries/Versions/A/SUPMoatMobileAppKit; sourceTree = "<group>"; };
 		E78E8ECA5225575DBF4544F2F60B73EC /* SAJsonParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAJsonParser.h; path = Pod/Classes/SAJsonParser.h; sourceTree = "<group>"; };
 		E82C2632AE21161A5E954C6EEBFBB5A5 /* SAFileListDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAFileListDownloader.h; path = Pod/Classes/FileList/SAFileListDownloader.h; sourceTree = "<group>"; };
 		E924704646FE044FA22612D9BF8850CC /* SACreative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SACreative.h; path = Pod/Classes/SACreative.h; sourceTree = "<group>"; };
@@ -410,9 +410,9 @@
 		ECD4697E8E663DF08C4A7496B6C9C179 /* SAWebPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAWebPlayer.h; path = Pod/Classes/SAWebPlayer.h; sourceTree = "<group>"; };
 		F0186D24F1BEEA42E521793C25BA9424 /* SAServerEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAServerEvent.h; sourceTree = "<group>"; };
 		F0CF97B8F989EC2D741A2CCBD79BE488 /* SAUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAUtils.xcconfig; sourceTree = "<group>"; };
-		F20EC048E07E83DDB1DDBD6D5F02E5D0 /* SUPMoatMobileAppKit */ = {isa = PBXFileReference; includeInIndex = 1; name = SUPMoatMobileAppKit; path = Pod/Libraries/Versions/A/SUPMoatMobileAppKit; sourceTree = "<group>"; };
 		F4E8E390529D24DA1918A1C4B5203BF1 /* SAWebPlayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAWebPlayer.xcconfig; sourceTree = "<group>"; };
 		F590C4FC616A917323AD2C50AC8BA806 /* SAClickEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SAClickEvent.h; sourceTree = "<group>"; };
+		F60F887A98121CC4FA8FAC150C9C1033 /* SUPMoatNativeDisplayTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SUPMoatNativeDisplayTracker.h; sourceTree = "<group>"; };
 		F671ED1F8C72DB08EAC608D2AC2F270D /* Pods-SAEvents_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SAEvents_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F977D03894D18526ED3920A97C44BE54 /* SABlackMask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SABlackMask.h; path = Pod/Classes/SABlackMask.h; sourceTree = "<group>"; };
 		F98F402B12DD758918D9920612E49ECA /* SAMoatModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SAMoatModule.m; sourceTree = "<group>"; };
@@ -510,13 +510,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05261B291043B8B6FB9C885F5E1DBF52 /* Moat */ = {
+		00B0D28AD2E0230F2CC0BCFF1A84A07A /* Moat */ = {
 			isa = PBXGroup;
 			children = (
-				5DD89A1713675FCC8832454D6EA7C657 /* Frameworks */,
-				860A95C9FE898C29751FF9DA081F04FD /* Pod */,
+				A99F8CA1510E752DEC07FD3EFDFA53E8 /* SAEvents+Moat.h */,
+				3FAD960B128CDDBF25BBDE43CDFA4ADC /* SAEvents+Moat.m */,
+				24598E186A9B3B0CA693BA19E34D6E6E /* SUPMoatAnalytics.h */,
+				68A8640FEE8E486A506E05A654AD7745 /* SUPMoatBaseTracker.h */,
+				BF87FCBA2E76E14BB6147F45A0B54798 /* SUPMoatGMAInterstitialTracker.h */,
+				679F28519A3A2DBC7DA019051D2AE014 /* SUPMoatMobileAppKit.h */,
+				F60F887A98121CC4FA8FAC150C9C1033 /* SUPMoatNativeDisplayTracker.h */,
+				1FFD48424CB2124EF541FE7D826C8964 /* SUPMoatVideoTracker.h */,
+				44DEC6469084C7EDDFB3111DB9AA169F /* SUPMoatWebTracker.h */,
 			);
 			name = Moat;
+			path = Moat;
 			sourceTree = "<group>";
 		};
 		0A2A78E2A2900A8C52653810F96EF9B7 /* SAUtils */ = {
@@ -565,13 +573,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		14BDDA5203BD096B7EAA4C822FB0B50E /* Libraries */ = {
+		156DC4AFAC55852241C3E506740974AB /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				5370B1345C489EF6E63C66C334440528 /* Headers */,
+				95FBD136CC4C7FDA97B28F5E8DD84188 /* Plugin */,
 			);
-			name = Libraries;
-			path = Libraries;
+			name = Pod;
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		2006CB6050ACC1BC2C896FE27748C7DA /* Classes */ = {
@@ -629,6 +637,15 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
+		3703A806B04EA0DEB73C4F7678D72AF2 /* Moat */ = {
+			isa = PBXGroup;
+			children = (
+				F23C126F3538042B1B90751670292B9B /* Frameworks */,
+				156DC4AFAC55852241C3E506740974AB /* Pod */,
+			);
+			name = Moat;
+			sourceTree = "<group>";
+		};
 		4E8FD774480B33BF56948E04AD35EE94 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,21 +653,6 @@
 				F9F3024F9F91D7003AE7494AD6E0B016 /* Pods-SAEvents_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5370B1345C489EF6E63C66C334440528 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				20655BAE5851E9C3B60FDE274277863C /* SUPMoatAnalytics.h */,
-				406E81129BDDD716354E0054E7F6FDB9 /* SUPMoatBaseTracker.h */,
-				91BC4B63B51CC2D69837641A876690C3 /* SUPMoatGMAInterstitialTracker.h */,
-				9F1FC2EAA725624AB684BBA78EFA8C71 /* SUPMoatMobileAppKit.h */,
-				4136FB5430616764ED58EB1D0869A652 /* SUPMoatNativeDisplayTracker.h */,
-				DDB0F70C9FEA8572E1D70A544339A015 /* SUPMoatVideoTracker.h */,
-				0662FC662AE28DAA43CD8CF6BF7BE12D /* SUPMoatWebTracker.h */,
-			);
-			name = Headers;
-			path = Headers;
 			sourceTree = "<group>";
 		};
 		550B713DEE65DA68B210E56BE5FD5ADD /* Support Files */ = {
@@ -662,24 +664,6 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SAEvents";
-			sourceTree = "<group>";
-		};
-		5DD89A1713675FCC8832454D6EA7C657 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F20EC048E07E83DDB1DDBD6D5F02E5D0 /* SUPMoatMobileAppKit */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		766114B10796E32D46BAF64333860E62 /* Moat */ = {
-			isa = PBXGroup;
-			children = (
-				704DF3512A7D5B609E33841B53F1AB2E /* SAEvents+Moat.h */,
-				5AA4C0E865BCA30225762BD802952AB8 /* SAEvents+Moat.m */,
-			);
-			name = Moat;
-			path = Moat;
 			sourceTree = "<group>";
 		};
 		77D17814CC0E57F382204DAC3E796121 /* Support Files */ = {
@@ -797,31 +781,12 @@
 			path = SAModelSpace;
 			sourceTree = "<group>";
 		};
-		860A95C9FE898C29751FF9DA081F04FD /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				14BDDA5203BD096B7EAA4C822FB0B50E /* Libraries */,
-				937D8C9D72A97D5F29552F96029B0BD5 /* Plugin */,
-			);
-			name = Pod;
-			path = Pod;
-			sourceTree = "<group>";
-		};
 		8D6B54B22F22657A758011F7394C7451 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
 				ECF59C38C623503465C605E62276FB7C /* SAEvents */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		937D8C9D72A97D5F29552F96029B0BD5 /* Plugin */ = {
-			isa = PBXGroup;
-			children = (
-				766114B10796E32D46BAF64333860E62 /* Moat */,
-			);
-			name = Plugin;
-			path = Plugin;
 			sourceTree = "<group>";
 		};
 		94BAA3A38B94A91BF837B61F37727AEA /* Pod */ = {
@@ -831,6 +796,15 @@
 			);
 			name = Pod;
 			path = Pod;
+			sourceTree = "<group>";
+		};
+		95FBD136CC4C7FDA97B28F5E8DD84188 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				00B0D28AD2E0230F2CC0BCFF1A84A07A /* Moat */,
+			);
+			name = Plugin;
+			path = Plugin;
 			sourceTree = "<group>";
 		};
 		9B2AF54AF97B0E240F01A07397F2BB1F /* SAVideoPlayer */ = {
@@ -934,7 +908,7 @@
 			isa = PBXGroup;
 			children = (
 				362CA3E754745EF4BBBE6B02ABCBB606 /* Core */,
-				05261B291043B8B6FB9C885F5E1DBF52 /* Moat */,
+				3703A806B04EA0DEB73C4F7678D72AF2 /* Moat */,
 				550B713DEE65DA68B210E56BE5FD5ADD /* Support Files */,
 			);
 			name = SAEvents;
@@ -956,6 +930,14 @@
 				5EE52D24775A39DAB8D464C6CBEE7DA8 /* libSAWebPlayer.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F23C126F3538042B1B90751670292B9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E687DA12A60EF06D51074B986DFC0D45 /* SUPMoatMobileAppKit */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F9F3024F9F91D7003AE7494AD6E0B016 /* Pods-SAEvents_Tests */ = {

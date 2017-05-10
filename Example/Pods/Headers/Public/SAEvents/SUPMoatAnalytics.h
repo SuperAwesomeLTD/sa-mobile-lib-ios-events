@@ -1,1 +1,1 @@
-../../../../../Pod/Libraries/Headers/SUPMoatAnalytics.h
+../../../../../Pod/Plugin/Moat/SUPMoatAnalytics.h

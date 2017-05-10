@@ -1,1 +1,1 @@
-../../../../../Pod/Libraries/Headers/SUPMoatVideoTracker.h
+../../../../../Pod/Plugin/Moat/SUPMoatVideoTracker.h

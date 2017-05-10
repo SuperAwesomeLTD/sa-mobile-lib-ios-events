@@ -1,1 +1,1 @@
-../../../../../Pod/Libraries/Headers/SUPMoatWebTracker.h
+../../../../../Pod/Plugin/Moat/SUPMoatWebTracker.h

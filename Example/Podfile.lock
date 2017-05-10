@@ -39,7 +39,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SAEvents: 36b2ab48e03312df2737f8b1c4825012efe87900
+  SAEvents: d8beeaaa46ecc8cbbde46e8f9e323e1da10827df
   SAJsonParser: d0db6d8c737c04f8bf4e9474e82825347aa24f58
   SAModelSpace: b1955fb6fe18f3fb51a72a93f9db49fdfbd3f4f0
   SANetworking: 40e2a8ffd5c680be57dfd91426f3c74933ad1d80

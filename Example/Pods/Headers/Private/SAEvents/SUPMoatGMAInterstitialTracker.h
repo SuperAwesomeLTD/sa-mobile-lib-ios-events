@@ -1,1 +1,1 @@
-../../../../../Pod/Libraries/Headers/SUPMoatGMAInterstitialTracker.h
+../../../../../Pod/Plugin/Moat/SUPMoatGMAInterstitialTracker.h

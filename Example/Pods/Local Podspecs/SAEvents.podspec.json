@@ -50,11 +50,7 @@
 
         ]
       },
-      "source_files": [
-        "Pod/Plugin/Moat/*",
-        "Pod/Libraries/Headers/*"
-      ],
-      "preserve_paths": "Pod/Libraries/Headers/*.h",
+      "source_files": "Pod/Plugin/Moat/*",
       "vendored_libraries": "Pod/Libraries/libSUPMoatMobileAppKit.a",
       "libraries": "SUPMoatMobileAppKit"
     }
