@@ -17,7 +17,6 @@
 @interface SAMoatModule ()
 @property (nonatomic, assign) BOOL moatLimiting;
 @property (nonatomic, strong) SAAd *ad;
-@property (nonatomic, assign) BOOL shouldEnableMOAT;
 @end
 
 @implementation SAMoatModule
@@ -25,15 +24,15 @@
 - (id) initWithAd:(SAAd *)ad {
     if (self = [super init]) {
         
+        // init with true
+        _moatLimiting = true;
+        
         // get the ad
         _ad = ad;
         
         // init MOAT, if available
         SEL selector = NSSelectorFromString(@"initMoat");
-        if ([self respondsToSelector:selector] && [self isMoatAllowed]) {
-            
-            // set this so that other methods can play moat
-            _shouldEnableMOAT = true;
+        if ([self respondsToSelector:selector]) {
             
             // init moat
             IMP imp = [self methodForSelector:selector];
@@ -85,7 +84,7 @@
     SEL selector = NSSelectorFromString(@"internalStartMoatTrackingForDisplay:andAdDictionary:");
     
     // perform selector, if available
-    if ([self respondsToSelector:selector] && _shouldEnableMOAT) {
+    if ([self respondsToSelector:selector] && [self isMoatAllowed]) {
         IMP imp = [self methodForSelector:selector];
         NSString* (*func)(id, SEL, id, NSDictionary*) = (void *)imp;
         moatString = func(self, selector, webplayer, moatDict);
@@ -104,7 +103,7 @@
     SEL selector = NSSelectorFromString(@"internalStopMoatTrackingForDisplay");
     
     // perform selector, if available
-    if ([self respondsToSelector:selector] && _shouldEnableMOAT) {
+    if ([self respondsToSelector:selector]) {
         IMP imp = [self methodForSelector:selector];
         BOOL (*func)(id, SEL) = (void*) imp;
         moatResponse = func(self, selector);
@@ -143,7 +142,7 @@
     SEL selector = NSSelectorFromString(@"internalStartMoatTrackingForVideoPlayer:withLayer:andView:andAdDictionary:");
     
     // perform selector, if available
-    if ([self respondsToSelector:selector] && _shouldEnableMOAT) {
+    if ([self respondsToSelector:selector] && [self isMoatAllowed]) {
         IMP imp = [self methodForSelector:selector];
         BOOL (*func)(id, SEL, AVPlayer*, AVPlayerLayer*, UIView*, NSDictionary*) = (void *)imp;
         moatResponse = func(self, selector, player, layer, view, moatDict);
@@ -162,7 +161,7 @@
     SEL selector = NSSelectorFromString(@"internalStopMoatTrackingForVideoPlayer");
     
     // perform selector, if available
-    if ([self respondsToSelector:selector] && _shouldEnableMOAT) {
+    if ([self respondsToSelector:selector]) {
         IMP imp = [self methodForSelector:selector];
         BOOL (*func)(id, SEL) = (void*) imp;
         moatResponse = func(self, selector);

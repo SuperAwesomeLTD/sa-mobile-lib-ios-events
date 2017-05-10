@@ -38,6 +38,7 @@
     ad.advertiserId = 50;
     ad.campaignId = 892;
     ad.lineItemId = 2892;
+    ad.moat = 0.2;
     ad.creative._id = 2910;
     ad.appId = 201;
     ad.placementId = 100;
