@@ -383,6 +383,7 @@
 		CE56B77D573A63FE900168281B2B0834 /* SABlackMask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SABlackMask.m; path = Pod/Classes/SABlackMask.m; sourceTree = "<group>"; };
 		CFD3C24ED9DB8961BCE8A90C39FF6054 /* libSASession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSASession.a; path = libSASession.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D168F999BE594CD7E9229325AB9CAE28 /* SAResizedWebPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAResizedWebPlayer.h; path = Pod/Classes/SAResizedWebPlayer.h; sourceTree = "<group>"; };
+		D342305A4048D02881D5F6E8F71D06DC /* libSUPMoatMobileAppKit.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libSUPMoatMobileAppKit.a; path = Pod/Libraries/libSUPMoatMobileAppKit.a; sourceTree = "<group>"; };
 		D67294DA3429F42353FC18315D89543A /* SANetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SANetwork.h; path = Pod/Classes/Request/SANetwork.h; sourceTree = "<group>"; };
 		D83F0C195E535CCCFA996A68FB3FE11C /* SAAd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAAd.h; path = Pod/Classes/SAAd.h; sourceTree = "<group>"; };
 		D8A065CD7331544D2E5ACD65249BCEDE /* Pods-SAEvents_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SAEvents_Example-dummy.m"; sourceTree = "<group>"; };
@@ -399,7 +400,6 @@
 		E0509050C115DBC357C7452E76873343 /* Pods-SAEvents_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SAEvents_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E2B773329307E58A603CCB960B5CF29E /* SASession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SASession.m; path = Pod/Classes/SASession.m; sourceTree = "<group>"; };
 		E5C34D563A84498D0EEFB7D645532C69 /* NSDictionary+SafeHandling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+SafeHandling.h"; path = "Pod/Classes/NSDictionary+SafeHandling.h"; sourceTree = "<group>"; };
-		E687DA12A60EF06D51074B986DFC0D45 /* SUPMoatMobileAppKit */ = {isa = PBXFileReference; includeInIndex = 1; name = SUPMoatMobileAppKit; path = Pod/Libraries/Versions/A/SUPMoatMobileAppKit; sourceTree = "<group>"; };
 		E78E8ECA5225575DBF4544F2F60B73EC /* SAJsonParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAJsonParser.h; path = Pod/Classes/SAJsonParser.h; sourceTree = "<group>"; };
 		E82C2632AE21161A5E954C6EEBFBB5A5 /* SAFileListDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAFileListDownloader.h; path = Pod/Classes/FileList/SAFileListDownloader.h; sourceTree = "<group>"; };
 		E924704646FE044FA22612D9BF8850CC /* SACreative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SACreative.h; path = Pod/Classes/SACreative.h; sourceTree = "<group>"; };
@@ -565,6 +565,14 @@
 			path = SANetworking;
 			sourceTree = "<group>";
 		};
+		0C0EC969821ECC9EAC3726760A85B57B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D342305A4048D02881D5F6E8F71D06DC /* libSUPMoatMobileAppKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,7 +648,7 @@
 		3703A806B04EA0DEB73C4F7678D72AF2 /* Moat */ = {
 			isa = PBXGroup;
 			children = (
-				F23C126F3538042B1B90751670292B9B /* Frameworks */,
+				0C0EC969821ECC9EAC3726760A85B57B /* Frameworks */,
 				156DC4AFAC55852241C3E506740974AB /* Pod */,
 			);
 			name = Moat;
@@ -930,14 +938,6 @@
 				5EE52D24775A39DAB8D464C6CBEE7DA8 /* libSAWebPlayer.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F23C126F3538042B1B90751670292B9B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E687DA12A60EF06D51074B986DFC0D45 /* SUPMoatMobileAppKit */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F9F3024F9F91D7003AE7494AD6E0B016 /* Pods-SAEvents_Tests */ = {
