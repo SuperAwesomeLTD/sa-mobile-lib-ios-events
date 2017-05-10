@@ -17,7 +17,7 @@
 #import "SAViewController.h"
 #import "SAVideoPlayer.h"
 #import "SAWebPlayer.h"
-// #import "SAEvents+Moat.h"
+ #import "SAEvents+Moat.h"
 
 @interface SAEvents_SAMoatModule_Tests : XCTestCase
 @property (nonatomic, strong) SAViewController *vc;
@@ -40,144 +40,155 @@
 
 - (void) test1 {
     
-//    SAAd *ad = [SAEvents_Aux getTestAd];
-//    
-//    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
-//    [module disableMoatLimiting];
-//    
-//    SAWebPlayer *webView = [[SAWebPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
-//    
-//    XCTAssertNotNil(_vc);
-//    XCTAssertNotNil(webView);
-//    
-//    [_vc.view addSubview:webView];
-//    
-//    NSString *moat = [module moatEventForWebPlayer:webView];
-//    XCTAssertNotNil(moat);
-//    
-//    XCTAssertTrue([moat rangeOfString:@"z.moatads.com"].location != NSNotFound);
-//    XCTAssertTrue([moat rangeOfString:@"superawesomeinappdisplay"].location != NSNotFound);
-//    XCTAssertTrue([moat rangeOfString:@"731223424656"].location != NSNotFound);
-//    
-//    NSInteger loc1 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel1=%ld", ad.advertiserId]].location;
-//    XCTAssertTrue(loc1 != NSNotFound);
-//    
-//    NSInteger loc2 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel2=%ld", ad.campaignId]].location;
-//    XCTAssertTrue(loc2 != NSNotFound);
-//    
-//    NSInteger loc3 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel3=%ld", ad.lineItemId]].location;
-//    XCTAssertTrue(loc3 != NSNotFound);
-//    
-//    NSInteger loc4 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel4=%ld", ad.creative._id]].location;
-//    XCTAssertTrue(loc4 != NSNotFound);
-//    
-//    NSInteger loc5 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer1=%ld", ad.appId]].location;
-//    XCTAssertTrue(loc5 != NSNotFound);
-//    
-//    NSInteger loc6 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer2=%ld", ad.placementId]].location;
-//    XCTAssertTrue(loc6 != NSNotFound);
-//    
-//    NSInteger loc7 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer3=%ld", ad.publisherId]].location;
-//    XCTAssertTrue(loc7 != NSNotFound);
+    SAAd *ad = [SAEvents_Aux getTestAd];
+    
+    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
+    [module disableMoatLimiting];
+    
+    SAWebPlayer *webView = [[SAWebPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
+    
+    XCTAssertNotNil(_vc);
+    XCTAssertNotNil(webView);
+    
+    [_vc.view addSubview:webView];
+    
+    NSString *moat = [module startMoatTrackingForDisplay:webView];
+    XCTAssertNotNil(moat);
+    
+    XCTAssertTrue([moat rangeOfString:@"z.moatads.com"].location != NSNotFound);
+    XCTAssertTrue([moat rangeOfString:@"superawesomeinappdisplay"].location != NSNotFound);
+    XCTAssertTrue([moat rangeOfString:@"731223424656"].location != NSNotFound);
+    
+    NSInteger loc1 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel1=%ld", ad.advertiserId]].location;
+    XCTAssertTrue(loc1 != NSNotFound);
+    
+    NSInteger loc2 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel2=%ld", ad.campaignId]].location;
+    XCTAssertTrue(loc2 != NSNotFound);
+    
+    NSInteger loc3 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel3=%ld", ad.lineItemId]].location;
+    XCTAssertTrue(loc3 != NSNotFound);
+    
+    NSInteger loc4 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel4=%ld", ad.creative._id]].location;
+    XCTAssertTrue(loc4 != NSNotFound);
+    
+    NSInteger loc5 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer1=%ld", ad.appId]].location;
+    XCTAssertTrue(loc5 != NSNotFound);
+    
+    NSInteger loc6 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer2=%ld", ad.placementId]].location;
+    XCTAssertTrue(loc6 != NSNotFound);
+    
+    NSInteger loc7 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer3=%ld", ad.publisherId]].location;
+    XCTAssertTrue(loc7 != NSNotFound);
+    
+    BOOL stopped = [module stopMoatTrackingForDisplay];
+    XCTAssertTrue(stopped);
     
 }
 
 - (void) test2 {
     
-//    SAAd *ad = [SAEvents_Aux getTestAd];
-//    
-//    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
-//    [module disableMoatLimiting];
-//    
-//    SAWebPlayer *webView = nil;
-//    
-//    XCTAssertNotNil(_vc);
-//    
-//    NSString *moat = [module moatEventForWebPlayer:webView];
-//    XCTAssertNotNil(moat);
-//    
-//    XCTAssertTrue([moat rangeOfString:@"z.moatads.com"].location != NSNotFound);
-//    XCTAssertTrue([moat rangeOfString:@"superawesomeinappdisplay"].location != NSNotFound);
-//    XCTAssertTrue([moat rangeOfString:@"731223424656"].location != NSNotFound);
-//    
-//    NSInteger loc1 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel1=%ld", ad.advertiserId]].location;
-//    XCTAssertTrue(loc1 != NSNotFound);
-//    
-//    NSInteger loc2 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel2=%ld", ad.campaignId]].location;
-//    XCTAssertTrue(loc2 != NSNotFound);
-//    
-//    NSInteger loc3 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel3=%ld", ad.lineItemId]].location;
-//    XCTAssertTrue(loc3 != NSNotFound);
-//    
-//    NSInteger loc4 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel4=%ld", ad.creative._id]].location;
-//    XCTAssertTrue(loc4 != NSNotFound);
-//    
-//    NSInteger loc5 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer1=%ld", ad.appId]].location;
-//    XCTAssertTrue(loc5 != NSNotFound);
-//    
-//    NSInteger loc6 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer2=%ld", ad.placementId]].location;
-//    XCTAssertTrue(loc6 != NSNotFound);
-//    
-//    NSInteger loc7 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer3=%ld", ad.publisherId]].location;
-//    XCTAssertTrue(loc7 != NSNotFound);
+    SAAd *ad = [SAEvents_Aux getTestAd];
+    
+    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
+    [module disableMoatLimiting];
+    
+    SAWebPlayer *webView = nil;
+    
+    XCTAssertNotNil(_vc);
+    
+    NSString *moat = [module startMoatTrackingForDisplay:webView];
+    XCTAssertNotNil(moat);
+    
+    XCTAssertTrue([moat rangeOfString:@"z.moatads.com"].location != NSNotFound);
+    XCTAssertTrue([moat rangeOfString:@"superawesomeinappdisplay"].location != NSNotFound);
+    XCTAssertTrue([moat rangeOfString:@"731223424656"].location != NSNotFound);
+    
+    NSInteger loc1 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel1=%ld", ad.advertiserId]].location;
+    XCTAssertTrue(loc1 != NSNotFound);
+    
+    NSInteger loc2 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel2=%ld", ad.campaignId]].location;
+    XCTAssertTrue(loc2 != NSNotFound);
+    
+    NSInteger loc3 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel3=%ld", ad.lineItemId]].location;
+    XCTAssertTrue(loc3 != NSNotFound);
+    
+    NSInteger loc4 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientLevel4=%ld", ad.creative._id]].location;
+    XCTAssertTrue(loc4 != NSNotFound);
+    
+    NSInteger loc5 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer1=%ld", ad.appId]].location;
+    XCTAssertTrue(loc5 != NSNotFound);
+    
+    NSInteger loc6 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer2=%ld", ad.placementId]].location;
+    XCTAssertTrue(loc6 != NSNotFound);
+    
+    NSInteger loc7 = [moat rangeOfString:[NSString stringWithFormat:@"moatClientSlicer3=%ld", ad.publisherId]].location;
+    XCTAssertTrue(loc7 != NSNotFound);
+    
+    BOOL stopped = [module stopMoatTrackingForDisplay];
+    XCTAssertTrue(stopped);
     
 }
 
 - (void) test3 {
     
-//    SAAd *ad = nil;
-//    
-//    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
-//    [module disableMoatLimiting];
-//    
-//    SAWebPlayer *webView = nil;
-//    
-//    XCTAssertNotNil(_vc);
-//    
-//    NSString *moat = [module moatEventForWebPlayer:webView];
-//    XCTAssertNotNil(moat);
-//    XCTAssertTrue([moat isEqualToString:@""]);
+    SAAd *ad = nil;
+    
+    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
+    [module disableMoatLimiting];
+    
+    SAWebPlayer *webView = nil;
+    
+    XCTAssertNotNil(_vc);
+    
+    NSString *moat = [module startMoatTrackingForDisplay:webView];
+    XCTAssertNotNil(moat);
+    XCTAssertTrue([moat isEqualToString:@""]);
+    
+    BOOL stopped = [module stopMoatTrackingForDisplay];
+    XCTAssertFalse(stopped);
     
 }
 
 - (void) test4 {
     
-//    SAAd *ad = [SAEvents_Aux getTestAd];
-//    
-//    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
-//    [module disableMoatLimiting];
-//    
-//    SAVideoPlayer *player = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
-//    
-//    XCTAssertNotNil(_vc);
-//    XCTAssertNotNil(player);
-//    
-//    [_vc.view addSubview:player];
-//    
-//    BOOL moat = [module moatEventForVideoPlayer:[player getPlayer]
-//                                           withLayer:[player getPlayerLayer]
-//                                             andView:player];
-//    XCTAssertTrue(moat);
+    SAAd *ad = [SAEvents_Aux getTestAd];
+    
+    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
+    [module disableMoatLimiting];
+    
+    SAVideoPlayer *player = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
+    
+    XCTAssertNotNil(_vc);
+    XCTAssertNotNil(player);
+    
+    [_vc.view addSubview:player];
+    
+    BOOL moat = [module startMoatTrackingForVideoPlayer:[player getPlayer]
+                                              withLayer:[player getPlayerLayer]
+                                                andView:player];
+    // XCTAssertTrue(moat);
+    
+    
 }
 
 - (void) test5 {
     
-//    SAAd *ad = nil;
-//    
-//    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
-//    [module disableMoatLimiting];
-//    
-//    SAVideoPlayer *player = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
-//    
-//    XCTAssertNotNil(_vc);
-//    XCTAssertNotNil(player);
-//    
-//    [_vc.view addSubview:player];
-//    
-//    BOOL moat = [module moatEventForVideoPlayer:[player getPlayer]
-//                                      withLayer:[player getPlayerLayer]
-//                                        andView:player];
-//    XCTAssertFalse(moat);
+    SAAd *ad = nil;
+    
+    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
+    [module disableMoatLimiting];
+    
+    SAVideoPlayer *player = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
+    
+    XCTAssertNotNil(_vc);
+    XCTAssertNotNil(player);
+    
+    [_vc.view addSubview:player];
+    
+    BOOL moat = [module startMoatTrackingForVideoPlayer:[player getPlayer]
+                                              withLayer:[player getPlayerLayer]
+                                                andView:player];
+    XCTAssertFalse(moat);
 }
 
 @end

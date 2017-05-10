@@ -1,1 +1,0 @@
-../../../../../../Pod/Frameworks/SUPMoatMobileAppKit.framework/Versions/A/Headers/SUPMoatGMAInterstitialTracker.h

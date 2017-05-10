@@ -9,8 +9,8 @@
 #import "SAUtils.h"
 
 #if defined(__has_include)
-#if __has_include("SAEvents+Moat2.h")
-#import "SAEvents+Moat2.h"
+#if __has_include("SAEvents+Moat.h")
+#import "SAEvents+Moat.h"
 #endif
 #endif
 

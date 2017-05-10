@@ -22,16 +22,16 @@
   "default_subspecs": "Core",
   "dependencies": {
     "SAUtils": [
-      "1.5.0"
+      "1.5.2"
     ],
     "SANetworking": [
       "0.2.9"
     ],
     "SAModelSpace": [
-      "0.4.7"
+      "0.4.9"
     ],
     "SASession": [
-      "0.3.5"
+      "0.3.6"
     ]
   },
   "subspecs": [
@@ -50,8 +50,13 @@
 
         ]
       },
-      "source_files": "Pod/Plugin/Moat/*",
-      "vendored_frameworks": "Pod/Frameworks/SUPMoatMobileAppKit.framework"
+      "source_files": [
+        "Pod/Plugin/Moat/*",
+        "Pod/Libraries/Headers/*"
+      ],
+      "preserve_paths": "Pod/Libraries/Headers/*.h",
+      "vendored_libraries": "Pod/Libraries/libSUPMoatMobileAppKit.a",
+      "libraries": "SUPMoatMobileAppKit"
     }
   ]
 }

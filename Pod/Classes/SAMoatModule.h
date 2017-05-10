@@ -28,6 +28,10 @@
  *                  inserted in the web view so that the JS moat stuff works
  */
 - (NSString*) startMoatTrackingForDisplay:(id)webplayer;
+
+/**
+ * Stop moat tracking for display (web view) ads
+ */
 - (BOOL) stopMoatTrackingForDisplay;
 
 /**
@@ -40,6 +44,10 @@
 - (BOOL) startMoatTrackingForVideoPlayer:(AVPlayer*) player
                                withLayer:(AVPlayerLayer*) layer
                                  andView:(UIView*) view;
+
+/**
+ * Stop moat tracking for video ads
+ */
 - (BOOL) stopMoatTrackingForVideoPlayer;
 
 /**

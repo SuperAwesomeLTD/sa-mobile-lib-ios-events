@@ -9,45 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Pod/Classes/SAMoatModule.m"
-            timestampString = "515499591.653629"
+            filePath = "../Pod/Plugin/Moat/SAEvents+Moat.m"
+            timestampString = "516103796.322425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-startMoatTrackingForDisplay:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Pod/Plugin/Moat/SAEvents+Moat2.m"
-            timestampString = "515502761.49136"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "-initMoat"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Pod/Plugin/Moat/SAEvents+Moat2.m"
-            timestampString = "515502882.701556"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "-internalStartMoatTrackingForDisplay:andAdDictionary:"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-internalStartMoatTrackingForVideoPlayer:withLayer:andView:andAdDictionary:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
