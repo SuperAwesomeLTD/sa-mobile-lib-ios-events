@@ -1,1 +1,1 @@
-../../../../../Pod/Plugin/Moat/SUPMoatMobileAppKit.h
+../../../../../Pod/Libraries/Headers/SUPMoatMobileAppKit.h
