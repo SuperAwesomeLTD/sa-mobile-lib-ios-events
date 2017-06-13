@@ -71,19 +71,19 @@
     
     [self.view addSubview:_videoPlayer];
     
-    _webPlayer = [[SAWebPlayer alloc] initWithContentSize:CGSizeMake(320, 50) andParentFrame:CGRectMake(0, 240, 320, 50)];
-    
-    NSString *moatStr = [_moat startMoatTrackingForDisplay:[_webPlayer getWebView]];
-    NSLog(@"MOAT Str is %@", moatStr);
-    NSString *html = [[NSString alloc] initWithFormat:@"<html><body><img src='https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/YkKgkIQYOiwV7WmbHK7jArBjHOrU3Bcn.jpg'>%@</body></html>", moatStr];
-    
-    [self.view addSubview:_webPlayer];
-
-    [_webPlayer setEventHandler:^(SAWebPlayerEvent event) {
-        // do nosthing
-    }];
-    
-    [_webPlayer loadHTML:html witBase:nil];
+//    _webPlayer = [[SAWebPlayer alloc] initWithContentSize:CGSizeMake(320, 50) andParentFrame:CGRectMake(0, 240, 320, 50)];
+//    
+//    NSString *moatStr = [_moat startMoatTrackingForDisplay:[_webPlayer getWebView]];
+//    NSLog(@"MOAT Str is %@", moatStr);
+//    NSString *html = [[NSString alloc] initWithFormat:@"<html><body><img src='https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/YkKgkIQYOiwV7WmbHK7jArBjHOrU3Bcn.jpg'>%@</body></html>", moatStr];
+//    
+//    [self.view addSubview:_webPlayer];
+//
+//    [_webPlayer setEventHandler:^(SAWebPlayerEvent event) {
+//        // do nosthing
+//    }];
+//    
+//    [_webPlayer loadHTML:html witBase:nil];
 }
 
 - (void)didReceiveMemoryWarning {
