@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '306C2BEDC9AD046F7F772F9E2630851A'
-               BlueprintName = 'SAEvents'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSAEvents.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "306C2BEDC9AD046F7F772F9E2630851A"
+               BlueprintName = "SAEvents"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libSAEvents.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
