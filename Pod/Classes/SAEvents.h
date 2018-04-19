@@ -56,6 +56,7 @@
 - (BOOL) startMoatTrackingForVideoPlayer:(AVPlayer*) player withLayer:(AVPlayerLayer*) layer andView:(UIView*) view;
 - (BOOL) stopMoatTrackingForVideoPlayer;
 - (void) disableMoatLimiting;
+- (BOOL) isChildInViewableRect: (UIView*) view;
 
 
 @end

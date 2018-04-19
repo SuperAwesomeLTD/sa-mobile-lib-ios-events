@@ -45,4 +45,9 @@ typedef void (^saDidFindViewOnScreen) (BOOL success);
  */
 - (void) close;
 
+/**
+ * Method that just checks viewability
+ */
+- (BOOL) isChildInViewableRect: (UIView*) view;
+
 @end

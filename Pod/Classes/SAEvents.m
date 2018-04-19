@@ -160,6 +160,14 @@
     
 }
 
+- (BOOL) isChildInViewableRect: (UIView*) view {
+    if (_viewableModule) {
+        return [_viewableModule isChildInViewableRect:view];
+    } else {
+        return false;
+    }
+}
+
 - (NSString*) startMoatTrackingForDisplay:(id)webplayer {
     return _moatModule ? [_moatModule startMoatTrackingForDisplay:webplayer] : @"";
 }

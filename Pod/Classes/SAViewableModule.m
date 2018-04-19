@@ -76,6 +76,18 @@
     
 }
 
+- (BOOL) isChildInViewableRect: (UIView*) view {
+    CGRect childR = view.frame;
+    CGRect superR = CGRectMake(0, 0, view.superview.frame.size.width, view.superview.frame.size.height);
+    CGRect screenR = [UIScreen mainScreen].bounds;
+    
+    if ([SAUtils isRect:childR inRect:screenR] && [SAUtils isRect:childR inRect:superR]) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 - (void) checkViewableImpressionForDisplay: (UIView*) view
                                andResponse: (saDidFindViewOnScreen) response {
     [self checkViewableImpressionForView:view
