@@ -9,11 +9,11 @@
 @class AVPlayer;
 @class AVPlayerLayer;
 @class SUPMoatWebTracker;
-@class SUPMoatVideoTracker;
+@class SUPMoatAVVideoTracker;
 
 @interface SAMoatModule : NSObject
 
-@property (nonatomic, strong) SUPMoatVideoTracker *videoTracker;
+@property (nonatomic, strong) SUPMoatAVVideoTracker *videoTracker;
 @property (nonatomic, strong) SUPMoatWebTracker *webTracker;
 
 - (id) initWithAd: (SAAd*) ad;

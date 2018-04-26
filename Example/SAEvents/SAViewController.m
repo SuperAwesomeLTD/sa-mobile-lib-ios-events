@@ -43,13 +43,13 @@
     ad.appId = 201;
     ad.placementId = 100;
     ad.publisherId = 21;
-    
+
     _moat = [[SAMoatModule alloc] initWithAd:ad];
     [_moat disableMoatLimiting];
-    
+
     _videoPlayer = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
-    [_videoPlayer setEventHandler:^(SAVideoPlayerEvent event) {
-       
+    [_videoPlayer setEventHandler:^(SAVideoPlayerEvent event, CGFloat time, CGFloat duration) {
+
         if (event == Video_Start) {
             BOOL res = [weakSelf.moat startMoatTrackingForVideoPlayer:[weakSelf.videoPlayer getPlayer]
                                                             withLayer:[weakSelf.videoPlayer getPlayerLayer]
@@ -60,30 +60,31 @@
             BOOL res = [weakSelf.moat stopMoatTrackingForVideoPlayer];
             NSLog(@"MOAT END %d", res);
         }
+
     }];
-    
+
     [[SAFileDownloader getInstance] downloadFileFrom:@"https://sa-beta-ads-video-transcoded-superawesome.netdna-ssl.com/uKCcG2tSUM5mquPclh79M1XMW2XJvPwW.mp4" andResponse:^(BOOL success, NSString *diskPath) {
-        
+
         NSString *finalDiskURL = [SAUtils filePathInDocuments:diskPath];
         [weakSelf.videoPlayer playWithMediaFile:finalDiskURL];
-        
+
     }];
-    
+
     [self.view addSubview:_videoPlayer];
     
-//    _webPlayer = [[SAWebPlayer alloc] initWithContentSize:CGSizeMake(320, 50) andParentFrame:CGRectMake(0, 240, 320, 50)];
-//    
-//    NSString *moatStr = [_moat startMoatTrackingForDisplay:[_webPlayer getWebView]];
-//    NSLog(@"MOAT Str is %@", moatStr);
-//    NSString *html = [[NSString alloc] initWithFormat:@"<html><body><img src='https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/YkKgkIQYOiwV7WmbHK7jArBjHOrU3Bcn.jpg'>%@</body></html>", moatStr];
-//    
-//    [self.view addSubview:_webPlayer];
-//
-//    [_webPlayer setEventHandler:^(SAWebPlayerEvent event) {
-//        // do nosthing
-//    }];
-//    
-//    [_webPlayer loadHTML:html witBase:nil];
+    _webPlayer = [[SAWebPlayer alloc] initWithContentSize:CGSizeMake(320, 50) andParentFrame:CGRectMake(0, 240, 320, 50)];
+    
+    NSString *moatStr = [_moat startMoatTrackingForDisplay:[_webPlayer getWebView]];
+    NSLog(@"MOAT Str is %@", moatStr);
+    NSString *html = [[NSString alloc] initWithFormat:@"<html><body><img src='https://s3-eu-west-1.amazonaws.com/sb-ads-uploads/images/YkKgkIQYOiwV7WmbHK7jArBjHOrU3Bcn.jpg'>%@</body></html>", moatStr];
+    
+    [self.view addSubview:_webPlayer];
+
+    [_webPlayer setEventHandler:^(SAWebPlayerEvent event) {
+        // do nosthing
+    }];
+    
+    [_webPlayer loadHTML:html witBase:nil];
 }
 
 - (void)didReceiveMemoryWarning {

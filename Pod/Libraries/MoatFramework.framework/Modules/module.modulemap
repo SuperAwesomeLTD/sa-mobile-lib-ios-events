@@ -1,6 +1,0 @@
-framework module MoatFramework {
-  umbrella header "MoatFramework.h"
-
-  export *
-  module * { export * }
-}
