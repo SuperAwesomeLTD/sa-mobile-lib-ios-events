@@ -19,6 +19,11 @@
 - (id) initWithAd: (SAAd*) ad;
 
 /**
+ * Start moat tracking before everything else
+ */
++ (void) initMoat;
+
+/**
  * Method that registers a Moat event object,
  * according to the moat specifications
  *

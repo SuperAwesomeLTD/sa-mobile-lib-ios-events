@@ -19,6 +19,8 @@
 @property (nonatomic, strong) SAAd *ad;
 @end
 
+static BOOL moatEnabled = false;
+
 @implementation SAMoatModule
 
 - (id) initWithAd:(SAAd *)ad {
@@ -30,18 +32,28 @@
         // get the ad
         _ad = ad;
         
-        // init MOAT, if available
-        SEL selector = NSSelectorFromString(@"initMoat");
-        if ([self respondsToSelector:selector]) {
-            
-            // init moat
-            IMP imp = [self methodForSelector:selector];
-            void (*func)(id, SEL) = (void*)imp;
-            func(self, selector);
+        // try to enable moat here at last
+        if (!moatEnabled) {
+            [SAMoatModule initMoat];
+        } else {
+            NSLog(@"MOAT already initialised, good!");
         }
     }
     
     return self;
+}
+
++ (void) initMoat {
+    // init MOAT, if available
+    SEL selector = NSSelectorFromString(@"internalInitMoat");
+    if ([SAMoatModule respondsToSelector:selector]) {
+        
+        // init moat
+        IMP imp = [SAMoatModule methodForSelector:selector];
+        void (*func)(id, SEL) = (void*)imp;
+        func(self, selector);
+        moatEnabled = true;
+    }
 }
 
 /**

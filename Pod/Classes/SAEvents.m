@@ -192,4 +192,8 @@
     }
 }
 
++ (void) initMoat {
+    [SAMoatModule initMoat];
+}
+
 @end

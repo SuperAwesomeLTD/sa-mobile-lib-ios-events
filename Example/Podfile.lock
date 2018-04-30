@@ -1,16 +1,16 @@
 PODS:
-  - SAEvents (1.9.8):
-    - SAEvents/Core (= 1.9.8)
+  - SAEvents (1.9.9):
+    - SAEvents/Core (= 1.9.9)
     - SAModelSpace (= 0.5.4)
     - SANetworking (= 0.3.1)
     - SASession (= 0.3.8)
     - SAUtils (= 1.5.4)
-  - SAEvents/Core (1.9.8):
+  - SAEvents/Core (1.9.9):
     - SAModelSpace (= 0.5.4)
     - SANetworking (= 0.3.1)
     - SASession (= 0.3.8)
     - SAUtils (= 1.5.4)
-  - SAEvents/Moat (1.9.8):
+  - SAEvents/Moat (1.9.9):
     - SAEvents/Core
     - SAModelSpace (= 0.5.4)
     - SANetworking (= 0.3.1)
@@ -49,7 +49,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SAEvents: d72d559582c91f625fe629799c9ad288b8ba82a5
+  SAEvents: 1a47211af1b8fdaa47f7147d8f0de06ece1642f4
   SAJsonParser: f7c534c9e7bca38dfa4d254d2229122f562bd953
   SAModelSpace: 76e645798f653fcf84c4fe80b002737e47381d2d
   SANetworking: bd3fc423e108b09dbad94564af19de9ea6652ae7

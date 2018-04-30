@@ -57,6 +57,7 @@
 - (BOOL) stopMoatTrackingForVideoPlayer;
 - (void) disableMoatLimiting;
 - (BOOL) isChildInViewableRect: (UIView*) view;
++ (void) initMoat;
 
 
 @end

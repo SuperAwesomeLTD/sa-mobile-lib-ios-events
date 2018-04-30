@@ -11,7 +11,7 @@
 
 @implementation SAMoatModule (Moat)
 
-- (void) initMoat {
++ (void) internalInitMoat {
     
     SUPMoatOptions *options = [[SUPMoatOptions alloc] init];
     options.locationServicesEnabled = false;

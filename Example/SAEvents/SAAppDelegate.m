@@ -7,12 +7,17 @@
 //
 
 #import "SAAppDelegate.h"
+#import "SAEvents.h"
 
 @implementation SAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // init Moat
+    [SAEvents initMoat];
+    
     return YES;
 }
 
