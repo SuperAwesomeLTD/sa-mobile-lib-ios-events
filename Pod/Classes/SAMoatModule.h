@@ -5,15 +5,24 @@
 
 #import <UIKit/UIKit.h>
 
+//@class SAAd;
+//@class AVPlayer;
+//@class AVPlayerLayer;
+//@class SUPMoatWebTracker;
+//@class SUPMoatAVVideoTracker;
+
 @class SAAd;
 @class AVPlayer;
 @class AVPlayerLayer;
 @class SUPMoatWebTracker;
-@class SUPMoatAVVideoTracker;
+@class SUPMoatVideoTracker;
 
 @interface SAMoatModule : NSObject
 
-@property (nonatomic, strong) SUPMoatAVVideoTracker *videoTracker;
+//@property (nonatomic, strong) SUPMoatAVVideoTracker *videoTracker;
+//@property (nonatomic, strong) SUPMoatWebTracker *webTracker;
+
+@property (nonatomic, strong) SUPMoatVideoTracker *videoTracker;
 @property (nonatomic, strong) SUPMoatWebTracker *webTracker;
 
 - (id) initWithAd: (SAAd*) ad;

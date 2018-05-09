@@ -15,11 +15,9 @@
 
 /** Tracker for tracking native video ads shown with AVPlayer or MPMoviePlayerController.
  *
- * @warning This class will be removed in a future version of this SDK. We recommend using SUPMoatMPVideoTracker and SUPMoatAVVideoTracker instead of this class.
  * @warning FreeWheel/IMA ads, even ones that use AVPlayer, are best tracked with specialized Moat trackers.
  * Please inform the Moat team to get custom builds and documentation for FreeWheel and IMA based ads.
  */
-
 @interface SUPMoatVideoTracker : SUPMoatBaseTracker
 
 /** Creates tracker for tracking video ads.
@@ -39,7 +37,7 @@
  * @param player the MPMoviePlayerController instance being used to play the ad.
  */
 - (bool)trackVideoAd:(NSDictionary *)adIds
-  usingMPMoviePlayer:(MPMoviePlayerController *)player;
+   usingMPMoviePlayer:(MPMoviePlayerController *)player;
 
 /** Call to start tracking video ad backed by an AVPlayer.
  *
@@ -51,9 +49,9 @@
  * @param view the view that renders the video ad.
  */
 - (bool)trackVideoAd:(NSDictionary *)adIds
-  usingAVMoviePlayer:(AVPlayer *)player
-           withLayer:(CALayer *)layer
-  withContainingView:(UIView *)view;
+   usingAVMoviePlayer:(AVPlayer *)player
+            withLayer:(CALayer *)layer
+   withContainingView:(UIView *)view;
 
 /** Call if the layer or view in which the video ad is rendered changes.
  *
@@ -61,7 +59,7 @@
  * @param view the new view tha renders the video ad.
  */
 - (void)changeTargetLayer:(CALayer *)newLayer
-       withContainingView:(UIView *)view;
+        withContainingView:(UIView *)view;
 
 /** Call to stop tracking the ad.
  *

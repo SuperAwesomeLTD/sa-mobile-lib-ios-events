@@ -12,18 +12,18 @@ PODS:
   - OHHTTPStubs/NSURLSession (6.1.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (6.1.0)
-  - SAEvents (2.0.0):
-    - SAEvents/Core (= 2.0.0)
+  - SAEvents (2.0.1):
+    - SAEvents/Core (= 2.0.1)
     - SAModelSpace (= 1.0.0)
     - SANetworking (= 1.0.0)
     - SASession (= 1.1.1)
     - SAUtils (= 1.5.5)
-  - SAEvents/Core (2.0.0):
+  - SAEvents/Core (2.0.1):
     - SAModelSpace (= 1.0.0)
     - SANetworking (= 1.0.0)
     - SASession (= 1.1.1)
     - SAUtils (= 1.5.5)
-  - SAEvents/Moat (2.0.0):
+  - SAEvents/Moat (2.0.1):
     - SAEvents/Core
     - SAModelSpace (= 1.0.0)
     - SANetworking (= 1.0.0)
@@ -65,7 +65,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
-  SAEvents: 28c87078ea35483794a37f9d074fd6780854361c
+  SAEvents: ae32bbf66917fa1dfd02b45595d42be71acece14
   SAJsonParser: a9fac712c99b71e36997010413862866f8246d5a
   SAModelSpace: 07140f87445b477fbb61e5016a51e9f4c02546c7
   SANetworking: 672cec0782244c2d780c3c58867e58e8ed2917ee

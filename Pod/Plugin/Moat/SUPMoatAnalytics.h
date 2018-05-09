@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SUPMoatWebTracker.h"
+#import "SUPMoatNativeDisplayTracker.h"
+#import "SUPMoatVideoTracker.h"
+#import "SUPMoatGMAInterstitialTracker.h"
 
 /** Settings that determine aspects of the SDK's functionality */
 @interface SUPMoatOptions : NSObject<NSCopying>
@@ -66,19 +70,6 @@
  *
  * @param partnerCode The code provided to you by Moat for native ad tracking.
  */
-- (void)prepareNativeDisplayTracking:(NSString *)partnerCode __deprecated_msg("Use -prepareNativeDisplayTracking:error:");
-
-/** Call to prepare the Moat SDK for native display tracking.
- *
- * This call should be used if the Moat SDK will be used to track native ads.
- * Again, this call should be made as early as possible to ensure that the SDK is ready
- * when the first native ad loads.
- * @see SUPMoatVideoTracker.h for more detail on what constitues a native ad.
- *
- * @param partnerCode The code provided to you by Moat for native ad tracking.
- * @param error Error object pointer if there is a failure during initialization.
- * @return Whether or not native display initialization successfully completed.
- */
-- (BOOL)prepareNativeDisplayTracking:(NSString *)partnerCode error:(NSError **)error;
+- (void)prepareNativeDisplayTracking:(NSString *)partnerCode;
 
 @end

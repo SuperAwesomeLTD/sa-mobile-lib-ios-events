@@ -22,6 +22,7 @@
  */
 @interface SUPMoatWebTracker : SUPMoatBaseTracker
 
+
 /** Creates tracker for tracking Web View based ads.
  *
  * @param webViewOrWebViewContainer the UIView that contains the WebView to be tracked

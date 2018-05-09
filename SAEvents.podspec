@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
     mo.frameworks = 'AdSupport', 'WebKit'
     mo.dependency 'SAEvents/Core'
     mo.source_files = 'Pod/Plugin/Moat/*'
-    # mo.vendored_libraries = 'Pod/Libraries/libSUPMoatMobileAppKit.a'
-    mo.vendored_frameworks = 'Pod/Libraries/SUPMoatMobileAppKit.framework'
+    mo.vendored_libraries = 'Pod/Libraries/libSUPMoatMobileAppKit.a'
+    # mo.vendored_frameworks = 'Pod/Libraries/SUPMoatMobileAppKit.framework'
   end
 end
