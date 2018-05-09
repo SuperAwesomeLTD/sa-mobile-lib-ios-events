@@ -6,5 +6,4 @@
 #import "SAServerEvent.h"
 
 @interface SAClickEvent : SAServerEvent
-
 @end

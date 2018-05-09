@@ -5,6 +5,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import "SAServerEvent.h"
 
 @class SAAd;
 @class SASession;
@@ -29,12 +30,12 @@
 - (id) initWithAd: (SAAd*) ad
        andSession: (SASession*) session;
 
-- (void) triggerClickEvent;
-- (void) triggerImpressionEvent;
-- (void) triggeViewableImpressionEvent;
-- (void) triggerPgOpenEvent;
-- (void) triggerPgFailEvent;
-- (void) triggerPgCloseEvent;
-- (void) triggerPgSuccessEvent;
+- (void) triggerClickEvent: (saDidTriggerEvent) response;
+- (void) triggerImpressionEvent: (saDidTriggerEvent) response;
+- (void) triggeViewableImpressionEvent: (saDidTriggerEvent) response;
+- (void) triggerPgOpenEvent: (saDidTriggerEvent) response;
+- (void) triggerPgFailEvent: (saDidTriggerEvent) response;
+- (void) triggerPgCloseEvent: (saDidTriggerEvent) response;
+- (void) triggerPgSuccessEvent: (saDidTriggerEvent) response;
 
 @end

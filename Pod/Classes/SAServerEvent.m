@@ -38,10 +38,11 @@
 }
 
 - (NSDictionary*) getHeader {
-    return @{
-             @"Content-Type": @"application/json",
-             @"User-Agent": [SAUtils getUserAgent]
-             };
+    NSMutableDictionary *header = [@{@"Content-Type": @"application/json"} mutableCopy];
+    if (session != nil) {
+        [header setObject:[session getUserAgent] forKey:@"User-Agent"];
+    }
+    return header;
 }
 
 - (NSDictionary*) getQuery {

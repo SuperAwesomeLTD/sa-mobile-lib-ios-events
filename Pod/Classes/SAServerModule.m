@@ -37,45 +37,45 @@
     return self;
 }
 
-- (void) triggerClickEvent {
+- (void) triggerClickEvent: (saDidTriggerEvent) response {
     if (_clickEvent) {
-        [_clickEvent triggerEvent];
+        [_clickEvent triggerEvent:response];
     }
 }
 
-- (void) triggerImpressionEvent {
+- (void) triggerImpressionEvent: (saDidTriggerEvent) response {
     if (_impressionEvent) {
-        [_impressionEvent triggerEvent];
+        [_impressionEvent triggerEvent: response];
     }
 }
 
-- (void) triggeViewableImpressionEvent {
+- (void) triggeViewableImpressionEvent: (saDidTriggerEvent) response {
     if (_viewableImpressionEvent) {
-        [_viewableImpressionEvent triggerEvent];
+        [_viewableImpressionEvent triggerEvent: response];
     }
 }
 
-- (void) triggerPgOpenEvent {
+- (void) triggerPgOpenEvent: (saDidTriggerEvent) response {
     if (_pgOpenEvent) {
-        [_pgOpenEvent triggerEvent];
+        [_pgOpenEvent triggerEvent: response];
     }
 }
 
-- (void) triggerPgFailEvent {
+- (void) triggerPgFailEvent: (saDidTriggerEvent) response {
     if (_pgFailEvent) {
-        [_pgFailEvent triggerEvent];
+        [_pgFailEvent triggerEvent: response];
     }
 }
 
-- (void) triggerPgCloseEvent {
+- (void) triggerPgCloseEvent: (saDidTriggerEvent) response {
     if (_pgCloseEvent) {
-        [_pgCloseEvent triggerEvent];
+        [_pgCloseEvent triggerEvent: response];
     }
 }
 
-- (void) triggerPgSuccessEvent {
+- (void) triggerPgSuccessEvent: (saDidTriggerEvent) response {
     if (_pgSuccessEvent) {
-        [_pgSuccessEvent triggerEvent];
+        [_pgSuccessEvent triggerEvent: response];
     }
 }
 
