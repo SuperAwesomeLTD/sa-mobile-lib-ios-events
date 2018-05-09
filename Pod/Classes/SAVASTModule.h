@@ -4,6 +4,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "SAServerEvent.h"
 
 @class SAAd;
 @class SAURLEvent;
@@ -25,15 +26,15 @@
 
 - (NSString*) getVASTClickThroughEvent;
 
-- (void) triggerVASTClickThroughEvent;
-- (void) triggerVASTErrorEvent;
-- (void) triggerVASTImpressionEvent;
-- (void) triggerVASTCreativeViewEvent;
-- (void) triggerVASTStartEvent;
-- (void) triggerVASTFirstQuartileEvent;
-- (void) triggerVASTMidpointEvent;
-- (void) triggerVASTThirdQuartileEvent;
-- (void) triggerVASTCompleteEvent;
-- (void) triggerVASTClickTrackingEvent;
+- (void) triggerVASTClickThroughEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTErrorEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTImpressionEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTCreativeViewEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTStartEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTFirstQuartileEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTMidpointEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTThirdQuartileEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTCompleteEvent: (saDidTriggerEvent) response;
+- (void) triggerVASTClickTrackingEvent: (saDidTriggerEvent) response;
 
 @end

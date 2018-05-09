@@ -60,7 +60,8 @@
                          [[MockVastEvent alloc] initWithEvent:@"vast_midpoint" andPlacementId:placementId],
                          [[MockVastEvent alloc] initWithEvent:@"vast_thirdQuartile" andPlacementId:placementId],
                          [[MockVastEvent alloc] initWithEvent:@"vast_complete" andPlacementId:placementId],
-                         [[MockVastEvent alloc] initWithEvent:@"vast_click_tracking" andPlacementId:placementId]
+                         [[MockVastEvent alloc] initWithEvent:@"vast_click_tracking" andPlacementId:placementId],
+                         [[MockVastEvent alloc] initWithEvent:@"vast_error" andPlacementId:placementId]
                          ] mutableCopy];
     }
     

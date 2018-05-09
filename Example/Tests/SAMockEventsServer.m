@@ -90,6 +90,8 @@
             return [self->_factory successResponse];
         else if ([url containsString:@"/vast/event/vast_click_tracking?placement=1000"])
             return [self->_factory successResponse];
+        else if ([url containsString:@"/vast/event/vast_error?placement=1000"])
+            return [self->_factory successResponse];
         /*
          * Viewable impression event
          */

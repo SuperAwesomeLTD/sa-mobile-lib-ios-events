@@ -36,43 +36,43 @@
 
 - (void) triggerClickEvent {
     if (_serverModule) {
-        [_serverModule triggerClickEvent];
+        [_serverModule triggerClickEvent: nil];
     }
 }
 
 - (void) triggerImpressionEvent {
     if (_serverModule) {
-        [_serverModule triggerImpressionEvent];
+        [_serverModule triggerImpressionEvent: nil];
     }
 }
 
 - (void) triggerViewableImpressionEvent {
     if (_serverModule) {
-        [_serverModule triggeViewableImpressionEvent];
+        [_serverModule triggeViewableImpressionEvent: nil];
     }
 }
 
 - (void) triggerPgOpenEvent {
     if (_serverModule) {
-        [_serverModule triggerPgOpenEvent];
+        [_serverModule triggerPgOpenEvent: nil];
     }
 }
 
 - (void) triggerPgCloseEvent {
     if (_serverModule) {
-        [_serverModule triggerPgCloseEvent];
+        [_serverModule triggerPgCloseEvent: nil];
     }
 }
 
 - (void) triggerPgFailEvent {
     if (_serverModule) {
-        [_serverModule triggerPgFailEvent];
+        [_serverModule triggerPgFailEvent: nil];
     }
 }
 
 - (void) triggerPgSuccessEvent {
     if (_serverModule) {
-        [_serverModule triggerPgSuccessEvent];
+        [_serverModule triggerPgSuccessEvent: nil];
     }
 }
 
@@ -82,61 +82,61 @@
 
 - (void) triggerVASTClickThroughEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTClickThroughEvent];
+        [_vastModule triggerVASTClickThroughEvent: nil];
     }
 }
 
 - (void) triggerVASTErrorEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTErrorEvent];
+        [_vastModule triggerVASTErrorEvent: nil];
     }
 }
 
 - (void) triggerVASTImpressionEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTImpressionEvent];
+        [_vastModule triggerVASTImpressionEvent: nil];
     }
 }
 
 - (void) triggerVASTCreativeViewEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTCreativeViewEvent];
+        [_vastModule triggerVASTCreativeViewEvent: nil];
     }
 }
 
 - (void) triggerVASTStartEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTStartEvent];
+        [_vastModule triggerVASTStartEvent: nil];
     }
 }
 
 - (void) triggerVASTFirstQuartileEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTFirstQuartileEvent];
+        [_vastModule triggerVASTFirstQuartileEvent: nil];
     }
 }
 
 - (void) triggerVASTMidpointEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTMidpointEvent];
+        [_vastModule triggerVASTMidpointEvent: nil];
     }
 }
 
 - (void) triggerVASTThirdQuartileEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTThirdQuartileEvent];
+        [_vastModule triggerVASTThirdQuartileEvent: nil];
     }
 }
 
 - (void) triggerVASTCompleteEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTCompleteEvent];
+        [_vastModule triggerVASTCompleteEvent: nil];
     }
 }
 
 - (void) triggerVASTClickTrackingEvent {
     if (_vastModule) {
-        [_vastModule triggerVASTClickTrackingEvent];
+        [_vastModule triggerVASTClickTrackingEvent: nil];
     }
 }
 

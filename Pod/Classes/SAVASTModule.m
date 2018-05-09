@@ -34,7 +34,6 @@
             if ([event.event rangeOfString:@"vast_click_through"].location != NSNotFound) {
                 _vastClickThrough = [[SAURLEvent alloc] initWithUrl:event.URL];
             }
-            
             if ([event.event rangeOfString:@"vast_error"].location != NSNotFound) {
                 [_vastError addObject:[[SAURLEvent alloc] initWithUrl:event.URL]];
             }
@@ -75,63 +74,63 @@
 }
 
 
-- (void) triggerVASTClickThroughEvent {
+- (void) triggerVASTClickThroughEvent: (saDidTriggerEvent) response {
     if (_vastClickThrough) {
-        [_vastClickThrough triggerEvent];
+        [_vastClickThrough triggerEvent: response];
     }
 }
 
-- (void) triggerVASTErrorEvent {
+- (void) triggerVASTErrorEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastError) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTImpressionEvent {
+- (void) triggerVASTImpressionEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastImpression) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTCreativeViewEvent {
+- (void) triggerVASTCreativeViewEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastCreativeView) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTStartEvent {
+- (void) triggerVASTStartEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastStart) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTFirstQuartileEvent {
+- (void) triggerVASTFirstQuartileEvent: (saDidTriggerEvent) response{
     for (SAURLEvent *event in _vastFirstQuartile) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTMidpointEvent {
+- (void) triggerVASTMidpointEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastMidpoint) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTThirdQuartileEvent {
+- (void) triggerVASTThirdQuartileEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastThirdQuartile) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTCompleteEvent {
+- (void) triggerVASTCompleteEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastComplete) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
-- (void) triggerVASTClickTrackingEvent {
+- (void) triggerVASTClickTrackingEvent: (saDidTriggerEvent) response {
     for (SAURLEvent *event in _vastClickTracking) {
-        [event triggerEvent];
+        [event triggerEvent: response];
     }
 }
 
