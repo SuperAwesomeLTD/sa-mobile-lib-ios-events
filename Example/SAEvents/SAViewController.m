@@ -24,53 +24,53 @@
 
 @implementation SAViewController
 
-- (void)viewDidLoad {
+- (void) viewDidLoad {
     [super viewDidLoad];
     
-    NSString *ua = [SAUtils getUserAgent];
-
-    NSLog(@"%@", ua);
-
-    // get a weak self reference
-    __weak typeof (self) weakSelf = self;
-
-    SAAd *ad = [[SAAd alloc] init];
-    ad.advertiserId = 50;
-    ad.campaignId = 892;
-    ad.lineItemId = 2892;
-    ad.moat = 0.2;
-    ad.creative._id = 2910;
-    ad.appId = 201;
-    ad.placementId = 100;
-    ad.publisherId = 21;
-
-    _moat = [[SAMoatModule alloc] initWithAd:ad];
-    [_moat disableMoatLimiting];
-
-    _videoPlayer = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
-    [_videoPlayer setEventHandler:^(SAVideoPlayerEvent event, CGFloat time, CGFloat duration) {
-
-        if (event == Video_Start) {
-            BOOL res = [weakSelf.moat startMoatTrackingForVideoPlayer:[weakSelf.videoPlayer getPlayer]
-                                                            withLayer:[weakSelf.videoPlayer getPlayerLayer]
-                                                              andView:weakSelf.videoPlayer];
-            NSLog(@"MOAT START %d", res);
-        }
-        if (event == Video_End) {
-            BOOL res = [weakSelf.moat stopMoatTrackingForVideoPlayer];
-            NSLog(@"MOAT END %d", res);
-        }
-
-    }];
-
-    [[SAFileDownloader getInstance] downloadFileFrom:@"https://sa-beta-ads-video-transcoded-superawesome.netdna-ssl.com/uKCcG2tSUM5mquPclh79M1XMW2XJvPwW.mp4" andResponse:^(BOOL success, NSString *diskPath) {
-
-        NSString *finalDiskURL = [SAUtils filePathInDocuments:diskPath];
-        [weakSelf.videoPlayer playWithMediaFile:finalDiskURL];
-
-    }];
-
-    [self.view addSubview:_videoPlayer];
+//    NSString *ua = [SAUtils getUserAgent];
+//
+//    NSLog(@"%@", ua);
+//
+//    // get a weak self reference
+//    __weak typeof (self) weakSelf = self;
+//
+//    SAAd *ad = [[SAAd alloc] init];
+//    ad.advertiserId = 50;
+//    ad.campaignId = 892;
+//    ad.lineItemId = 2892;
+//    ad.moat = 0.2;
+//    ad.creative._id = 2910;
+//    ad.appId = 201;
+//    ad.placementId = 100;
+//    ad.publisherId = 21;
+//
+//    _moat = [[SAMoatModule alloc] initWithAd:ad];
+//    [_moat disableMoatLimiting];
+//
+//    _videoPlayer = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];
+//    [_videoPlayer setEventHandler:^(SAVideoPlayerEvent event, CGFloat time, CGFloat duration) {
+//
+//        if (event == Video_Start) {
+//            BOOL res = [weakSelf.moat startMoatTrackingForVideoPlayer:[weakSelf.videoPlayer getPlayer]
+//                                                            withLayer:[weakSelf.videoPlayer getPlayerLayer]
+//                                                              andView:weakSelf.videoPlayer];
+//            NSLog(@"MOAT START %d", res);
+//        }
+//        if (event == Video_End) {
+//            BOOL res = [weakSelf.moat stopMoatTrackingForVideoPlayer];
+//            NSLog(@"MOAT END %d", res);
+//        }
+//
+//    }];
+//
+//    [[SAFileDownloader getInstance] downloadFileFrom:@"https://sa-beta-ads-video-transcoded-superawesome.netdna-ssl.com/uKCcG2tSUM5mquPclh79M1XMW2XJvPwW.mp4" andResponse:^(BOOL success, NSString *diskPath) {
+//
+//        NSString *finalDiskURL = [SAUtils filePathInDocuments:diskPath];
+//        [weakSelf.videoPlayer playWithMediaFile:finalDiskURL];
+//
+//    }];
+//
+//    [self.view addSubview:_videoPlayer];
 
 //    _webPlayer = [[SAWebPlayer alloc] initWithContentSize:CGSizeMake(320, 50) andParentFrame:CGRectMake(0, 240, 320, 50)];
 //

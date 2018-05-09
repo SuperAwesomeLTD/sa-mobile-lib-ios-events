@@ -1,34 +1,48 @@
 PODS:
-  - SAEvents (1.9.9):
-    - SAEvents/Core (= 1.9.9)
-    - SAModelSpace (= 0.5.4)
-    - SANetworking (= 0.3.1)
-    - SASession (= 0.3.8)
-    - SAUtils (= 1.5.4)
-  - SAEvents/Core (1.9.9):
-    - SAModelSpace (= 0.5.4)
-    - SANetworking (= 0.3.1)
-    - SASession (= 0.3.8)
-    - SAUtils (= 1.5.4)
-  - SAEvents/Moat (1.9.9):
+  - OHHTTPStubs (6.1.0):
+    - OHHTTPStubs/Default (= 6.1.0)
+  - OHHTTPStubs/Core (6.1.0)
+  - OHHTTPStubs/Default (6.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.1.0)
+  - SAEvents (2.0.0):
+    - SAEvents/Core (= 2.0.0)
+    - SAModelSpace (= 1.0.0)
+    - SANetworking (= 1.0.0)
+    - SASession (= 1.1.1)
+    - SAUtils (= 1.5.5)
+  - SAEvents/Core (2.0.0):
+    - SAModelSpace (= 1.0.0)
+    - SANetworking (= 1.0.0)
+    - SASession (= 1.1.1)
+    - SAUtils (= 1.5.5)
+  - SAEvents/Moat (2.0.0):
     - SAEvents/Core
-    - SAModelSpace (= 0.5.4)
-    - SANetworking (= 0.3.1)
-    - SASession (= 0.3.8)
-    - SAUtils (= 1.5.4)
-  - SAJsonParser (1.3.4)
-  - SAModelSpace (0.5.4):
-    - SAJsonParser (= 1.3.4)
-    - SAUtils (= 1.5.4)
-  - SANetworking (0.3.1)
-  - SASession (0.3.8):
-    - SAUtils (= 1.5.4)
-  - SAUtils (1.5.4)
+    - SAModelSpace (= 1.0.0)
+    - SANetworking (= 1.0.0)
+    - SASession (= 1.1.1)
+    - SAUtils (= 1.5.5)
+  - SAJsonParser (1.3.5)
+  - SAModelSpace (1.0.0):
+    - SAJsonParser (= 1.3.5)
+    - SAUtils (= 1.5.5)
+  - SANetworking (1.0.0)
+  - SASession (1.1.1):
+    - SAUtils (= 1.5.5)
+  - SAUtils (1.5.5)
   - SAVideoPlayer (1.2.5)
-  - SAWebPlayer (1.2.4):
-    - SANetworking (= 0.3.1)
+  - SAWebPlayer (1.2.5):
+    - SANetworking (= 1.0.0)
 
 DEPENDENCIES:
+  - OHHTTPStubs
   - SAEvents (from `../`)
   - SAEvents/Moat (from `../`)
   - SAVideoPlayer
@@ -36,6 +50,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - OHHTTPStubs
     - SAJsonParser
     - SAModelSpace
     - SANetworking
@@ -49,15 +64,16 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SAEvents: 1a47211af1b8fdaa47f7147d8f0de06ece1642f4
-  SAJsonParser: f7c534c9e7bca38dfa4d254d2229122f562bd953
-  SAModelSpace: 76e645798f653fcf84c4fe80b002737e47381d2d
-  SANetworking: bd3fc423e108b09dbad94564af19de9ea6652ae7
-  SASession: 3964576d8b15f97428d71c5f58f8873b50dcb4a9
-  SAUtils: 225cdfaee9cb68184d5d27d7ff1119e1150d3398
+  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
+  SAEvents: 28c87078ea35483794a37f9d074fd6780854361c
+  SAJsonParser: a9fac712c99b71e36997010413862866f8246d5a
+  SAModelSpace: 07140f87445b477fbb61e5016a51e9f4c02546c7
+  SANetworking: 672cec0782244c2d780c3c58867e58e8ed2917ee
+  SASession: 1a6ffb5d68c6947718c7a6a449ba005d186015bb
+  SAUtils: 95e06baec2636bfe494d9f8a43ec4def6fb28229
   SAVideoPlayer: cc118f17151dfd227a3115a9d266e1cae12c1f3c
-  SAWebPlayer: 5f38c854fdbd677c74984746b355c5492bd83e1e
+  SAWebPlayer: 58745c01128e45a862cf13fdd545d9e1997b6ca4
 
-PODFILE CHECKSUM: 2500cc21ee0036a9a3cd18944a82361e1d8f9b90
+PODFILE CHECKSUM: ee213d7d6f4fee7123ba650582f22d2c51d605db
 
 COCOAPODS: 1.5.0

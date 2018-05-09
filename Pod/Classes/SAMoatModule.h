@@ -24,6 +24,13 @@
 + (void) initMoat;
 
 /**
+ * Method that determines is Moat can be triggered at this point
+ *
+ * @return true or false
+ */
+- (BOOL) isMoatAllowed;
+
+/**
  * Method that registers a Moat event object,
  * according to the moat specifications
  *
