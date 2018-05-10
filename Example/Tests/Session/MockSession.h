@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SASession.h"
+#import "SASessionProtocol.h"
 
-@interface MockSession: SASession
-- (NSString*) getUserAgent;
+@interface MockSession: NSObject <SASessionProtocol>
 @end

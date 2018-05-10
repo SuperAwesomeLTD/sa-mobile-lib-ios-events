@@ -37,7 +37,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAImpressionEvent *event = [[SAImpressionEvent alloc] initWithAd:ad andSession:session];
     
     [event triggerEvent:^(BOOL success) {
@@ -59,7 +59,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1001];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAImpressionEvent *event = [[SAImpressionEvent alloc] initWithAd:ad andSession:session];
     
     [event triggerEvent:^(BOOL success) {

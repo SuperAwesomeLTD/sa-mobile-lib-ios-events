@@ -7,8 +7,8 @@
 #import <Foundation/Foundation.h>
 #import "SAServerEvent.h"
 
+@protocol SASessionProtocol;
 @class SAAd;
-@class SASession;
 @class SAClickEvent;
 @class SAImpressionEvent;
 @class SAViewableImpressionEvent;
@@ -28,7 +28,7 @@
 @property (nonatomic, strong) SAPGSuccessEvent          *pgSuccessEvent;
 
 - (id) initWithAd: (SAAd*) ad
-       andSession: (SASession*) session;
+       andSession: (id<SASessionProtocol>) session;
 
 - (void) triggerClickEvent: (saDidTriggerEvent) response;
 - (void) triggerImpressionEvent: (saDidTriggerEvent) response;

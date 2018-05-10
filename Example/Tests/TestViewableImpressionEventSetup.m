@@ -28,7 +28,7 @@
 - (void) test_ViewableImpression_Init {
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     
     // when
     SAViewableImpressionEvent *event = [[SAViewableImpressionEvent alloc] initWithAd:ad  andSession:session];

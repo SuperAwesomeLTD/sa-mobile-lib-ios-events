@@ -44,7 +44,7 @@
     ad.placementId = 100;
     ad.publisherId = 21;
 
-    _moat = [[SAMoatModule alloc] initWithAd:ad];
+    _moat = [[SAMoatModule alloc] initWithAd:ad andLoggingEnabled:true];
     [_moat disableMoatLimiting];
 
     _videoPlayer = [[SAVideoPlayer alloc] initWithFrame:CGRectMake(0, 0, 320, 240)];

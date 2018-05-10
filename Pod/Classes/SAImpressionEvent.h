@@ -6,5 +6,4 @@
 #import "SAServerEvent.h"
 
 @interface SAImpressionEvent : SAServerEvent
-
 @end

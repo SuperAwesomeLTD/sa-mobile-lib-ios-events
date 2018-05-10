@@ -12,12 +12,12 @@
 
 @implementation SAMoatModule (Moat)
 
-+ (void) internalInitMoat {
++ (void) internalInitMoat: (BOOL) loggingEnabled {
     
     SUPMoatOptions *options = [[SUPMoatOptions alloc] init];
     options.locationServicesEnabled = false;
     options.IDFACollectionEnabled = false;
-    options.debugLoggingEnabled = true;
+    options.debugLoggingEnabled = loggingEnabled;
     SUPMoatAnalytics *analytics = [SUPMoatAnalytics sharedInstance];
     [analytics startWithOptions:options];
     

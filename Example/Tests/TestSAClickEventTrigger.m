@@ -37,7 +37,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAClickEvent *event = [[SAClickEvent alloc] initWithAd:ad andSession:session];
     
     [event triggerEvent:^(BOOL success) {
@@ -59,7 +59,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1001];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAClickEvent *event = [[SAClickEvent alloc] initWithAd:ad andSession:session];
     
     [event triggerEvent:^(BOOL success) {
@@ -81,7 +81,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createVideoAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAClickEvent *event = [[SAClickEvent alloc] initWithAd:ad andSession:session];
     
     [event triggerEvent:^(BOOL success) {
@@ -103,7 +103,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createVideoAd:1001];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAClickEvent *event = [[SAClickEvent alloc] initWithAd:ad andSession:session];
     
     [event triggerEvent:^(BOOL success) {
