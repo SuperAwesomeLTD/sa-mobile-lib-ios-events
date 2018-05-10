@@ -39,7 +39,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAServerModule *module = [[SAServerModule alloc] initWithAd:ad andSession:session];
     
     // when
@@ -73,7 +73,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1001];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAServerModule *module = [[SAServerModule alloc] initWithAd:ad andSession:session];
     
     // when
@@ -107,7 +107,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createVideoAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAServerModule *module = [[SAServerModule alloc] initWithAd:ad andSession:session];
     
     // when
@@ -141,7 +141,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createVideoAd:1001];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     SAServerModule *module = [[SAServerModule alloc] initWithAd:ad andSession:session];
     
     // when

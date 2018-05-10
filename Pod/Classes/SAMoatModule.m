@@ -23,7 +23,8 @@ static BOOL moatEnabled = false;
 
 @implementation SAMoatModule
 
-- (id) initWithAd:(SAAd *)ad {
+- (id) initWithAd: (SAAd*) ad
+andLoggingEnabled: (BOOL) loggingEnabled {
     if (self = [super init]) {
         
         // init with true
@@ -34,7 +35,7 @@ static BOOL moatEnabled = false;
         
         // try to enable moat here at last
         if (!moatEnabled) {
-            [SAMoatModule initMoat];
+            [SAMoatModule initMoat: loggingEnabled];
         } else {
             NSLog(@"MOAT already initialised, good!");
         }
@@ -43,15 +44,15 @@ static BOOL moatEnabled = false;
     return self;
 }
 
-+ (void) initMoat {
++ (void) initMoat: (BOOL) loggingEnabled {
     // init MOAT, if available
-    SEL selector = NSSelectorFromString(@"internalInitMoat");
+    SEL selector = NSSelectorFromString(@"internalInitMoat:");
     if ([SAMoatModule respondsToSelector:selector]) {
         
         // init moat
         IMP imp = [SAMoatModule methodForSelector:selector];
-        void (*func)(id, SEL) = (void*)imp;
-        func(self, selector);
+        void (*func)(id, SEL, BOOL) = (void*)imp;
+        func(self, selector, loggingEnabled);
         moatEnabled = true;
     }
 }

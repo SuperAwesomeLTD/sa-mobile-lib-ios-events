@@ -5,9 +5,9 @@
 
 #import "SAServerEvent.h"
 #import "SAAd.h"
-#import "SASession.h"
 #import "SAUtils.h"
 #import "SANetwork.h"
+#import "SASessionProtocol.h"
 
 @interface SAServerEvent ()
 @property (nonatomic, strong) SANetwork *network;
@@ -15,7 +15,7 @@
 
 @implementation SAServerEvent
 
-- (id) initWithAd: (SAAd*) newAd andSession: (SASession*) newSession {
+- (id) initWithAd: (SAAd*) newAd andSession: (id<SASessionProtocol>) newSession {
     if (self = [super init]) {
         ad = newAd;
         session = newSession;

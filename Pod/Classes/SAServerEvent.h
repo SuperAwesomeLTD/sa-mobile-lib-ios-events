@@ -6,18 +6,18 @@
 #import <Foundation/Foundation.h>
 
 @class SAAd;
-@class SASession;
+@protocol SASessionProtocol;
 
 // typical event response (used mostly for testing purposes atm)
 typedef void (^saDidTriggerEvent) (BOOL success);
 
 @interface SAServerEvent : NSObject {
     SAAd      *ad;
-    SASession *session;
+    id<SASessionProtocol> session;
 }
 
 - (id) initWithAd: (SAAd*) ad
-       andSession: (SASession*) session;
+       andSession: (id<SASessionProtocol>) session;
 
 - (NSString*) getUrl;
 - (NSString*) getEndpoint;

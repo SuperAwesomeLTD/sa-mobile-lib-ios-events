@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.dependency 'SAUtils', '1.5.5'
   s.dependency 'SANetworking', '1.0.0'
   s.dependency 'SAModelSpace', '1.0.0'
-  s.dependency 'SASession', '1.1.1'
+  s.dependency 'SASession', '1.1.2'
   s.subspec 'Core' do |c|
     c.source_files = 'Pod/Classes/**/*'
   end

@@ -28,7 +28,7 @@
 - (void) test_ClickEvent_Init_WithDisplayAd {
     // given
     SAAd *ad = [SAModelFactory createDisplayAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     
     // when
     SAClickEvent *event = [[SAClickEvent alloc] initWithAd:ad andSession:session];
@@ -55,7 +55,7 @@
     
     // given
     SAAd *ad = [SAModelFactory createVideoAd:1000];
-    SASession *session = [[MockSession alloc] init];
+    MockSession *session = [[MockSession alloc] init];
     
     // when
     SAClickEvent *event = [[SAClickEvent alloc] initWithAd:ad andSession:session];

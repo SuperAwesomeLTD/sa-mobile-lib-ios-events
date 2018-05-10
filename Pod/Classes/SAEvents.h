@@ -6,7 +6,7 @@
 #import <UIKit/UIKit.h>
 
 @class SAAd;
-@class SASession;
+@protocol SASessionProtocol;
 @class AVPlayer;
 @class AVPlayerLayer;
 @class SAMoatModule;
@@ -27,7 +27,8 @@
 @property (nonatomic, strong) SAMoatModule *moatModule;
 
 - (void) setAd: (SAAd*) ad
-    andSession: (SASession*) session;
+    andSession: (id<SASessionProtocol>) session
+andLoggingEnabled: (BOOL) loggingEnabled;
 
 - (void) unsetAd;
 
@@ -57,7 +58,7 @@
 - (BOOL) stopMoatTrackingForVideoPlayer;
 - (void) disableMoatLimiting;
 - (BOOL) isChildInViewableRect: (UIView*) view;
-+ (void) initMoat;
++ (void) initMoat: (BOOL) loggingEnabled;
 
 
 @end

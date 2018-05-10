@@ -62,4 +62,44 @@
     return 2;
 }
 
+- (SAConfiguration)getConfiguration {
+    return PRODUCTION;
+}
+
+
+- (NSInteger)getHeight {
+    return 50;
+}
+
+
+- (SARTBInstl)getInstl {
+    return IN_FULLSCREEN;
+}
+
+
+- (SARTBPlaybackMethod)getPlaybackMethod {
+    return PB_WITH_SOUND_ON_SCREEN;
+}
+
+
+- (SARTBPosition)getPos {
+    return POS_FULLSCREEN;
+}
+
+
+- (SARTBSkip)getSkip {
+    return SK_NO_SKIP;
+}
+
+
+- (SARTBStartDelay)getStartDelay {
+    return DL_PRE_ROLL;
+}
+
+
+- (NSInteger)getWidth {
+    return 320;
+}
+
+
 @end

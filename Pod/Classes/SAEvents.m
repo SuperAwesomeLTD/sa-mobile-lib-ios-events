@@ -8,6 +8,7 @@
 #import "SAMoatModule.h"
 #import "SAViewableModule.h"
 #import "SAVASTModule.h"
+#import "SASessionProtocol.h"
 
 @interface SAEvents ()
 @end
@@ -15,10 +16,11 @@
 @implementation SAEvents
 
 - (void) setAd: (SAAd*) ad
-    andSession: (SASession*) session {
+    andSession: (id<SASessionProtocol>) session
+andLoggingEnabled: (BOOL) loggingEnabled{
     
     _serverModule = [[SAServerModule alloc] initWithAd:ad andSession:session];
-    _moatModule = [[SAMoatModule alloc] initWithAd:ad];
+    _moatModule = [[SAMoatModule alloc] initWithAd:ad andLoggingEnabled:loggingEnabled];
     _viewableModule = [[SAViewableModule alloc] init];
     _vastModule = [[SAVASTModule alloc] initWithAd:ad];
     
@@ -192,8 +194,8 @@
     }
 }
 
-+ (void) initMoat {
-    [SAMoatModule initMoat];
++ (void) initMoat: (BOOL) loggingEnabled {
+    [SAMoatModule initMoat:loggingEnabled];
 }
 
 @end

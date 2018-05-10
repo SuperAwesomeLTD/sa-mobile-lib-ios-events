@@ -7,6 +7,7 @@
 #import "SAServerModule.h"
 #import "SAAd.h"
 #import "SASession.h"
+#import "SASessionProtocol.h"
 #import "SAClickEvent.h"
 #import "SAImpressionEvent.h"
 #import "SAViewableImpressionEvent.h"
@@ -21,7 +22,7 @@
 @implementation SAServerModule
 
 - (id) initWithAd: (SAAd*) ad
-       andSession: (SASession*) session {
+       andSession: (id<SASessionProtocol>) session {
     
     if (self = [super init]) {
         
