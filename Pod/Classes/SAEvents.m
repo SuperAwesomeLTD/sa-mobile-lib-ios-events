@@ -16,11 +16,10 @@
 @implementation SAEvents
 
 - (void) setAd: (SAAd*) ad
-    andSession: (id<SASessionProtocol>) session
-andLoggingEnabled: (BOOL) loggingEnabled{
+    andSession: (id<SASessionProtocol>) session {
     
     _serverModule = [[SAServerModule alloc] initWithAd:ad andSession:session];
-    _moatModule = [[SAMoatModule alloc] initWithAd:ad andLoggingEnabled:loggingEnabled];
+    _moatModule = [[SAMoatModule alloc] initWithAd:ad];
     _viewableModule = [[SAViewableModule alloc] init];
     _vastModule = [[SAVASTModule alloc] initWithAd:ad];
     

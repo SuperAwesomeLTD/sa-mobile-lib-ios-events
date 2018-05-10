@@ -25,8 +25,7 @@
 @property (nonatomic, strong) SUPMoatVideoTracker *videoTracker;
 @property (nonatomic, strong) SUPMoatWebTracker *webTracker;
 
-- (id) initWithAd: (SAAd*) ad
-andLoggingEnabled: (BOOL) loggingEnabled;
+- (id) initWithAd: (SAAd*) ad;
 
 /**
  * Start moat tracking before everything else

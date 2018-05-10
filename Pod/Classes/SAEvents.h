@@ -27,8 +27,7 @@
 @property (nonatomic, strong) SAMoatModule *moatModule;
 
 - (void) setAd: (SAAd*) ad
-    andSession: (id<SASessionProtocol>) session
-andLoggingEnabled: (BOOL) loggingEnabled;
+    andSession: (id<SASessionProtocol>) session;
 
 - (void) unsetAd;
 

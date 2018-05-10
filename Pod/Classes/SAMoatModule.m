@@ -23,8 +23,7 @@ static BOOL moatEnabled = false;
 
 @implementation SAMoatModule
 
-- (id) initWithAd: (SAAd*) ad
-andLoggingEnabled: (BOOL) loggingEnabled {
+- (id) initWithAd: (SAAd*) ad {
     if (self = [super init]) {
         
         // init with true
@@ -32,13 +31,6 @@ andLoggingEnabled: (BOOL) loggingEnabled {
         
         // get the ad
         _ad = ad;
-        
-        // try to enable moat here at last
-        if (!moatEnabled) {
-            [SAMoatModule initMoat: loggingEnabled];
-        } else {
-            NSLog(@"MOAT already initialised, good!");
-        }
     }
     
     return self;

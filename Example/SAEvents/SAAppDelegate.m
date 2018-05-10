@@ -16,7 +16,7 @@
     // Override point for customization after application launch.
     
     // init Moat
-    [SAEvents initMoat:true];
+    [SAEvents initMoat:false];
     
     return YES;
 }
