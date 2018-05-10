@@ -28,7 +28,7 @@
     SAAd *ad = [SAModelFactory createDisplayAd:1000];
     
     // when
-    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad];
+    SAMoatModule *module = [[SAMoatModule alloc] initWithAd:ad andLoggingEnabled:true];
     [module disableMoatLimiting];
     
     BOOL isAllowed1 = [module isMoatAllowed];
