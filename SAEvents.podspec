@@ -35,4 +35,12 @@ Pod::Spec.new do |s|
     mo.vendored_libraries = 'Pod/Libraries/libSUPMoatMobileAppKit.a'
     # mo.vendored_frameworks = 'Pod/Libraries/SUPMoatMobileAppKit.framework'
   end
+
+  s.subspec 'Moat2' do |mo2|
+    mo2.frameworks = 'AdSupport', 'WebKit'
+    mo2.dependency 'SAEvents/Core'
+    mo2.source_files = 'Pod/Plugin/Moat2/*'
+    # mo.vendored_libraries = 'Pod/Libraries/libSUPMoatMobileAppKit.a'
+    mo2.vendored_frameworks = 'Pod/Libraries/SUPMoatMobileAppKit.framework'
+  end
 end
