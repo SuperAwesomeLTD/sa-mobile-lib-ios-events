@@ -23,7 +23,7 @@ PODS:
     - SANetworking (= 1.0.0)
     - SASession (= 1.1.2)
     - SAUtils (= 1.5.5)
-  - SAEvents/Moat (2.0.1):
+  - SAEvents/Moat2 (2.0.1):
     - SAEvents/Core
     - SAModelSpace (= 1.0.0)
     - SANetworking (= 1.0.0)
@@ -44,7 +44,7 @@ PODS:
 DEPENDENCIES:
   - OHHTTPStubs
   - SAEvents (from `../`)
-  - SAEvents/Moat (from `../`)
+  - SAEvents/Moat2 (from `../`)
   - SAVideoPlayer
   - SAWebPlayer
 
@@ -74,6 +74,6 @@ SPEC CHECKSUMS:
   SAVideoPlayer: cc118f17151dfd227a3115a9d266e1cae12c1f3c
   SAWebPlayer: 58745c01128e45a862cf13fdd545d9e1997b6ca4
 
-PODFILE CHECKSUM: 857c0a4abc7d2e47f3340096fec57cf3a210f410
+PODFILE CHECKSUM: a8e7b451b918d81d1bb699d34a7f9d470523fee5
 
 COCOAPODS: 1.5.0
