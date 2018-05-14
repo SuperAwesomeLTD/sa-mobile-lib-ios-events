@@ -2,7 +2,8 @@ platform :ios, '8.0'
 
 target 'SAEvents_Example' do
     pod 'SAEvents', :path => '../'
-    pod 'SAEvents/Moat', :path => '../'
+#    pod 'SAEvents/Moat', :path => '../'
+    pod 'SAEvents/Moat2', :path => '../'
     pod 'SAWebPlayer'
     pod 'SAVideoPlayer'
     

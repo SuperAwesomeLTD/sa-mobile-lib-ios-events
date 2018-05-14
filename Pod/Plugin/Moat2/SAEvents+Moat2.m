@@ -1,10 +1,13 @@
-#import "SAEvents+Moat.h"
-#import "SUPMoatAnalytics.h"
+#import "SAEvents+Moat2.h"
+#import <SUPMoatMobileAppKit/SUPMoatMobileAppKit.h>
 
 #define MOAT_SERVER                 @"https://z.moatads.com"
 #define MOAT_URL                    @"moatad.js"
 #define MOAT_DISPLAY_PARTNER_CODE   @"superawesomeinappdisplay731223424656"
 #define MOAT_VIDEO_PARTNER_CODE     @"superawesomeinappvideo467548716573"
+
+@interface SAMoatModule () <SUPMoatTrackerDelegate, SUPMoatVideoTrackerDelegate>
+@end
 
 @implementation SAMoatModule (Moat)
 
@@ -23,6 +26,8 @@
                                   andAdDictionary:(NSDictionary*)adDict {
     
     self.webTracker = [SUPMoatWebTracker trackerWithWebComponent:webView];
+    self.webTracker.trackerDelegate = self;
+    [self.webTracker startTracking];
     
     NSMutableString *moatQuery = [[NSMutableString alloc] init];
     [moatQuery appendFormat:@"moatClientLevel1=%@", [adDict objectForKey:@"advertiser"]];
@@ -49,6 +54,20 @@
     return false;
 }
 
+- (void)trackerStartedTracking:(SUPMoatBaseTracker *)tracker {
+    NSLog(@"MOAT Tracker %@ started tracking", tracker);
+}
+
+- (void)trackerStoppedTracking:(SUPMoatBaseTracker *)tracker {
+    NSLog(@"MOAT Tracker %@ stopped tracking", tracker);
+}
+
+- (void)tracker:(SUPMoatBaseTracker *)tracker
+failedToStartTracking:(SUPMoatStartFailureType)type
+         reason:(NSString *)reason {
+    NSLog(@"MOAT Tracker %@ failed to start tracking", tracker);
+}
+
 - (BOOL) internalStartMoatTrackingForVideoPlayer:(AVPlayer*)player
                                        withLayer:(AVPlayerLayer*)layer
                                          andView:(UIView*)view
@@ -64,12 +83,11 @@
                                      @"slicer3": [adDict objectForKey:@"publisher"]
                                      };
 
-    self.videoTracker = [SUPMoatVideoTracker trackerWithPartnerCode:MOAT_VIDEO_PARTNER_CODE];
+    self.avVideoTracker = [SUPMoatAVVideoTracker trackerWithPartnerCode:MOAT_VIDEO_PARTNER_CODE];
+    self.avVideoTracker.trackerDelegate = self;
+    self.avVideoTracker.videoTrackerDelegate = self;
     
-    return [self.videoTracker trackVideoAd:moatDictionary
-                        usingAVMoviePlayer:player
-                                 withLayer:layer
-                        withContainingView:view];
+    return [self.avVideoTracker trackVideoAd:moatDictionary player:player layer:layer];
 }
 
 - (BOOL) internalStopMoatTrackingForVideoPlayer {
@@ -78,6 +96,11 @@
         return true;
     }
     return false;
+}
+
+- (void)tracker:(SUPMoatBaseVideoTracker *)tracker
+sentAdEventType:(SUPMoatAdEventType)adEventType {
+    NSLog(@"MOAT Tracker %@ sending event %lu", tracker, (unsigned long)adEventType);
 }
 
 @end
