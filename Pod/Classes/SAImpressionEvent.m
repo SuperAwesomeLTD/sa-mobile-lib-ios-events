@@ -24,7 +24,8 @@
                  @"bundle": [session getBundleId],
                  @"ct": @([session getConnectivityType]),
                  @"no_image": @(true),
-                 @"rnd": @([session getCachebuster])
+                 @"rnd": @([session getCachebuster]),
+                 @"type": @"impressionDownloaded"
                  };
     }
     else {

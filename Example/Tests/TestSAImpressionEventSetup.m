@@ -42,6 +42,7 @@
     
     NSDictionary *query = [event getQuery];
     
+    XCTAssertEqual(9, query.count);
     XCTAssertEqualObjects(@(2), query[@"ct"]);
     XCTAssertEqualObjects(@(2001), query[@"line_item"]);
     XCTAssertEqualObjects(@(123456), query[@"rnd"]);
@@ -49,6 +50,7 @@
     XCTAssertEqualObjects(@(1000), query[@"placement"]);
     XCTAssertEqualObjects(@"superawesome.tv.saadloaderdemo", query[@"bundle"]);
     XCTAssertEqualObjects(@(5001), query[@"creative"]);
+    XCTAssertEqualObjects(@"impressionDownloaded", query[@"type"]);
 }
 
 @end
