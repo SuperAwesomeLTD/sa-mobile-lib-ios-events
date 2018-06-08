@@ -23,6 +23,7 @@
                                   andAdDictionary:(NSDictionary*)adDict {
     
     self.webTracker = [SUPMoatWebTracker trackerWithWebComponent:webView];
+    BOOL result = [self.webTracker startTracking];
     
     NSMutableString *moatQuery = [[NSMutableString alloc] init];
     [moatQuery appendFormat:@"moatClientLevel1=%@", [adDict objectForKey:@"advertiser"]];
@@ -33,20 +34,26 @@
     [moatQuery appendFormat:@"&moatClientSlicer2=%@", [adDict objectForKey:@"placement"]];
     [moatQuery appendFormat:@"&moatClientSlicer3=%@", [adDict objectForKey:@"publisher"]];
     
-    return [NSString stringWithFormat:
+    NSString *stringResult = [NSString stringWithFormat:
             @"<script src=\"%@/%@/%@?%@\" type=\"text/javascript\"></script>",
             MOAT_SERVER,
             MOAT_DISPLAY_PARTNER_CODE,
             MOAT_URL,
             moatQuery];
+    
+    NSLog(@"SuperAwesome-Moat Started Moat web stracking with result %d and JS tag %@", result, stringResult);
+    return stringResult;
 }
 
 - (BOOL) internalStopMoatTrackingForDisplay {
     if (self.webTracker) {
         [self.webTracker stopTracking];
+        NSLog(@"SuperAwesome-Moat Stoped Moat web tracking");
         return true;
+    } else {
+        NSLog(@"SuperAwesome-Moat Failed to stop Moat web tracking because webTracker is null");
+        return false;
     }
-    return false;
 }
 
 - (BOOL) internalStartMoatTrackingForVideoPlayer:(AVPlayer*)player
@@ -66,18 +73,23 @@
 
     self.videoTracker = [SUPMoatVideoTracker trackerWithPartnerCode:MOAT_VIDEO_PARTNER_CODE];
     
-    return [self.videoTracker trackVideoAd:moatDictionary
-                        usingAVMoviePlayer:player
-                                 withLayer:layer
-                        withContainingView:view];
+    BOOL result = [self.videoTracker trackVideoAd:moatDictionary
+                               usingAVMoviePlayer:player
+                                        withLayer:layer
+                               withContainingView:view];
+    NSLog(@"SuperAwesome-Moat Started Moat video tracking with result %d", result);
+    return result;
 }
 
 - (BOOL) internalStopMoatTrackingForVideoPlayer {
     if (self.videoTracker) {
         [self.videoTracker stopTracking];
+        NSLog(@"SuperAwesome-Moat Stoped Moat video tracking");
         return true;
+    } else {
+        NSLog(@"SuperAwesome-Moat Failed to stop Moat video tracking because videoTracker is null");
+        return false;
     }
-    return false;
 }
 
 @end
