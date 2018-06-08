@@ -38,7 +38,7 @@ PODS:
     - SAUtils (= 1.5.5)
   - SAUtils (1.5.5)
   - SAVideoPlayer (1.2.5)
-  - SAWebPlayer (1.2.5):
+  - SAWebPlayer (1.2.6):
     - SANetworking (= 1.0.0)
 
 DEPENDENCIES:
@@ -72,7 +72,7 @@ SPEC CHECKSUMS:
   SASession: 05f174a62318b786ee36e4e34d97c2b96444d0ae
   SAUtils: 95e06baec2636bfe494d9f8a43ec4def6fb28229
   SAVideoPlayer: cc118f17151dfd227a3115a9d266e1cae12c1f3c
-  SAWebPlayer: 58745c01128e45a862cf13fdd545d9e1997b6ca4
+  SAWebPlayer: f5c7cefd8a7406b7f570831af90b167feff13dcd
 
 PODFILE CHECKSUM: a8e7b451b918d81d1bb699d34a7f9d470523fee5
 
