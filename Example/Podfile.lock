@@ -12,18 +12,18 @@ PODS:
   - OHHTTPStubs/NSURLSession (6.1.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (6.1.0)
-  - SAEvents (2.2.0):
-    - SAEvents/Core (= 2.2.0)
+  - SAEvents (2.2.2):
+    - SAEvents/Core (= 2.2.2)
     - SAModelSpace (= 1.0.0)
     - SANetworking (= 1.0.0)
     - SASession (= 1.1.2)
     - SAUtils (= 1.5.5)
-  - SAEvents/Core (2.2.0):
+  - SAEvents/Core (2.2.2):
     - SAModelSpace (= 1.0.0)
     - SANetworking (= 1.0.0)
     - SASession (= 1.1.2)
     - SAUtils (= 1.5.5)
-  - SAEvents/Moat2 (2.2.0):
+  - SAEvents/Moat2 (2.2.2):
     - SAEvents/Core
     - SAModelSpace (= 1.0.0)
     - SANetworking (= 1.0.0)
@@ -38,7 +38,7 @@ PODS:
     - SAUtils (= 1.5.5)
   - SAUtils (1.5.5)
   - SAVideoPlayer (1.2.5)
-  - SAWebPlayer (1.2.5):
+  - SAWebPlayer (1.2.6):
     - SANetworking (= 1.0.0)
 
 DEPENDENCIES:
@@ -65,14 +65,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
-  SAEvents: 460c6a7b6313e4e54840a1297f2a2b112b803fa1
+  SAEvents: 56aa58b8e1242dfa3ccdd5e84647cdabefdb540a
   SAJsonParser: a9fac712c99b71e36997010413862866f8246d5a
   SAModelSpace: 07140f87445b477fbb61e5016a51e9f4c02546c7
   SANetworking: 672cec0782244c2d780c3c58867e58e8ed2917ee
   SASession: 05f174a62318b786ee36e4e34d97c2b96444d0ae
   SAUtils: 95e06baec2636bfe494d9f8a43ec4def6fb28229
   SAVideoPlayer: cc118f17151dfd227a3115a9d266e1cae12c1f3c
-  SAWebPlayer: 58745c01128e45a862cf13fdd545d9e1997b6ca4
+  SAWebPlayer: f5c7cefd8a7406b7f570831af90b167feff13dcd
 
 PODFILE CHECKSUM: a8e7b451b918d81d1bb699d34a7f9d470523fee5
 

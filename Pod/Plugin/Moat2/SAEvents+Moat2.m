@@ -19,7 +19,6 @@
     options.debugLoggingEnabled = loggingEnabled;
     SUPMoatAnalytics *analytics = [SUPMoatAnalytics sharedInstance];
     [analytics startWithOptions:options];
-    
 }
 
 - (NSString*) internalStartMoatTrackingForDisplay:(UIWebView*)webView
@@ -27,7 +26,7 @@
     
     self.webTracker = [SUPMoatWebTracker trackerWithWebComponent:webView];
     self.webTracker.trackerDelegate = self;
-    [self.webTracker startTracking];
+    BOOL result = [self.webTracker startTracking];
     
     NSMutableString *moatQuery = [[NSMutableString alloc] init];
     [moatQuery appendFormat:@"moatClientLevel1=%@", [adDict objectForKey:@"advertiser"]];
@@ -38,34 +37,27 @@
     [moatQuery appendFormat:@"&moatClientSlicer2=%@", [adDict objectForKey:@"placement"]];
     [moatQuery appendFormat:@"&moatClientSlicer3=%@", [adDict objectForKey:@"publisher"]];
     
-    return [NSString stringWithFormat:
+    NSString *stringResult = [NSString stringWithFormat:
             @"<script src=\"%@/%@/%@?%@\" type=\"text/javascript\"></script>",
             MOAT_SERVER,
             MOAT_DISPLAY_PARTNER_CODE,
             MOAT_URL,
             moatQuery];
+    
+    NSLog(@"SuperAwesome-Moat Started Moat web stracking with result %d and JS tag %@", result, stringResult);
+    
+    return stringResult;
 }
 
 - (BOOL) internalStopMoatTrackingForDisplay {
     if (self.webTracker) {
         [self.webTracker stopTracking];
+        NSLog(@"SuperAwesome-Moat Stoped Moat web tracking");
         return true;
+    } else {
+        NSLog(@"SuperAwesome-Moat Failed to stop Moat web tracking because webTracker is null");
+        return false;
     }
-    return false;
-}
-
-- (void)trackerStartedTracking:(SUPMoatBaseTracker *)tracker {
-    NSLog(@"MOAT Tracker %@ started tracking", tracker);
-}
-
-- (void)trackerStoppedTracking:(SUPMoatBaseTracker *)tracker {
-    NSLog(@"MOAT Tracker %@ stopped tracking", tracker);
-}
-
-- (void)tracker:(SUPMoatBaseTracker *)tracker
-failedToStartTracking:(SUPMoatStartFailureType)type
-         reason:(NSString *)reason {
-    NSLog(@"MOAT Tracker %@ failed to start tracking", tracker);
 }
 
 - (BOOL) internalStartMoatTrackingForVideoPlayer:(AVPlayer*)player
@@ -86,21 +78,39 @@ failedToStartTracking:(SUPMoatStartFailureType)type
     self.avVideoTracker = [SUPMoatAVVideoTracker trackerWithPartnerCode:MOAT_VIDEO_PARTNER_CODE];
     self.avVideoTracker.trackerDelegate = self;
     self.avVideoTracker.videoTrackerDelegate = self;
-    
-    return [self.avVideoTracker trackVideoAd:moatDictionary player:player layer:layer];
+    BOOL result = [self.avVideoTracker trackVideoAd:moatDictionary player:player layer:layer];
+    NSLog(@"SuperAwesome-Moat Started Moat video tracking with result %d", result);
+    return result;
 }
 
 - (BOOL) internalStopMoatTrackingForVideoPlayer {
-    if (self.videoTracker) {
-        [self.videoTracker stopTracking];
+    if (self.avVideoTracker) {
+        [self.avVideoTracker stopTracking];
+        NSLog(@"SuperAwesome-Moat Stoped Moat video tracking");
         return true;
+    } else {
+        NSLog(@"SuperAwesome-Moat Failed to stop Moat video tracking because videoTracker is null");
+        return false;
     }
-    return false;
+}
+
+- (void)trackerStartedTracking:(SUPMoatBaseTracker *)tracker {
+    NSLog(@"SuperAwesome-Moat Tracker %@ started tracking", tracker);
+}
+
+- (void)trackerStoppedTracking:(SUPMoatBaseTracker *)tracker {
+    NSLog(@"SuperAwesome-Moat Tracker %@ stopped tracking", tracker);
+}
+
+- (void)tracker:(SUPMoatBaseTracker *)tracker
+failedToStartTracking:(SUPMoatStartFailureType)type
+         reason:(NSString *)reason {
+    NSLog(@"SuperAwesome-Moat Tracker %@ failed to start tracking because %@", tracker, reason);
 }
 
 - (void)tracker:(SUPMoatBaseVideoTracker *)tracker
 sentAdEventType:(SUPMoatAdEventType)adEventType {
-    NSLog(@"MOAT Tracker %@ sending event %lu", tracker, (unsigned long)adEventType);
+    NSLog(@"SuperAwesome-Moat Tracker %@ sending event %lu", tracker, (unsigned long)adEventType);
 }
 
 @end
