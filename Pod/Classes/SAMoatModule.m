@@ -40,12 +40,14 @@ static BOOL moatEnabled = false;
     // init MOAT, if available
     SEL selector = NSSelectorFromString(@"internalInitMoat:");
     if ([SAMoatModule respondsToSelector:selector]) {
-        
         // init moat
         IMP imp = [SAMoatModule methodForSelector:selector];
         void (*func)(id, SEL, BOOL) = (void*)imp;
         func(self, selector, loggingEnabled);
         moatEnabled = true;
+        NSLog(@"SuperAwesome-Moat-Module Called 'internalInitMoat' and moat is %d", moatEnabled);
+    } else {
+        NSLog(@"SuperAwesome-Moat-Module Could not call 'internalInitMoat' because there is no selector");
     }
 }
 
@@ -57,7 +59,10 @@ static BOOL moatEnabled = false;
 - (BOOL) isMoatAllowed {
     NSInteger moatRandInt = [SAUtils randomNumberBetween:0 maxNumber:100];
     CGFloat moatRand = (CGFloat) (moatRandInt / 100.0f);
-    return _ad != nil && ((moatRand < _ad.moat && _moatLimiting) || !_moatLimiting);
+    BOOL result = _ad != nil && ((moatRand < _ad.moat && _moatLimiting) || !_moatLimiting);
+    NSLog(@"SuperAwesome-Moat-Module Is Moat allowed: moatRand=%.2f | ad.moat=%.2f | moatLimiting=%d | result=%d",
+          moatRand, _ad.moat, _moatLimiting, result);
+    return result;
 }
 
 /**
@@ -82,9 +87,6 @@ static BOOL moatEnabled = false;
                                @"publisher": @(_ad.publisherId)
                                };
     
-    // response variable
-    NSString *moatString = @"";
-    
     // selector
     SEL selector = NSSelectorFromString(@"internalStartMoatTrackingForDisplay:andAdDictionary:");
     
@@ -92,17 +94,16 @@ static BOOL moatEnabled = false;
     if ([self respondsToSelector:selector] && [self isMoatAllowed]) {
         IMP imp = [self methodForSelector:selector];
         NSString* (*func)(id, SEL, id, NSDictionary*) = (void *)imp;
-        moatString = func(self, selector, webplayer, moatDict);
+        NSString *moatResponse = func(self, selector, webplayer, moatDict);
+        NSLog(@"SuperAwesome-Moat-Module Called 'internalStartMoatTrackingForDisplay' with response %@", moatResponse);
+        return moatResponse;
+    } else {
+        NSLog(@"SuperAwesome-Moat-Module Could not call 'internalStartMoatTrackingForDisplay' because there is no selector");
+        return @"";
     }
-    
-    // return
-    return moatString;
 }
 
 - (BOOL) stopMoatTrackingForDisplay {
-    
-    // response variable
-    BOOL moatResponse = false;
     
     // selector
     SEL selector = NSSelectorFromString(@"internalStopMoatTrackingForDisplay");
@@ -111,11 +112,13 @@ static BOOL moatEnabled = false;
     if ([self respondsToSelector:selector]) {
         IMP imp = [self methodForSelector:selector];
         BOOL (*func)(id, SEL) = (void*) imp;
-        moatResponse = func(self, selector);
+        BOOL moatResponse = func(self, selector);
+        NSLog(@"SuperAwesome-Moat-Module Called 'internalStopMoatTrackingForDisplay' with response %d", moatResponse);
+        return moatResponse;
+    } else {
+        NSLog(@"SuperAwesome-Moat-Module Could not call 'internalStopMoatTrackingForDisplay' because there is no selector");
+        return false;
     }
-    
-    // return
-    return moatResponse;
 }
 
 /**
@@ -140,9 +143,6 @@ static BOOL moatEnabled = false;
                                @"publisher":@(_ad.publisherId)
                                };
     
-    // response variable
-    BOOL moatResponse = false;
-    
     // selector
     SEL selector = NSSelectorFromString(@"internalStartMoatTrackingForVideoPlayer:withLayer:andView:andAdDictionary:");
     
@@ -150,17 +150,16 @@ static BOOL moatEnabled = false;
     if ([self respondsToSelector:selector] && [self isMoatAllowed]) {
         IMP imp = [self methodForSelector:selector];
         BOOL (*func)(id, SEL, AVPlayer*, AVPlayerLayer*, UIView*, NSDictionary*) = (void *)imp;
-        moatResponse = func(self, selector, player, layer, view, moatDict);
+        BOOL moatResponse = func(self, selector, player, layer, view, moatDict);
+        NSLog(@"SuperAwesome-Moat-Module Called 'internalStartMoatTrackingForVideoPlayer' with response %d", moatResponse);
+        return moatResponse;
+    } else {
+        NSLog(@"SuperAwesome-Moat-Module Could not call 'internalStartMoatTrackingForVideoPlayer' because there is no selector");
+        return false;
     }
-    
-    // return
-    return moatResponse;
 }
 
 - (BOOL) stopMoatTrackingForVideoPlayer {
-    
-    // response variable
-    BOOL moatResponse = false;
     
     // selector
     SEL selector = NSSelectorFromString(@"internalStopMoatTrackingForVideoPlayer");
@@ -169,12 +168,13 @@ static BOOL moatEnabled = false;
     if ([self respondsToSelector:selector]) {
         IMP imp = [self methodForSelector:selector];
         BOOL (*func)(id, SEL) = (void*) imp;
-        moatResponse = func(self, selector);
+        BOOL moatResponse = func(self, selector);
+        NSLog(@"SuperAwesome-Moat-Module Called 'internalStopMoatTrackingForVideoPlayer' with response %d", moatResponse);
+        return moatResponse;
+    } else {
+        NSLog(@"SuperAwesome-Moat-Module Could not call 'internalStopMoatTrackingForVideoPlayer' because there is no selector");
+        return false;
     }
-    
-    // return
-    return moatResponse;
-    
 }
 
 /**
