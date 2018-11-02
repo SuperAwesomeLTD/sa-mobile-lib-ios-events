@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   s.source = { 
 	:git => 'https://github.com/SuperAwesomeLTD/sa-mobile-lib-ios-events.git', 
 	:branch => 'master',
-	:tag => '2.0.1' }
+	:tag => '2.0.1' 
+  }
   s.platform = :ios, '8.0'
   s.requires_arc = true
   s.default_subspec = 'Core'
